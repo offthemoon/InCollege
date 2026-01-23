@@ -1,0 +1,16 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. IDKBRUH.
+       AUTHOR. NEVADA.
+       DATE-WRITTEN.  01/23/2026.
+       DATE-COMPILED. 01/23/2026.
+       SECURITY.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+
+       DATA DIVISION.
+       FILE SECTION.
+
+       PROCEDURE DIVISION.
+              DISPLAY "Hello, COBOL World!".
+              STOP RUN.
