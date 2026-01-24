@@ -7,23 +7,24 @@
 
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT ACCOUNTS-FILE ASSIGN TO "accounts_info.dat"
+               ORGANIZATION IS LINE SEQUENTIAL.
 
        DATA DIVISION.
        FILE SECTION.
-
-
+       FD ACCOUNTS-FILE.
+       01 ACCOUNTS-RECORD.
+           05 FILE-USER PIC X(15).
+           05 FILE-PASS PIC X(15).
 
        WORKING-STORAGE SECTION.
            01 MAX-USERS PIC 9 VALUE 5.
            01 WELCOME-CHOICE PIC 9.
-
-           01 USER-DATA.
-               10 U-NAME PIC X(15).
-               10 U-PASS PIC X(15).
-
-           01 MENU-CHOICE PIC 9.
            01 IN-USER PIC X(15).
            01 IN-PASS PIC X(15).
+           01  LOGIN-SUCCESS PIC 9 VALUE 0.
+           01  FILE-EOF PIC 9 VALUE 0.
 
 
        PROCEDURE DIVISION.
@@ -51,3 +52,32 @@
            ACCEPT IN-USER.
            DISPLAY "Enter Password:".
            ACCEPT IN-PASS.
+
+           OPEN INPUT ACCOUNTS-FILE.
+           MOVE 0 TO LOGIN-SUCCESS
+           MOVE 0 TO FILE-EOF.
+
+           PERFORM UNTIL FILE-EOF = 1
+               READ ACCOUNTS-FILE
+                   AT END
+                       MOVE 1 TO FILE-EOF
+                   NOT AT END
+                       PERFORM CHECK-CREDENTIALS
+               END-READ
+           END-PERFORM.
+
+           CLOSE ACCOUNTS-FILE.
+
+           IF LOGIN-SUCCESS = 1
+               DISPLAY "Login Successful!"
+           ELSE
+               DISPLAY "Login Failed! Invalid username or password"
+           END-IF.
+
+       CHECK-CREDENTIALS.
+           IF FILE-USER = IN-USER
+               IF  FILE-PASS = IN-PASS
+                   MOVE 1 TO LOGIN-SUCCESS
+                   MOVE 1 TO FILE-EOF
+               END-IF
+           END-IF.
