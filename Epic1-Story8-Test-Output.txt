@@ -1,0 +1,33 @@
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+testuser
+Please enter your password:
+TestPass1!
+Incorrect username/password, please try again
+Please enter your username:
+3
+Please enter your password:
+1
+Incorrect username/password, please try again
+Please enter your username:
+2
+Please enter your password:
+3
+Incorrect username/password, please try again
+Please enter your username:
+4
+Please enter your password:
+5
+Incorrect username/password, please try again
+Please enter your username:
+6
+Please enter your password:
+9
+Incorrect username/password, please try again
+Please enter your username:
+--- END_OF_PROGRAM_EXECUTION ---

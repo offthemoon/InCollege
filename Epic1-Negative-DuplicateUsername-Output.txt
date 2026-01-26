@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 2
 Please enter your username:
-newuser1
+testuser
 Please enter your password:
-ValidP@ss1
+NewPass123!
 Account created successfully
 Welcome to InCollege!
 1. Log In
