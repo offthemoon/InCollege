@@ -1,19 +1,22 @@
 Welcome to InCollege!
-Log In
-Create New Account
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
 2
 Please enter your username:
 testuser
 Username already exists, please try again
 Welcome to InCollege!
-Log In
-Create New Account
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
 TestPass1!
 Welcome to InCollege!
-Log In
-Create New Account
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
 1
 Please enter your username:
@@ -21,11 +24,10 @@ testuser
 Please enter your password:
 TestPass1!
 You have successfully logged in.
-Welcome, testuser!
 1. Search for a job
 2. Find someone you know
 3. Learn a new skill
-9. Logout
+4. Logout
 Enter your choice:
 3
 Learn a New Skill:
@@ -50,7 +52,12 @@ Enter your choice:
 1. Search for a job
 2. Find someone you know
 3. Learn a new skill
-9. Logout
+4. Logout
 Enter your choice:
 9
+1. Search for a job
+2. Find someone you know
+3. Learn a new skill
+4. Logout
+Enter your choice:
 --- END_OF_PROGRAM_EXECUTION ---
