@@ -1,7 +1,0 @@
-2
-testuser
-TestPass1!
-1
-testuser
-WrongPass1!
-9
