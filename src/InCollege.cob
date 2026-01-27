@@ -4,9 +4,9 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT INPUT-FILE ASSIGN TO "InCollege-Input.txt"
+           SELECT INPUT-FILE ASSIGN TO INPUT-FILENAME
                ORGANIZATION IS LINE SEQUENTIAL.
-           SELECT OUTPUT-FILE ASSIGN TO "InCollege-Output.txt"
+           SELECT OUTPUT-FILE ASSIGN TO OUTPUT-FILENAME
                ORGANIZATION IS LINE SEQUENTIAL.
            SELECT ACCOUNTS-FILE ASSIGN TO "accounts_info.dat"
                ORGANIZATION IS LINE SEQUENTIAL
@@ -28,6 +28,11 @@
 
        01 ACCOUNTS-STATUS              PIC XX VALUE "00".
        01 INFILE-EOF                   PIC 9 VALUE 0.
+
+       01 INPUT-FILENAME               PIC X(120) VALUE "InCollege-Input.txt".
+       01 OUTPUT-FILENAME              PIC X(120) VALUE "InCollege-Output.txt".
+       01 CMDLINE                      PIC X(120) VALUE SPACES.
+       01 TEST-ID                      PIC X(40)  VALUE SPACES.
 
        01 CHOICE                       PIC 9 VALUE 0.
        01 LOGIN-SUCCESS                PIC 9 VALUE 0.
@@ -52,12 +57,31 @@
 
        PROCEDURE DIVISION.
        MAIN.
+           PERFORM SETUP-FILENAMES
            OPEN INPUT INPUT-FILE
            OPEN OUTPUT OUTPUT-FILE
            PERFORM ENSURE-ACCOUNTS-FILE
            PERFORM LOAD-ACCOUNTS
            PERFORM MAIN-MENU
            PERFORM END-PROGRAM
+           .
+
+       SETUP-FILENAMES.
+           MOVE SPACES TO CMDLINE
+           ACCEPT CMDLINE FROM COMMAND-LINE
+           MOVE FUNCTION TRIM(CMDLINE) TO TEST-ID
+           IF TEST-ID NOT = SPACES
+               MOVE SPACES TO INPUT-FILENAME
+               MOVE SPACES TO OUTPUT-FILENAME
+               STRING "InCollege-Input-"  FUNCTION TRIM(TEST-ID) ".txt"
+                   DELIMITED BY SIZE
+                   INTO INPUT-FILENAME
+               END-STRING
+               STRING "InCollege-Output-" FUNCTION TRIM(TEST-ID) ".txt"
+                   DELIMITED BY SIZE
+                   INTO OUTPUT-FILENAME
+               END-STRING
+           END-IF
            .
 
        END-PROGRAM.
@@ -97,6 +121,7 @@
            .
 
        ENSURE-ACCOUNTS-FILE.
+           MOVE "00" TO ACCOUNTS-STATUS
            OPEN INPUT ACCOUNTS-FILE
            IF ACCOUNTS-STATUS NOT = "00"
                OPEN OUTPUT ACCOUNTS-FILE
