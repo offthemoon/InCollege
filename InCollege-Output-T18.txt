@@ -3,26 +3,11 @@ Welcome to InCollege!
 2. Create New Account
 3. Exit
 Enter your choice:
-2
-Please enter your username:
-testuser
-Username already exists, please try again
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
-Enter your choice:
-TestPass1!
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
-Enter your choice:
 1
 Please enter your username:
-testuser
+Riham
 Please enter your password:
-TestPass1!
+RihaM!99
 You have successfully logged in.
 1. Search for a job
 2. Find someone you know
@@ -38,26 +23,16 @@ Skill 4
 Skill 5
 Go Back
 Enter your choice:
-1
-This skill is under construction.
-Learn a New Skill:
-Skill 1
-Skill 2
-Skill 3
-Skill 4
-Skill 5
-Go Back
-Enter your choice:
-6
+0
 1. Search for a job
 2. Find someone you know
 3. Learn a new skill
 4. Logout
 Enter your choice:
-9
-1. Search for a job
-2. Find someone you know
-3. Learn a new skill
-4. Logout
+4
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
 --- END_OF_PROGRAM_EXECUTION ---
