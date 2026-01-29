@@ -5,24 +5,10 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Jasmine
+Samuel
 Please enter your password:
-Jas123!me
+Sam2025#
 You have successfully logged in.
-1. Search for a job
-2. Find someone you know
-3. Learn a new skill
-4. Logout
-Enter your choice:
-1
-Job search/internship is under construction.
-1. Search for a job
-2. Find someone you know
-3. Learn a new skill
-4. Logout
-Enter your choice:
-2
-Find someone you know is under construction.
 1. Search for a job
 2. Find someone you know
 3. Learn a new skill
@@ -37,7 +23,7 @@ Skill 4
 Skill 5
 Go Back
 Enter your choice:
-1
+5
 This skill is under construction.
 Learn a New Skill:
 Skill 1
@@ -47,7 +33,7 @@ Skill 4
 Skill 5
 Go Back
 Enter your choice:
-6
+0
 1. Search for a job
 2. Find someone you know
 3. Learn a new skill
@@ -59,5 +45,4 @@ Welcome to InCollege!
 2. Create New Account
 3. Exit
 Enter your choice:
-3
 --- END_OF_PROGRAM_EXECUTION ---
