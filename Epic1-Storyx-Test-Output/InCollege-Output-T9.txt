@@ -1,0 +1,18 @@
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Jasmine
+Please enter your password:
+WrongPass1!
+Incorrect username/password, please try again
+Please enter your username:
+Jas123!me
+Please enter your password:
+4
+Incorrect username/password, please try again
+Please enter your username:
+--- END_OF_PROGRAM_EXECUTION ---
