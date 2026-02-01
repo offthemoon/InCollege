@@ -236,16 +236,18 @@
                     EDU-ALL
            END-UNSTRING
 
-           IF FUNCTION TRIM(EXP-COUNT-TXT) = SPACES
-               MOVE 0 TO U-EXP-COUNT(WS-I)
+           IF EXP-COUNT-TXT(1:1) >= "0" AND EXP-COUNT-TXT(1:1) <= "3"
+               COMPUTE U-EXP-COUNT(WS-I) =
+                   FUNCTION NUMVAL(EXP-COUNT-TXT(1:1))
            ELSE
-               MOVE FUNCTION NUMVAL(EXP-COUNT-TXT) TO U-EXP-COUNT(WS-I)
+               MOVE 0 TO U-EXP-COUNT(WS-I)
            END-IF
 
-           IF FUNCTION TRIM(EDU-COUNT-TXT) = SPACES
-               MOVE 0 TO U-EDU-COUNT(WS-I)
+           IF EDU-COUNT-TXT(1:1) >= "0" AND EDU-COUNT-TXT(1:1) <= "3"
+               COMPUTE U-EDU-COUNT(WS-I) =
+                   FUNCTION NUMVAL(EDU-COUNT-TXT(1:1))
            ELSE
-               MOVE FUNCTION NUMVAL(EDU-COUNT-TXT) TO U-EDU-COUNT(WS-I)
+               MOVE 0 TO U-EDU-COUNT(WS-I)
            END-IF
 
            PERFORM PARSE-EXP
@@ -255,6 +257,10 @@
        PARSE-EXP.
            MOVE 1 TO EXP-PTR
            IF U-EXP-COUNT(WS-I) = 0
+               EXIT PARAGRAPH
+           END-IF
+           IF EXP-ALL = SPACES
+               MOVE 0 TO U-EXP-COUNT(WS-I)
                EXIT PARAGRAPH
            END-IF
 
@@ -277,6 +283,10 @@
        PARSE-EDU.
            MOVE 1 TO EDU-PTR
            IF U-EDU-COUNT(WS-I) = 0
+               EXIT PARAGRAPH
+           END-IF
+           IF EDU-ALL = SPACES
+               MOVE 0 TO U-EDU-COUNT(WS-I)
                EXIT PARAGRAPH
            END-IF
 
@@ -326,21 +336,22 @@
 
        BUILD-EXP-ALL.
            MOVE SPACES TO EXP-ALL
-           MOVE SPACES TO EXP-COUNT-TXT
+           MOVE "0" TO EXP-COUNT-TXT
            IF U-EXP-COUNT(WS-I) = 0
-               MOVE "0" TO EXP-COUNT-TXT
                EXIT PARAGRAPH
            END-IF
 
-           MOVE U-EXP-COUNT(WS-I) TO WS-K
-           MOVE FUNCTION TRIM(FUNCTION NUMVAL-C(WS-K)) TO EXP-COUNT-TXT
+           MOVE FUNCTION CHAR(U-EXP-COUNT(WS-I) + 48)
+               TO EXP-COUNT-TXT(1:1)
 
            MOVE 1 TO EXP-PTR
            PERFORM VARYING WS-J FROM 1 BY 1 UNTIL WS-J > U-EXP-COUNT(WS-I)
                IF WS-J > 1
-                   STRING "~" DELIMITED BY SIZE INTO EXP-ALL WITH POINTER EXP-PTR
+                   STRING "~" DELIMITED BY SIZE
+                       INTO EXP-ALL WITH POINTER EXP-PTR
                    END-STRING
                END-IF
+
                STRING
                    FUNCTION TRIM(U-EXP-TITLE(WS-I, WS-J)) "^"
                    FUNCTION TRIM(U-EXP-COMP(WS-I, WS-J)) "^"
@@ -354,21 +365,22 @@
 
        BUILD-EDU-ALL.
            MOVE SPACES TO EDU-ALL
-           MOVE SPACES TO EDU-COUNT-TXT
+           MOVE "0" TO EDU-COUNT-TXT
            IF U-EDU-COUNT(WS-I) = 0
-               MOVE "0" TO EDU-COUNT-TXT
                EXIT PARAGRAPH
            END-IF
 
-           MOVE U-EDU-COUNT(WS-I) TO WS-K
-           MOVE FUNCTION TRIM(FUNCTION NUMVAL-C(WS-K)) TO EDU-COUNT-TXT
+           MOVE FUNCTION CHAR(U-EDU-COUNT(WS-I) + 48)
+               TO EDU-COUNT-TXT(1:1)
 
            MOVE 1 TO EDU-PTR
            PERFORM VARYING WS-J FROM 1 BY 1 UNTIL WS-J > U-EDU-COUNT(WS-I)
                IF WS-J > 1
-                   STRING "~" DELIMITED BY SIZE INTO EDU-ALL WITH POINTER EDU-PTR
+                   STRING "~" DELIMITED BY SIZE
+                       INTO EDU-ALL WITH POINTER EDU-PTR
                    END-STRING
                END-IF
+
                STRING
                    FUNCTION TRIM(U-EDU-DEGREE(WS-I, WS-J)) "^"
                    FUNCTION TRIM(U-EDU-UNIV(WS-I, WS-J)) "^"
