@@ -59,8 +59,9 @@
        01 GRAD-YEAR-NUM                    PIC 9(4) VALUE 0.
        01 YEAR-OK                          PIC 9 VALUE 0.
 
-       01 EXP-COUNT-TXT                    PIC X(2) VALUE SPACES.
-       01 EDU-COUNT-TXT                    PIC X(2) VALUE SPACES.
+       *> Fix one , changed both of these from strings to actual numbers.
+       01 EXP-COUNT-TXT                    PIC 99(2) VALUE 0.
+       01 EDU-COUNT-TXT                    PIC 99(2) VALUE 0.
 
        01 EXP-ALL                          PIC X(1200) VALUE SPACES.
        01 EDU-ALL                          PIC X(600)  VALUE SPACES.
@@ -76,8 +77,8 @@
                10 U-PASS                   PIC X(12).
                10 U-FNAME                  PIC X(15).
                10 U-LNAME                  PIC X(15).
-               10 U-UNIV                   PIC X(25).
-               10 U-MAJOR                  PIC X(20).
+               10 U-UNIV                   PIC X(50).
+               10 U-MAJOR                  PIC X(30).
                10 U-GRAD                   PIC X(4).
                10 U-ABOUT                  PIC X(200).
                10 U-EXP-COUNT              PIC 9.
@@ -216,8 +217,8 @@
            .
 
        PARSE-ACCOUNT-LINE.
-           MOVE SPACES TO EXP-COUNT-TXT
-           MOVE SPACES TO EDU-COUNT-TXT
+           MOVE 0 TO EXP-COUNT-TXT
+           MOVE 0 TO EDU-COUNT-TXT
            MOVE SPACES TO EXP-ALL
            MOVE SPACES TO EDU-ALL
 
@@ -326,14 +327,15 @@
 
        BUILD-EXP-ALL.
            MOVE SPACES TO EXP-ALL
-           MOVE SPACES TO EXP-COUNT-TXT
+           *>changed this to a number and instead of spaces have 0
+           MOVE 0 TO EXP-COUNT-TXT
            IF U-EXP-COUNT(WS-I) = 0
-               MOVE "0" TO EXP-COUNT-TXT
+               MOVE 0 TO EXP-COUNT-TXT
                EXIT PARAGRAPH
            END-IF
 
-           MOVE U-EXP-COUNT(WS-I) TO WS-K
-           MOVE FUNCTION TRIM(FUNCTION NUMVAL-C(WS-K)) TO EXP-COUNT-TXT
+           *>removed the two lines here and placed this new line.
+           MOVE U-EXP-COUNT(WS-I) TO EXP-COUNT-TXT
 
            MOVE 1 TO EXP-PTR
            PERFORM VARYING WS-J FROM 1 BY 1 UNTIL WS-J > U-EXP-COUNT(WS-I)
@@ -352,16 +354,19 @@
            END-PERFORM
            .
 
+
+
        BUILD-EDU-ALL.
            MOVE SPACES TO EDU-ALL
-           MOVE SPACES TO EDU-COUNT-TXT
+            *>changed this to a number and instead of spaces have 0
+           MOVE 0 TO EDU-COUNT-TXT
            IF U-EDU-COUNT(WS-I) = 0
-               MOVE "0" TO EDU-COUNT-TXT
+               MOVE 0 TO EDU-COUNT-TXT
                EXIT PARAGRAPH
            END-IF
 
-           MOVE U-EDU-COUNT(WS-I) TO WS-K
-           MOVE FUNCTION TRIM(FUNCTION NUMVAL-C(WS-K)) TO EDU-COUNT-TXT
+           *>removed the two lines here and placed this new line.
+           MOVE U-EDU-COUNT(WS-I) TO EDU-COUNT-TXT
 
            MOVE 1 TO EDU-PTR
            PERFORM VARYING WS-J FROM 1 BY 1 UNTIL WS-J > U-EDU-COUNT(WS-I)
@@ -638,7 +643,7 @@
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            PERFORM REQUIRE-NONBLANK
-           MOVE WS-OUT(1:25) TO U-UNIV(CURRENT-USER-ID)
+           MOVE WS-OUT(1:50) TO U-UNIV(CURRENT-USER-ID)
 
            MOVE "Enter Major:" TO WS-OUT
            PERFORM PRINT-LINE
