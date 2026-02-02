@@ -5,14 +5,14 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Samuel
+Ehtan
 Please enter your password:
-aslj;@A
+etan
 Incorrect username/password, please try again
 Please enter your username:
-Roy
+Chris
 Please enter your password:
-%ljkdW
+cris
 Incorrect username/password, please try again
 Please enter your username:
 --- END_OF_PROGRAM_EXECUTION ---
