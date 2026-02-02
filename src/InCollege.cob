@@ -76,8 +76,8 @@
                10 U-PASS                   PIC X(12).
                10 U-FNAME                  PIC X(15).
                10 U-LNAME                  PIC X(15).
-               10 U-UNIV                   PIC X(25).
-               10 U-MAJOR                  PIC X(20).
+               10 U-UNIV                   PIC X(50).
+               10 U-MAJOR                  PIC X(50).
                10 U-GRAD                   PIC X(4).
                10 U-ABOUT                  PIC X(200).
                10 U-EXP-COUNT              PIC 9.
@@ -650,13 +650,13 @@
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            PERFORM REQUIRE-NONBLANK
-           MOVE WS-OUT(1:25) TO U-UNIV(CURRENT-USER-ID)
+           MOVE WS-OUT(1:50) TO U-UNIV(CURRENT-USER-ID)
 
            MOVE "Enter Major:" TO WS-OUT
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            PERFORM REQUIRE-NONBLANK
-           MOVE WS-OUT(1:20) TO U-MAJOR(CURRENT-USER-ID)
+           MOVE WS-OUT(1:50) TO U-MAJOR(CURRENT-USER-ID)
 
            PERFORM GET-VALID-GRAD-YEAR
            MOVE GRAD-YEAR-TEXT TO U-GRAD(CURRENT-USER-ID)
