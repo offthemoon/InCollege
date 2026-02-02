@@ -1,6 +1,45 @@
 1
-Unknown
-SomePass1!
 Jasmine
 Jas123!me
-4
+1
+
+Jasmine
+
+
+
+
+Kohli
+
+
+
+
+
+
+University of South Florida
+
+
+Computer Science
+3242
+1900
+neva
+1000
+2026
+I am a scrum master for InCollege wk2.
+
+Tester
+InCollege
+Spring 2026
+Created test inputs
+
+Programmer
+Google
+Fall 2025
+Built amazing programs
+DONE
+
+Computer Science
+University of South Florida
+2023-2027
+DONE
+2
+6
