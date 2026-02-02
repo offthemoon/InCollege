@@ -936,5 +936,4 @@
                    END-STRING
                    PERFORM PRINT-LINE
                END-PERFORM
-           END-IF
-           .
+           END-IF.

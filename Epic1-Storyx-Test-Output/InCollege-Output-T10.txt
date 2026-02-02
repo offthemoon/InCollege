@@ -111,7 +111,7 @@ Enter your choice:
 2
 --- Your Profile ---
 Name: Jasmine Kohli
-University: University of South Flori
+University: University of South Florida
 Major: Computer Science
 Graduation Year: 2026
 About Me: I am a scrum master for InCollege wk2.

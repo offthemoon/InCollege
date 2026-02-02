@@ -63,7 +63,7 @@ Enter your choice:
 2
 --- Your Profile ---
 Name: Samuel Johnson
-University: University of South Flori
+University: University of South Florida
 Major: Computer Science
 Graduation Year: 2027
 About Me: I am a tester for InCollege wk2.
