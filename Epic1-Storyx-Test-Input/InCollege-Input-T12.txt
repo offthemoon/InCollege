@@ -1,0 +1,45 @@
+2
+EdgeCase12
+Edge@12345
+1
+EdgeCase12
+Edge@12345
+1
+Edge
+Case
+University of Miami
+Data Science
+2028
+Testing exactly 3 experiences and 3 education entries as per assignment edge case requirement.
+
+Software Engineer
+Microsoft
+Jan 2025 - Present
+Led development of cloud-based solutions.
+
+Data Analyst
+Amazon
+Summer 2024
+Analyzed large datasets for business insights.
+
+Research Assistant
+MIT Labs
+Fall 2023 - Spring 2024
+Conducted research on machine learning algorithms.
+DONE
+
+Master of Science
+Stanford University
+2026-2028
+
+Bachelor of Science
+UC Berkeley
+2022-2026
+
+Associate Degree
+San Francisco Community College
+2020-2022
+DONE
+2
+6
+3

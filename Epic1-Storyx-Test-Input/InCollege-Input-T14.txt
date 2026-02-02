@@ -1,0 +1,18 @@
+2
+LengthTest
+Long@12345
+1
+LengthTest
+Long@12345
+1
+Length
+Test
+University of Tampa
+Information Technology
+2030
+This is a test of the About Me field length validation. According to the assignment requirements this field should accept up to 200 characters maximum. This sentence is designed to exceed that limit significantly to verify proper truncation or handling of overly long input text for the About Me section of the user profile creation feature.
+DONE
+DONE
+2
+6
+3
