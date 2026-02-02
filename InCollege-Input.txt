@@ -1,16 +1,13 @@
 1
-Riham
-RihaM!99
+Roy
+Roy@1234
 1
 Roy
 Ibarra
-Massachusetts Institute of Technology
-Mechatronics and Robotics Engineering
-Hellow
-deez
-fine
-2030
-
+University of Central Florida
+Electrical Engineering
+2027
+I am a developer for InCollege wk2.
 
 Developer
 InCollege
@@ -29,7 +26,7 @@ In this job, I made a lot of amazing drinks. I really improved my communication 
 
 Electrical Engineering
 University of South Florida
-who asked
+2023-2027
 
 High School Diploma
 Strawberry Crest High School
