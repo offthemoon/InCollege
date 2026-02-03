@@ -1,1 +1,0 @@
-#InCollege Project (COBOL)
