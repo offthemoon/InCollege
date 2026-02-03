@@ -25,15 +25,26 @@ Project Structure
 
 ## Running the program
 
-## Features implemented (so far)
-- User login
-- Account creation and validation
-- I/O formatting for user interactions
+## Features implemented
+- Week 1: User login, account creation, input/output handling
+- Week 2: Profile creation and editing, optional sections (About Me, Experience, Education), profile viewing
 
 ## Weekly Epics
 
 ### Week 1 - User Login and Registration
 **Tasks Completed:**
-- Login validation
-- User input parsing
-- I/O integration
+- User account creation with password validation
+- Login validation for existing users
+- User input parsing from input file
+- Dual I/O integration (screen output and output file to match)
+- Storing account information in a file
+
+### Week 2 – User Profile Creation and Management
+**Tasks Completed:**
+- Profile creation and editing after successful login
+- Capture and validation of required profile information
+- Optional profile sections (About Me, Experience, Education)
+- Persistent storage of profile data linked to user accounts
+- Profile viewing functionality
+- Continued file-based input and output handling
+
