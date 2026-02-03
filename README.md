@@ -24,6 +24,28 @@ Project Structure
 - Docker
 
 ## Running the program
+**1. Open the project in Docker**
+
+Ensure the project is opened inside the Docker container and you are in the project root directory.
+
+The expected structure is:
+
+-Source code in src/
+
+-Executable in bin/
+
+-Input and output files in the project root
+**2. Compile the COBOL program**
+Make sure you are in the src folder and have opened the InCollege.cob file.
+``` Press 'Ctrl+Shift+B' ``` to compile it.
+**3. Run using the default input and output files**
+Running the program without arguments uses the default files:
+
+-Input file: InCollege-Input.txt
+
+-Output file: InCollege-Output.txt
+
+In terminal enter ```./bin/InCollege```
 
 ## Features implemented
 - Week 1: User login, account creation, input/output handling
