@@ -907,6 +907,9 @@
                        INTO WS-OUT
                    END-STRING
                    PERFORM PRINT-LINE
+               *> added this to help make readibility easier.
+               MOVE "----------------------------" TO WS-OUT
+               PERFORM PRINT-LINE
                END-PERFORM
            END-IF
 
@@ -934,6 +937,9 @@
                        DELIMITED BY SIZE
                        INTO WS-OUT
                    END-STRING
+                   PERFORM PRINT-LINE
+                    *> added this to help make readibility easier.
+                   MOVE "----------------------------" TO WS-OUT
                    PERFORM PRINT-LINE
                END-PERFORM
            END-IF
