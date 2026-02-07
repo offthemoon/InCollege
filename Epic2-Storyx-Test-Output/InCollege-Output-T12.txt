@@ -1,0 +1,282 @@
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+2
+Please enter your username:
+EdgeCase12
+Please enter your password:
+Edge@12345
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+EdgeCase12
+Please enter your password:
+Edge@12345
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+1
+--- Create/Edit Profile ---
+Enter First Name:
+Edge
+Enter Last Name:
+Case
+Enter University/College Attended:
+University of Miami
+Enter Major:
+Data Science
+Enter Graduation Year (YYYY):
+2028
+Enter About Me (optional, max 200 chars, enter blank line to skip):
+Testing exactly 3 experiences and 3 education entries as per assignment edge case requirement.
+Add Experience (optional, max 3 entries. Enter 'DONE' to finish):
+
+Experience #1 - Title:
+Software Engineer
+Experience #1 - Company/Organization:
+Microsoft
+Experience #1 - Dates (e.g., Summer 2024):
+Jan 2025 - Present
+Experience #1 - Description (optional, max 100 chars, blank to skip):
+Led development of cloud-based solutions.
+Add Experience (optional, max 3 entries. Enter 'DONE' to finish):
+
+Experience #2 - Title:
+Data Analyst
+Experience #2 - Company/Organization:
+Amazon
+Experience #2 - Dates (e.g., Summer 2024):
+Summer 2024
+Experience #2 - Description (optional, max 100 chars, blank to skip):
+Analyzed large datasets for business insights.
+Add Experience (optional, max 3 entries. Enter 'DONE' to finish):
+
+Experience #3 - Title:
+Research Assistant
+Experience #3 - Company/Organization:
+MIT Labs
+Experience #3 - Dates (e.g., Summer 2024):
+Fall 2023 - Spring 2024
+Experience #3 - Description (optional, max 100 chars, blank to skip):
+Conducted research on machine learning algorithms.
+Add Education (optional, max 3 entries. Enter 'DONE' to finish):
+DONE
+Profile saved successfully!
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+Master of Science
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+Stanford University
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+2026-2028
+--- Your Profile ---
+Name: Edge Case
+University: University of Miami
+Major: Data Science
+Graduation Year: 2028
+About Me: Testing exactly 3 experiences and 3 education entries as per assignment edge case requirement.
+Experience:
+ Title: Software Engineer
+ Company: Microsoft
+ Dates: Jan 2025 - Present
+ Description: Led development of cloud-based solutions.
+ Title: Data Analyst
+ Company: Amazon
+ Dates: Summer 2024
+ Description: Analyzed large datasets for business insights.
+ Title: Research Assistant
+ Company: MIT Labs
+ Dates: Fall 2023 - Spring 2024
+ Description: Conducted research on machine learning algorithms.
+Education:
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+Bachelor of Science
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+UC Berkeley
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+2022-2026
+--- Your Profile ---
+Name: Edge Case
+University: University of Miami
+Major: Data Science
+Graduation Year: 2028
+About Me: Testing exactly 3 experiences and 3 education entries as per assignment edge case requirement.
+Experience:
+ Title: Software Engineer
+ Company: Microsoft
+ Dates: Jan 2025 - Present
+ Description: Led development of cloud-based solutions.
+ Title: Data Analyst
+ Company: Amazon
+ Dates: Summer 2024
+ Description: Analyzed large datasets for business insights.
+ Title: Research Assistant
+ Company: MIT Labs
+ Dates: Fall 2023 - Spring 2024
+ Description: Conducted research on machine learning algorithms.
+Education:
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+Associate Degree
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+San Francisco Community College
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+2020-2022
+--- Your Profile ---
+Name: Edge Case
+University: University of Miami
+Major: Data Science
+Graduation Year: 2028
+About Me: Testing exactly 3 experiences and 3 education entries as per assignment edge case requirement.
+Experience:
+ Title: Software Engineer
+ Company: Microsoft
+ Dates: Jan 2025 - Present
+ Description: Led development of cloud-based solutions.
+ Title: Data Analyst
+ Company: Amazon
+ Dates: Summer 2024
+ Description: Analyzed large datasets for business insights.
+ Title: Research Assistant
+ Company: MIT Labs
+ Dates: Fall 2023 - Spring 2024
+ Description: Conducted research on machine learning algorithms.
+Education:
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+DONE
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+2
+--- Your Profile ---
+Name: Edge Case
+University: University of Miami
+Major: Data Science
+Graduation Year: 2028
+About Me: Testing exactly 3 experiences and 3 education entries as per assignment edge case requirement.
+Experience:
+ Title: Software Engineer
+ Company: Microsoft
+ Dates: Jan 2025 - Present
+ Description: Led development of cloud-based solutions.
+ Title: Data Analyst
+ Company: Amazon
+ Dates: Summer 2024
+ Description: Analyzed large datasets for business insights.
+ Title: Research Assistant
+ Company: MIT Labs
+ Dates: Fall 2023 - Spring 2024
+ Description: Conducted research on machine learning algorithms.
+Education:
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+6
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+3
+--- END_OF_PROGRAM_EXECUTION ---

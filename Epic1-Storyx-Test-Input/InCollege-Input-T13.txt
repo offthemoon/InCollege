@@ -1,8 +1,0 @@
-1
-Jasmine
-Wrong1!
-Jasmine
-Wrong2!
-Jasmine
-Jas123!me
-4

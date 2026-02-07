@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Roy
+Riham
 Please enter your password:
-Roy@1234
+RihaM!99
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -23,13 +23,22 @@ Roy
 Enter Last Name:
 Ibarra
 Enter University/College Attended:
-University of Central Florida
+Massachusetts Institute of Technology
 Enter Major:
-Electrical Engineering
+Mechatronics and Robotics Engineering
 Enter Graduation Year (YYYY):
-2027
+Hellow
+Invalid graduation year. Please try again.
+Enter Graduation Year (YYYY):
+deez
+Invalid graduation year. Please try again.
+Enter Graduation Year (YYYY):
+fine
+Invalid graduation year. Please try again.
+Enter Graduation Year (YYYY):
+2030
 Enter About Me (optional, max 200 chars, enter blank line to skip):
-I am a developer for InCollege wk2.
+
 Add Experience (optional, max 3 entries. Enter 'DONE' to finish):
 
 Experience #1 - Title:
@@ -67,7 +76,7 @@ Electrical Engineering
 Education #1 - University/College:
 University of South Florida
 Education #1 - Years Attended (e.g., 2023-2025):
-2023-2027
+who asked
 Add Education (optional, max 3 entries. Enter 'DONE' to finish):
 
 Education #2 - Degree:
@@ -89,10 +98,10 @@ Enter your choice:
 2
 --- Your Profile ---
 Name: Roy Ibarra
-University: University of Central Flo
-Major: Electrical Engineeri
-Graduation Year: 2027
-About Me: I am a developer for InCollege wk2.
+University: Massachusetts Institute o
+Major: Mechatronics and Rob
+Graduation Year: 2030
+About Me:
 Experience:
  Title: Developer
  Company: InCollege
@@ -109,7 +118,7 @@ Experience:
 Education:
  Degree: Electrical Engineering
  University: University of South Florida
- Years: 2023-2027
+ Years: who asked
  Degree: High School Diploma
  University: Strawberry Crest High School
  Years: 2019-2023
