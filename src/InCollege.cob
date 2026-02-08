@@ -980,7 +980,9 @@
            END-PERFORM
 
            IF FOUND = 0
-               MOVE "No match found." TO WS-OUT
+               MOVE "-----No match found. ----" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "Please Try Again. Make sure you use correct capitials and spell the name correctly" TO WS-OUT
                PERFORM PRINT-LINE
            END-IF
            .
