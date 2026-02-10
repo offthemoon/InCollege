@@ -614,7 +614,7 @@
                PERFORM PRINT-LINE
                MOVE "Skill 5" TO WS-OUT
                PERFORM PRINT-LINE
-               MOVE "Go Back" TO WS-OUT
+               MOVE "6. Go Back" TO WS-OUT
                PERFORM PRINT-LINE
                MOVE "Enter your choice:" TO WS-OUT
                PERFORM PRINT-LINE
