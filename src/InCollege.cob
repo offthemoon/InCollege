@@ -29,8 +29,8 @@
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 INFILE-EOF                       PIC 9 VALUE 0.
 
-       01 INPUT-FILENAME                   PIC X(120) VALUE "InCollege-Input.txt".
-       01 OUTPUT-FILENAME                  PIC X(120) VALUE "InCollege-Output.txt".
+       01 INPUT-FILENAME                   PIC X(120) VALUE "Wk3-In/t10.txt".
+       01 OUTPUT-FILENAME                  PIC X(120) VALUE "Wk3-Out/t10.txt".
        01 CMDLINE                          PIC X(120) VALUE SPACES.
        01 TEST-ID                          PIC X(40)  VALUE SPACES.
 
