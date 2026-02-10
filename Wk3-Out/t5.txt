@@ -56,7 +56,7 @@ Teacher Assistant
 Experience #2 - Company/Organization:
 Bellini Company
 Experience #2 - Dates (e.g., Summer 2024):
-Fall 2025
+Fall bye
 Experience #2 - Description (optional, max 100 chars, blank to skip):
 I graded student's work, taught students during recitation sessions and office hours. I really like.
 Add Experience (optional, max 3 entries. Enter 'DONE' to finish):
@@ -66,7 +66,7 @@ Bartender
 Experience #3 - Company/Organization:
 Hard Rock
 Experience #3 - Dates (e.g., Summer 2024):
-Summer 2025
+Summer hye
 Experience #3 - Description (optional, max 100 chars, blank to skip):
 In this job, I made a lot of amazing drinks. I really improved my communication by talking to customers.
 Add Education (optional, max 3 entries. Enter 'DONE' to finish):
@@ -96,10 +96,10 @@ Profile saved successfully!
 6. Logout
 Enter your choice:
 2
---- Your Profile ---
+--- Profile Information ---
 Name: Roy Ibarra
-University: Massachusetts Institute o
-Major: Mechatronics and Rob
+University: Massachusetts Institute of Technology
+Major: Mechatronics and Robotics Engineering
 Graduation Year: 2030
 About Me:
 Experience:
@@ -107,21 +107,26 @@ Experience:
  Company: InCollege
  Dates: Spring 2026
  Description: Coded wk2 tasks.
+----------------------------
  Title: Teacher Assistant
  Company: Bellini Company
- Dates: Fall 2025
+ Dates: Fall bye
  Description: I graded student's work, taught students during recitation sessions and office hours. I really like.
+----------------------------
  Title: Bartender
  Company: Hard Rock
- Dates: Summer 2025
+ Dates: Summer hye
  Description: In this job, I made a lot of amazing drinks. I really improved my communication by talking to custom
+----------------------------
 Education:
  Degree: Electrical Engineering
  University: University of South Florida
  Years: who asked
+----------------------------
  Degree: High School Diploma
  University: Strawberry Crest High School
  Years: 2019-2023
+----------------------------
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
