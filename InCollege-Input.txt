@@ -1,8 +1,36 @@
 1
 Roy
 Roy@1234
-4
-Jasmine
-Kohli
+1
+Roy
+Ibarra
+University of Central Florida
+Electrical Engineering
+2027
+I am a developer for InCollege wk2.
+
+Developer
+InCollege
+Spring 2026
+Coded wk2 tasks.
+
+Teacher Assistant
+Bellini Company
+Fall 2025
+I graded student's work, taught students during recitation sessions and office hours. I really like.
+
+Bartender
+Hard Rock
+Summer 2025
+In this job, I made a lot of amazing drinks. I really improved my communication by talking to customers.
+
+Electrical Engineering
+University of South Florida
+2023-2027
+
+High School Diploma
+Strawberry Crest High School
+2019-2023
+DONE
+2
 6
-3
