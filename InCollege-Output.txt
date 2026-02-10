@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Roy
+Jasmine
 Please enter your password:
-Roy@1234
+Jas123!me
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -18,18 +18,32 @@ You have successfully logged in.
 Enter your choice:
 4
 Enter first name to search:
-Jasmine
+Roy
 Enter last name to search:
-Kohli
+Ibarra
 --- Profile Found ---
 --- Profile Information ---
-Name: Jasmine Kohli
-University: University of South Flori
-Major: Computer Science
-Graduation Year: 2026
-About Me: I am a scrum master for InCollege wk2.
+Name: Roy Ibarra
+University: University of Central Florida
+Major: Electrical Engineering
+Graduation Year: 2027
+About Me: I am a developer for InCollege wk2.
 Experience:
+ Title: Developer
+ Company: InCollege
+ Dates: Spring 2026
+ Description: Coded wk2 tasks.
+----------------------------
+ Title: Teacher Assistant
+ Company: Bellini Company
+ Dates: Fall 2025
+ Description: I graded student's work, taught students during recitation sessions and office hours. I really like.
+----------------------------
 Education:
+ Degree: Electrical Engineering
+ University: University of South Florida
+ Years: 2023-2027
+----------------------------
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
