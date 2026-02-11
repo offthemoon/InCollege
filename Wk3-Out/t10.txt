@@ -24,12 +24,26 @@ Ibarra
 --- Profile Found ---
 --- Profile Information ---
 Name: Roy Ibarra
-University: University of Central Florida
-Major: Electrical Engineering
+University: University of Central Flo
+Major: Electrical Engineeri
 Graduation Year: 2027
 About Me: I am a developer for InCollege wk2.
 Experience:
+ Title: Developer
+ Company: InCollege
+ Dates: Spring 2026
+ Description: Coded wk2 tasks.
+----------------------------
+ Title: Teacher Assistant
+ Company: Bellini Company
+ Dates: Fall 2025
+ Description: I graded student's work, taught students during recitation sessions and office hours. I really like.
+----------------------------
 Education:
+ Degree: Electrical Engineering
+ University: University of South Florida
+ Years: 2023-2027
+----------------------------
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
