@@ -42,8 +42,7 @@ Enter first name to search:
 Ethan
 Enter last name to search:
 Chris
------No match found. ----
-Please Try Again. Make sure you use correct capitials and spell the name correctly
+No profile found.
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job

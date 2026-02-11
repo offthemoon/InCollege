@@ -32,7 +32,7 @@ Skill 2
 Skill 3
 Skill 4
 Skill 5
-Go Back
+6. Go Back
 Enter your choice:
 1
 This skill is under construction.
@@ -42,7 +42,7 @@ Skill 2
 Skill 3
 Skill 4
 Skill 5
-Go Back
+6. Go Back
 Enter your choice:
 6
 1. Create/Edit My Profile
