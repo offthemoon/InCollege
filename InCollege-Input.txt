@@ -1,24 +1,12 @@
-3
-Roy
-wrongpass
-Roy
-123
-2
-roy
 1
-John
-Doe
-
-Computer Science
-abc
-2100
-2026
-About me section here
-Intern at Google
-Teaching Assistant
-DONE
-USF
-DONE
-1
+Roy
+Roy@1234
 4
+Samuel
+Johnson
+4
+Ethan
+Hunt
+6
+3
 
