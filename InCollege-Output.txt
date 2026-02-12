@@ -25,30 +25,11 @@ Johnson
 --- Profile Information ---
 Name: Samuel Johnson
 University: Georgia Institute of Technology
-Major: Mechanical Engineerineer
+Major: Mechanical Engineer
 Graduation Year: 2027
 About Me: I am a tester for InCollege wk2.
->>>>>>> r_dev_branch3
 Experience:
- Title: Developer
- Company: InCollege
- Dates: Spring 2026
- Description: Coded wk2 tasks.
- Title: Teacher Assistant
- Company: Bellini Company
- Dates: Fall 2025
- Description: I graded student's work, taught students during recitation sessions and office hours. I really like.
- Title: Bartender
- Company: Hard Rock
- Dates: Summer 2025
- Description: In this job, I made a lot of amazing drinks. I really improved my communication by talking to custom
 Education:
- Degree: Electrical Engineering
- University: University of South Florida
- Years: 2023-2027
- Degree: High School Diploma
- University: Strawberry Crest High School
- Years: 2019-2023
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -75,4 +56,5 @@ Welcome to InCollege!
 2. Create New Account
 3. Exit
 Enter your choice:
+3gi
 --- END_OF_PROGRAM_EXECUTION ---

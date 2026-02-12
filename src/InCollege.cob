@@ -588,9 +588,7 @@
                            TO WS-OUT
                        PERFORM PRINT-LINE
                    WHEN 4
-                       MOVE "Find someone you know is under construction."
-                           TO WS-OUT
-                       PERFORM PRINT-LINE
+                       PERFORM FIND-SOMEONE
                    WHEN 5
                        PERFORM LEARN-SKILL-MENU
                    WHEN 6
@@ -836,7 +834,13 @@
            .
 
        VIEW-MY-PROFILE.
-           MOVE "--- Your Profile ---" TO WS-OUT
+           IF CURRENT-USER-ID < 1 OR CURRENT-USER-ID > 5
+               MOVE "Error: Invalid user session." TO WS-OUT
+               PERFORM PRINT-LINE
+               EXIT PARAGRAPH
+           END-IF
+
+           MOVE "--- Profile Information ---" TO WS-OUT
            PERFORM PRINT-LINE
 
            MOVE SPACES TO WS-OUT
@@ -908,6 +912,9 @@
                        INTO WS-OUT
                    END-STRING
                    PERFORM PRINT-LINE
+               *> added this to help make readibility easier.
+               MOVE "----------------------------" TO WS-OUT
+               PERFORM PRINT-LINE
                END-PERFORM
            END-IF
 
@@ -935,6 +942,9 @@
                        DELIMITED BY SIZE
                        INTO WS-OUT
                    END-STRING
+                   PERFORM PRINT-LINE
+                    *> added this to help make readibility easier.
+                   MOVE "----------------------------" TO WS-OUT
                    PERFORM PRINT-LINE
                END-PERFORM
            END-IF
