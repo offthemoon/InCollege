@@ -1,0 +1,55 @@
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Samuel
+Please enter your password:
+$@Mue12026
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+3
+Job search/internship is under construction.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+5
+Learn a New Skill:
+Skill 1
+Skill 2
+Skill 3
+Skill 4
+Skill 5
+6. Go Back
+Enter your choice:
+1
+This skill is under construction.
+Learn a New Skill:
+Skill 1
+Skill 2
+Skill 3
+Skill 4
+Skill 5
+6. Go Back
+Enter your choice:
+6
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
+Enter your choice:
+--- END_OF_PROGRAM_EXECUTION ---
