@@ -39,6 +39,7 @@
        01 USER-COUNT                       PIC 9 VALUE 0.
        01 FOUND                            PIC 9 VALUE 0.
        01 CURRENT-USER-ID                  PIC 9 VALUE 0.
+       77 WS-SEARCH-ID                     PIC 9 VALUE 0.
 
        01 WS-OUT                           PIC X(300) VALUE SPACES.
        01 USERNAME                         PIC X(15)  VALUE SPACES.
@@ -936,5 +937,157 @@
                    END-STRING
                    PERFORM PRINT-LINE
                END-PERFORM
+           END-IF
+           .
+
+       FIND-SOMEONE.
+           MOVE "Enter first name to search:" TO WS-OUT
+           PERFORM PRINT-LINE
+           PERFORM READ-INPUT
+           MOVE WS-OUT(1:15) TO USERNAME
+
+           MOVE "Enter last name to search:" TO WS-OUT
+           PERFORM PRINT-LINE
+           PERFORM READ-INPUT
+           MOVE WS-OUT(1:15) TO PASSWORD
+
+           MOVE 0 TO FOUND
+           MOVE 0 TO WS-SEARCH-ID
+
+           PERFORM VARYING WS-I FROM 1 BY 1 UNTIL WS-I > USER-COUNT
+               IF FUNCTION TRIM(U-FNAME(WS-I)) = FUNCTION TRIM(USERNAME)
+                  AND FUNCTION TRIM(U-LNAME(WS-I)) = FUNCTION TRIM(PASSWORD)
+                   MOVE 1 TO FOUND
+                   MOVE WS-I TO WS-SEARCH-ID
+               END-IF
+           END-PERFORM
+
+           IF FOUND = 1
+               MOVE "--- Profile Found ---" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               MOVE "--- Profile Information ---" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               MOVE SPACES TO WS-OUT
+               STRING "Name: "
+                      FUNCTION TRIM(U-FNAME(WS-SEARCH-ID)) " "
+                      FUNCTION TRIM(U-LNAME(WS-SEARCH-ID))
+                   DELIMITED BY SIZE
+                   INTO WS-OUT
+               END-STRING
+               PERFORM PRINT-LINE
+
+               MOVE SPACES TO WS-OUT
+               STRING "University: " FUNCTION TRIM(U-UNIV(WS-SEARCH-ID))
+                   DELIMITED BY SIZE
+                   INTO WS-OUT
+               END-STRING
+               PERFORM PRINT-LINE
+
+               MOVE SPACES TO WS-OUT
+               STRING "Major: " FUNCTION TRIM(U-MAJOR(WS-SEARCH-ID))
+                   DELIMITED BY SIZE
+                   INTO WS-OUT
+               END-STRING
+               PERFORM PRINT-LINE
+
+               MOVE SPACES TO WS-OUT
+               STRING "Graduation Year: " FUNCTION TRIM(U-GRAD(WS-SEARCH-ID))
+                   DELIMITED BY SIZE
+                   INTO WS-OUT
+               END-STRING
+               PERFORM PRINT-LINE
+
+               MOVE SPACES TO WS-OUT
+               STRING "About Me: " FUNCTION TRIM(U-ABOUT(WS-SEARCH-ID))
+                   DELIMITED BY SIZE
+                   INTO WS-OUT
+               END-STRING
+               PERFORM PRINT-LINE
+
+               MOVE "Experience:" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               IF U-EXP-COUNT(WS-SEARCH-ID) > 0
+                   PERFORM VARYING WS-J FROM 1 BY 1
+                       UNTIL WS-J > U-EXP-COUNT(WS-SEARCH-ID)
+
+                       MOVE SPACES TO WS-OUT
+                       STRING " Title: "
+                           FUNCTION TRIM(U-EXP-TITLE(WS-SEARCH-ID, WS-J))
+                           DELIMITED BY SIZE
+                           INTO WS-OUT
+                       END-STRING
+                       PERFORM PRINT-LINE
+
+                       MOVE SPACES TO WS-OUT
+                       STRING " Company: "
+                           FUNCTION TRIM(U-EXP-COMP(WS-SEARCH-ID, WS-J))
+                           DELIMITED BY SIZE
+                           INTO WS-OUT
+                       END-STRING
+                       PERFORM PRINT-LINE
+
+                       MOVE SPACES TO WS-OUT
+                       STRING " Dates: "
+                           FUNCTION TRIM(U-EXP-DATES(WS-SEARCH-ID, WS-J))
+                           DELIMITED BY SIZE
+                           INTO WS-OUT
+                       END-STRING
+                       PERFORM PRINT-LINE
+
+                       MOVE SPACES TO WS-OUT
+                       STRING " Description: "
+                           FUNCTION TRIM(U-EXP-DESC(WS-SEARCH-ID, WS-J))
+                           DELIMITED BY SIZE
+                           INTO WS-OUT
+                       END-STRING
+                       PERFORM PRINT-LINE
+
+                       MOVE "----------------------------" TO WS-OUT
+                       PERFORM PRINT-LINE
+                   END-PERFORM
+               END-IF
+
+               MOVE "Education:" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               IF U-EDU-COUNT(WS-SEARCH-ID) > 0
+                   PERFORM VARYING WS-J FROM 1 BY 1
+                       UNTIL WS-J > U-EDU-COUNT(WS-SEARCH-ID)
+
+                       MOVE SPACES TO WS-OUT
+                       STRING " Degree: "
+                           FUNCTION TRIM(U-EDU-DEGREE(WS-SEARCH-ID, WS-J))
+                           DELIMITED BY SIZE
+                           INTO WS-OUT
+                       END-STRING
+                       PERFORM PRINT-LINE
+
+                       MOVE SPACES TO WS-OUT
+                       STRING " University: "
+                           FUNCTION TRIM(U-EDU-UNIV(WS-SEARCH-ID, WS-J))
+                           DELIMITED BY SIZE
+                           INTO WS-OUT
+                       END-STRING
+                       PERFORM PRINT-LINE
+
+                       MOVE SPACES TO WS-OUT
+                       STRING " Years: "
+                           FUNCTION TRIM(U-EDU-YEARS(WS-SEARCH-ID, WS-J))
+                           DELIMITED BY SIZE
+                           INTO WS-OUT
+                       END-STRING
+                       PERFORM PRINT-LINE
+
+                       MOVE "----------------------------" TO WS-OUT
+                       PERFORM PRINT-LINE
+                   END-PERFORM
+               END-IF
+
+           ELSE
+               MOVE "No profile found." TO WS-OUT
+               PERFORM PRINT-LINE
            END-IF
            .
