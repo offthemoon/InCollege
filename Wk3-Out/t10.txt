@@ -24,8 +24,8 @@ Ibarra
 --- Profile Found ---
 --- Profile Information ---
 Name: Roy Ibarra
-University: University of Central Flo
-Major: Electrical Engineeri
+University: University of Central Florida
+Major: Electrical Engineerineer
 Graduation Year: 2027
 About Me: I am a developer for InCollege wk2.
 Experience:

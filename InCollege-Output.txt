@@ -24,8 +24,8 @@ Johnson
 --- Profile Found ---
 --- Profile Information ---
 Name: Samuel Johnson
-University: Georgia Institute of Tech
-Major: Mechanical Engineeri
+University: Georgia Institute of Technology
+Major: Mechanical Engineerineer
 Graduation Year: 2027
 About Me: I am a tester for InCollege wk2.
 Experience:
