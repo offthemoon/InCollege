@@ -11,11 +11,15 @@ Project Structure
 ├── src/                    
 │   ├── InCollege.cob           # Source COBOL code
 ├── Roles.txt                   # Team roles
+├── Epic1-Storyx-Test-Input     # Sample test inputs for Week 1
+├── Epic1-Storyx-Test-Output    # Sample test outputs for Week 1
 ├── Epic2-Storyx-Test-Input     # Sample test inputs for Week 2
 ├── Epic2-Storyx-Test-Output    # Sample test outputs for Week 2
-├── accounts_info.dat           # Stored account information for Week 1 and 2 test cases
-├── InCollege-Input.txt         # Example input for Week 2
-├── InCollege-Output.txt        # Example output for Week 2
+├── Epic3-Storyx-Test-Input     # Sample test inputs for Week 3
+├── Epic3-Storyx-Test-Output    # Sample test outputs for Week 3
+├── accounts_info.dat           # Stored account information for Week 1,2 and 3 test cases
+├── InCollege-Input.txt         # Example input for Week 3
+├── InCollege-Output.txt        # Example output for Week 3
 └── README.md                   # This file
 ```
 
