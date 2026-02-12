@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Roy
+Samuel
 Please enter your password:
-Roy@1234
+$@Mue12026
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -16,20 +16,8 @@ You have successfully logged in.
 5. Learn a new skill
 6. Logout
 Enter your choice:
-4
-Enter first name to search:
-Samuel
-Enter last name to search:
-Johnson
---- Profile Found ---
---- Profile Information ---
-Name: Samuel Johnson
-University: University of South Florida
-Major: Computer Science
-Graduation Year: 2027
-About Me: I am a tester for InCollege wk2.
-Experience:
-Education:
+3
+Job search/internship is under construction.
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -37,24 +25,31 @@ Education:
 5. Learn a new skill
 6. Logout
 Enter your choice:
-4
-Enter first name to search:
-Ethan
-Enter last name to search:
-Hunt
-No profile found.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. Logout
+5
+Learn a New Skill:
+Skill 1
+Skill 2
+Skill 3
+Skill 4
+Skill 5
+6. Go Back
+Enter your choice:
+1
+This skill is under construction.
+Learn a New Skill:
+Skill 1
+Skill 2
+Skill 3
+Skill 4
+Skill 5
+6. Go Back
 Enter your choice:
 6
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. Logout
 Enter your choice:
-3
 --- END_OF_PROGRAM_EXECUTION ---
