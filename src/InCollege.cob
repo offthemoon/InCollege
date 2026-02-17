@@ -1096,6 +1096,23 @@
                    END-PERFORM
                END-IF
 
+               MOVE "1. Send Connection Request" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "2. Back to Main Menu" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "Enter your choice:" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               PERFORM GET-CHOICE-1DIGIT
+
+               IF CHOICE = 1
+                   MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                       TO SR-SENDER
+                   MOVE FUNCTION TRIM(U-NAME(WS-SEARCH-ID))
+                       TO SR-RECIPIENT
+                   PERFORM SEND-REQUEST
+               END-IF
+
            ELSE
                MOVE "No profile found." TO WS-OUT
                PERFORM PRINT-LINE
