@@ -571,7 +571,9 @@
                PERFORM PRINT-LINE
                MOVE "5. Learn a new skill" TO WS-OUT
                PERFORM PRINT-LINE
-               MOVE "6. Logout" TO WS-OUT
+               MOVE "6. View My Pending Connection Requests" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "7. Logout" TO WS-OUT
                PERFORM PRINT-LINE
                MOVE "Enter your choice:" TO WS-OUT
                PERFORM PRINT-LINE
@@ -592,6 +594,8 @@
                    WHEN 5
                        PERFORM LEARN-SKILL-MENU
                    WHEN 6
+                       PERFORM VIEW-PENDING-REQUESTS
+                   WHEN 7
                        EXIT PARAGRAPH
                    WHEN OTHER
                        CONTINUE
