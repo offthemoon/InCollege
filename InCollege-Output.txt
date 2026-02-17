@@ -18,18 +18,32 @@ You have successfully logged in.
 Enter your choice:
 4
 Enter first name to search:
-Samuel
+Riham
 Enter last name to search:
-Johnson
+Khan
 --- Profile Found ---
 --- Profile Information ---
-Name: Samuel Johnson
-University: University of South Florida
-Major: Computer Science
-Graduation Year: 2027
-About Me: I am a tester for InCollege wk2.
+Name: Riham Khan
+University: Massachusetts Institute of Technology
+Major: Mechatronics and Robotics Engineering
+Graduation Year: 2030
+About Me:
 Experience:
+ Title: Developer
+ Company: InCollege
+ Dates: Spring 2026
+ Description: Coded wk2 tasks.
+----------------------------
+ Title: Teacher Assistant
+ Company: Bellini Company
+ Dates: Fall bye
+ Description: I graded student's work, taught students during recitation sessions and office hours. I really like.
+----------------------------
 Education:
+ Degree: Electrical Engineering
+ University: University of South Florida
+ Years: 2030
+----------------------------
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job

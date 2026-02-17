@@ -42,7 +42,7 @@ Experience:
 Education:
  Degree: Electrical Engineering
  University: University of South Florida
- Years: who asked
+ Years: 2030
 ----------------------------
 1. Create/Edit My Profile
 2. View My Profile

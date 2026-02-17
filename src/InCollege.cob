@@ -11,6 +11,9 @@
            SELECT ACCOUNTS-FILE ASSIGN TO "accounts_info.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS ACCOUNTS-STATUS.
+           SELECT REQUEST-FILE
+               ASSIGN TO "requests.dat"
+               ORGANIZATION IS LINE SEQUENTIAL.
 
        DATA DIVISION.
        FILE SECTION.
@@ -23,6 +26,9 @@
 
        FD ACCOUNTS-FILE.
        01 ACCT-RECORD                      PIC X(4000).
+
+       FD REQUEST-FILE.
+       01 REQUEST-LINE     PIC X(50).
 
        WORKING-STORAGE SECTION.
 
@@ -49,6 +55,11 @@
        01 WS-J                             PIC 99 VALUE 0.
        01 WS-K                             PIC 99 VALUE 0.
        01 WS-LEN                           PIC 99 VALUE 0.
+       01 WS-SENDER                        PIC X(20).
+       01 WS-RECEIVER                      PIC X(20).
+       01 WS-FOUND                         PIC 9 VALUE 0.
+       01 WS-EOF                           PIC 9 VALUE 0.
+       01 REQUEST-LINE                     PIC X(50).
        01 WS-CH                            PIC X  VALUE SPACE.
        01 HAS-UPPER                        PIC 9  VALUE 0.
        01 HAS-DIGIT                        PIC 9  VALUE 0.
@@ -951,6 +962,7 @@
            .
 
        FIND-SOMEONE.
+           *> Prompt for the user to enter the first and last name of the profile they want to find, then search through the loaded profiles for a match. If found, display the profile information.
            MOVE "Enter first name to search:" TO WS-OUT
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
@@ -1096,8 +1108,64 @@
                    END-PERFORM
                END-IF
 
+               *> Check and handle connection requests
+               PERFORM CHECK-REQUESTS
+
            ELSE
                MOVE "No profile found." TO WS-OUT
                PERFORM PRINT-LINE
+           END-IF
+           .
+
+       CHECK-REQUESTS.
+           MOVE 0 TO WS-FOUND
+           MOVE 0 TO WS-EOF
+
+           IF WS-SEARCH-ID < 1 OR WS-SEARCH-ID > USER-COUNT
+               MOVE "Error: No valid user selected for request." TO WS-OUT
+               PERFORM PRINT-LINE
+               EXIT PARAGRAPH
+           END-IF
+
+           OPEN INPUT REQUEST-FILE
+
+           PERFORM UNTIL WS-EOF = 1 OR WS-FOUND = 1
+               READ REQUEST-FILE
+                   AT END
+                       MOVE 1 TO WS-EOF
+                   NOT AT END
+                       UNSTRING REQUEST-LINE DELIMITED BY ","
+                           INTO WS-SENDER WS-RECEIVER
+                       END-UNSTRING
+
+                       IF WS-SENDER = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                          AND WS-RECEIVER = FUNCTION TRIM(U-NAME(WS-SEARCH-ID))
+                           DISPLAY "You already sent a request."
+                           MOVE 1 TO WS-FOUND
+                       END-IF
+
+                       IF WS-SENDER = FUNCTION TRIM(U-NAME(WS-SEARCH-ID))
+                          AND WS-RECEIVER = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                           DISPLAY "This user has already sent you a request."
+                           MOVE 1 TO WS-FOUND
+                       END-IF
+               END-READ
+           END-PERFORM
+
+           CLOSE REQUEST-FILE
+
+           IF WS-FOUND = 0
+               OPEN EXTEND REQUEST-FILE
+
+               STRING FUNCTION TRIM(U-NAME(CURRENT-USER-ID)) ","
+                      FUNCTION TRIM(U-NAME(WS-SEARCH-ID))
+                      DELIMITED BY SIZE
+                      INTO REQUEST-LINE
+               END-STRING
+
+               WRITE REQUEST-LINE
+               CLOSE REQUEST-FILE
+
+               DISPLAY "Connection request sent to " FUNCTION TRIM(U-NAME(WS-SEARCH-ID))
            END-IF
            .
