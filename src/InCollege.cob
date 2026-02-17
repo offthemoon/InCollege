@@ -571,7 +571,9 @@
                PERFORM PRINT-LINE
                MOVE "5. Learn a new skill" TO WS-OUT
                PERFORM PRINT-LINE
-               MOVE "6. Logout" TO WS-OUT
+               MOVE "6. View My Pending Connection Requests" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "7. Logout" TO WS-OUT
                PERFORM PRINT-LINE
                MOVE "Enter your choice:" TO WS-OUT
                PERFORM PRINT-LINE
@@ -592,6 +594,8 @@
                    WHEN 5
                        PERFORM LEARN-SKILL-MENU
                    WHEN 6
+                       PERFORM VIEW-PENDING-REQUESTS
+                   WHEN 7
                        EXIT PARAGRAPH
                    WHEN OTHER
                        CONTINUE
@@ -1094,6 +1098,23 @@
                        MOVE "----------------------------" TO WS-OUT
                        PERFORM PRINT-LINE
                    END-PERFORM
+               END-IF
+
+               MOVE "1. Send Connection Request" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "2. Back to Main Menu" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "Enter your choice:" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               PERFORM GET-CHOICE-1DIGIT
+
+               IF CHOICE = 1
+                   MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                       TO SR-SENDER
+                   MOVE FUNCTION TRIM(U-NAME(WS-SEARCH-ID))
+                       TO SR-RECIPIENT
+                   PERFORM SEND-REQUEST
                END-IF
 
            ELSE
