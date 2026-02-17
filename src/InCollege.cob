@@ -11,6 +11,10 @@
            SELECT ACCOUNTS-FILE ASSIGN TO "accounts_info.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS ACCOUNTS-STATUS.
+      *>   Week 4: New file for Connection Requests
+           SELECT REQUESTS-FILE ASSIGN TO "pending_requests.dat"
+               ORGANIZATION IS LINE SEQUENTIAL
+               FILE STATUS IS REQUESTS-STATUS.
 
        DATA DIVISION.
        FILE SECTION.
@@ -24,9 +28,13 @@
        FD ACCOUNTS-FILE.
        01 ACCT-RECORD                      PIC X(4000).
 
+       FD REQUESTS-FILE.
+       01 REQ-RECORD                       PIC X(100).
+
        WORKING-STORAGE SECTION.
 
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
+       01 REQUESTS-STATUS                  PIC XX VALUE "00".
        01 INFILE-EOF                       PIC 9 VALUE 0.
 
        01 INPUT-FILENAME                   PIC X(120) VALUE "InCollege-Input.txt".
@@ -71,6 +79,18 @@
        01 EXP-PTR                          PIC 9(4) VALUE 1.
        01 EDU-PTR                          PIC 9(4) VALUE 1.
 
+      *> Variables for Connection Requests (Week 4)
+       01 REQ-MAX                          PIC 99 VALUE 25.
+       01 PENDING-REQUESTS.
+           05 PEND-ENTRY OCCURS 25 TIMES.
+               10 PEND-FROM                PIC X(15).
+               10 PEND-TO                  PIC X(15).
+       01 PEND-COUNT                       PIC 99 VALUE 0.
+       01 SR-SENDER                        PIC X(15) VALUE SPACES.
+       01 SR-RECIPIENT                     PIC X(15) VALUE SPACES.
+       01 SR-VALID                         PIC 9 VALUE 0.
+       01 VR-FOUND                         PIC 9 VALUE 0.
+
        01 USERS.
            05 USER-ENTRY OCCURS 5 TIMES.
                10 U-NAME                   PIC X(15).
@@ -102,6 +122,8 @@
            OPEN OUTPUT OUTPUT-FILE
            PERFORM ENSURE-ACCOUNTS-FILE
            PERFORM LOAD-ACCOUNTS
+           PERFORM ENSURE-REQUESTS-FILE
+           PERFORM LOAD-REQUESTS
            PERFORM MAIN-MENU
            PERFORM END-PROGRAM
            .
@@ -1122,3 +1144,6 @@
                PERFORM PRINT-LINE
            END-IF
            .
+
+       COPY "SENDREQ.CPY".
+       COPY "VIEWREQ.CPY".
