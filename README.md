@@ -62,6 +62,8 @@ In terminal enter ```./bin/InCollege```
 ## Features implemented
 - Week 1: User login, account creation, input/output handling
 - Week 2: Profile creation and editing, optional sections (About Me, Experience, Education), profile viewing
+- Week 3: Enhanced profile viewing (complete profile display), basic user search by full name, exact match search results, dual I/O consistency for profile viewing and search functionality
+- Week 4: Send connection requests, store pending requests, view received connection requests
 
 ## Weekly Epics
 
@@ -81,4 +83,33 @@ In terminal enter ```./bin/InCollege```
 - Persistent storage of profile data linked to user accounts
 - Profile viewing functionality
 - Continued file-based input and output handling
+
+### Week 3 – Profile Viewing & Basic Search 
+**Tasks Completed:**
+- Enhanced "View My Profile" option to display complete saved profile information
+- Display of all required fields: First Name, Last Name, University/College, Major, Graduation Year
+- Display of optional sections: About Me, Experience, and Education entries
+- Clear and readable formatting of profile output in the console
+- Implemented functional "Find someone you know" feature
+- Exact match search by full name (First Name + Last Name)
+- Sequential scan of stored user account/profile data to locate matches
+- Display of full profile information when a matching user is found
+- Message shown when no matching user exists
+- Continued file-based input handling for menu selections and search queries
+- All output displayed on screen and written identically to the output file
+- Integrated search feature into the post-login menu flow
+- Program returns to main menu after profile viewing or search operations
+
+### Week 4 – Connection Requests  
+**Tasks Completed:**
+- Implemented option to send a connection request after viewing another user's profile  
+- Display confirmation message when a request is sent  
+- Stored pending connection requests persistently using a file  
+- Added menu option to view received connection requests  
+- Display list of users who have sent pending requests  
+- Show message when no pending requests exist  
+- Basic validation to prevent duplicate or invalid requests  
+- Continued file-based input handling for request actions  
+- All output displayed on screen and written identically to the output file  
+
 
