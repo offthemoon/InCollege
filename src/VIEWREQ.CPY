@@ -1,39 +1,3 @@
-      *> ============================================================
-      *> VIEWREQ.CPY - Copybook for Viewing Incoming Connection Requests
-      *> Handles: displaying all pending requests received by the
-      *>          currently logged-in user from requests.dat
-      *>
-      *> PARAGRAPHS PROVIDED:
-      *>   VIEW-PENDING-REQUESTS - displays all incoming requests for
-      *>                           the logged-in user, or a message if
-      *>                           none exist. Includes Back to Main Menu.
-      *>
-      *> DEPENDS ON (defined in InCollege.cob or SENDREQ.CPY):
-      *>   PENDING-REQUESTS table (PEND-FROM, PEND-TO, PEND-COUNT)
-      *>   CURRENT-USER-ID, U-NAME
-      *>   WS-OUT, WS-K
-      *>   PRINT-LINE, GET-CHOICE-1DIGIT
-      *> ============================================================
-
-      *> ============================================================
-      *> WORKING-STORAGE variable (COPY into WS SECTION of .cob)
-      *> ============================================================
-
-       01 VR-FOUND                     PIC 9 VALUE 0.
-      *>   0 = no incoming requests found for this user
-      *>   1 = at least one incoming request was displayed
-
-      *> ============================================================
-      *> PROCEDURE DIVISION paragraph
-      *> ============================================================
-
-      *> ------------------------------------------------------------
-      *> VIEW-PENDING-REQUESTS
-      *>   Loops through the in-memory PENDING-REQUESTS table and
-      *>   displays every entry where PEND-TO = logged-in user.
-      *>   If none are found, displays a "no pending requests" message.
-      *>   Always shows "1. Back to Main Menu" at the end.
-      *> ------------------------------------------------------------
        VIEW-PENDING-REQUESTS.
            MOVE "--- Pending Connection Requests ---" TO WS-OUT
            PERFORM PRINT-LINE
