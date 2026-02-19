@@ -1,5 +1,5 @@
-Jasmine Kaur Kohli - Scrum Master 
-Roy Ibarra - Developer #1
-Aarav Jain - Developer #2
-Samuel Johnson - Tester #1
-Riham Khan - Tester #2
+Scrum Master - Samuel Johnson
+Dev 1 - Riham Khan
+Dev 2 - Jasmine Kohli
+Test 1 - Aarav Jain
+Test 2 - Roy Ibarra

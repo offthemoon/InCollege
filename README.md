@@ -1,6 +1,6 @@
 # InCollege Project (COBOL)
 
-InCollege is a university-focused professional networking system implemented in COBOL. 
+InCollege is a university-focused professional networking system implemented in COBOL.
 This repository contains the core functionality for user login, account creation,
 input/output formats, and associated test cases.
 
@@ -8,8 +8,10 @@ Project Structure
 
 ```
 ├── bin/                        # Compiled executable files
-├── src/                    
+├── src/
 │   ├── InCollege.cob           # Source COBOL code
+│   ├── SENDREQ.CPY             # Source COBOL code for sending connection requests
+│   ├── VIEWREQ.CPY             # COBOL code fore viewing connection requests
 ├── Roles.txt                   # Team roles
 ├── Epic1-Storyx-Test-Input     # Sample test inputs for Week 1
 ├── Epic1-Storyx-Test-Output    # Sample test outputs for Week 1
@@ -17,9 +19,11 @@ Project Structure
 ├── Epic2-Storyx-Test-Output    # Sample test outputs for Week 2
 ├── Epic3-Storyx-Test-Input     # Sample test inputs for Week 3
 ├── Epic3-Storyx-Test-Output    # Sample test outputs for Week 3
-├── accounts_info.dat           # Stored account information for Week 1,2 and 3 test cases
-├── InCollege-Input.txt         # Example input for Week 3
-├── InCollege-Output.txt        # Example output for Week 3
+├── Epic4-Storyx-Test-Input     # Sample test inputs for Week 4
+├── Epic4-Storyx-Test-Output    # Sample test outputs for Week 4
+├── accounts_info.dat           # Stored account information for Week 1,2, 3, 4 test cases
+├── InCollege-Input.txt         # Example input for Week 4
+├── InCollege-Output.txt        # Example output for Week 4
 └── README.md                   # This file
 ```
 
@@ -84,7 +88,7 @@ In terminal enter ```./bin/InCollege```
 - Profile viewing functionality
 - Continued file-based input and output handling
 
-### Week 3 – Profile Viewing & Basic Search 
+### Week 3 – Profile Viewing & Basic Search
 **Tasks Completed:**
 - Enhanced "View My Profile" option to display complete saved profile information
 - Display of all required fields: First Name, Last Name, University/College, Major, Graduation Year
@@ -100,16 +104,18 @@ In terminal enter ```./bin/InCollege```
 - Integrated search feature into the post-login menu flow
 - Program returns to main menu after profile viewing or search operations
 
-### Week 4 – Connection Requests  
+### Week 4 – Connection Requests
 **Tasks Completed:**
-- Implemented option to send a connection request after viewing another user's profile  
-- Display confirmation message when a request is sent  
-- Stored pending connection requests persistently using a file  
-- Added menu option to view received connection requests  
-- Display list of users who have sent pending requests  
-- Show message when no pending requests exist  
-- Basic validation to prevent duplicate or invalid requests  
-- Continued file-based input handling for request actions  
-- All output displayed on screen and written identically to the output file  
+- Implemented option to send a connection request after viewing another user's profile
+- Display confirmation message when a request is sent
+- Stored pending connection requests persistently using a file
+- Added menu option to view received connection requests
+- Display list of users who have sent pending requests
+- Show message when no pending requests exist
+- Basic validation to prevent duplicate or invalid requests
+- Continued file-based input handling for request actions
+- All output displayed on screen and written identically to the output file
 
 
+### Week 5 – Connection Requests
+**Tasks Completed:**
