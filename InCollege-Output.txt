@@ -19,7 +19,12 @@ You have successfully logged in.
 Enter your choice:
 6
 --- Pending Connection Requests ---
-You have no pending connection requests at this time.
+Request from: Jasmine
+1. Accept
+2. Reject
+Enter your choice for Jasmine:
+2
+Connection request from Jasmine rejected.
 -----------------------------------
 1. Create/Edit My Profile
 2. View My Profile
@@ -29,11 +34,11 @@ You have no pending connection requests at this time.
 6. View My Pending Connection Requests
 7. Logout
 Enter your choice:
-1
---- Create/Edit Profile ---
-Enter First Name:
 7
-Enter Last Name:
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
 3
-Enter University/College Attended:
 --- END_OF_PROGRAM_EXECUTION ---
