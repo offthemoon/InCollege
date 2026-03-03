@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Samuel
+Roy
 Please enter your password:
-$@Mue12026
+Roy@1234
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -19,11 +19,7 @@ You have successfully logged in.
 Enter your choice:
 6
 --- Pending Connection Requests ---
-Request from: Roy
-1. Accept
-2. Reject
-Enter your choice for Roy:
-7
+You have no pending connection requests at this time.
 -----------------------------------
 1. Create/Edit My Profile
 2. View My Profile
@@ -33,14 +29,11 @@ Enter your choice for Roy:
 6. View My Pending Connection Requests
 7. Logout
 Enter your choice:
+1
+--- Create/Edit Profile ---
+Enter First Name:
+7
+Enter Last Name:
 3
-Job search/internship is under construction.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. Logout
-Enter your choice:
+Enter University/College Attended:
 --- END_OF_PROGRAM_EXECUTION ---
