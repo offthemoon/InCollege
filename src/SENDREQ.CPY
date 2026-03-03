@@ -60,6 +60,16 @@
                EXIT PARAGRAPH
            END-IF
 
+      *> Check if already connected
+           PERFORM ARE-CONNECTED
+           IF VN-FOUND = 1
+               MOVE 0 TO SR-VALID
+               MOVE "You are already connected with this user."
+                   TO WS-OUT
+               PERFORM PRINT-LINE
+               EXIT PARAGRAPH
+           END-IF
+
            IF PEND-COUNT > 0
                PERFORM VARYING WS-K FROM 1 BY 1
                    UNTIL WS-K > PEND-COUNT

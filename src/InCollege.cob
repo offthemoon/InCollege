@@ -8,13 +8,17 @@
                ORGANIZATION IS LINE SEQUENTIAL.
            SELECT OUTPUT-FILE ASSIGN TO OUTPUT-FILENAME
                ORGANIZATION IS LINE SEQUENTIAL.
-           SELECT ACCOUNTS-FILE ASSIGN TO "accounts_info.dat"
+           SELECT ACCOUNTS-FILE ASSIGN TO "src/accounts_info.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS ACCOUNTS-STATUS.
       *>   Week 4: New file for Connection Requests
-           SELECT REQUESTS-FILE ASSIGN TO "pending_requests.dat"
+           SELECT REQUESTS-FILE ASSIGN TO "src/pending_requests.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS REQUESTS-STATUS.
+      *>   Week 5: New file for Established Connections
+           SELECT CONNECTS-FILE ASSIGN TO "src/connections.dat"
+               ORGANIZATION IS LINE SEQUENTIAL
+               FILE STATUS IS CONNECTS-STATUS.
 
        DATA DIVISION.
        FILE SECTION.
@@ -31,10 +35,14 @@
        FD REQUESTS-FILE.
        01 REQ-RECORD                       PIC X(100).
 
+       FD CONNECTS-FILE.
+       01 CONN-RECORD                      PIC X(100).
+
        WORKING-STORAGE SECTION.
 
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
+       01 CONNECTS-STATUS                  PIC XX VALUE "00".
        01 INFILE-EOF                       PIC 9 VALUE 0.
 
        01 INPUT-FILENAME                   PIC X(120) VALUE "InCollege-Input.txt".
@@ -91,6 +99,15 @@
        01 SR-VALID                         PIC 9 VALUE 0.
        01 VR-FOUND                         PIC 9 VALUE 0.
 
+      *> Variables for Established Connections (Week 5)
+       01 CONN-MAX                         PIC 99 VALUE 25.
+       01 ESTABLISHED-CONNECTS.
+           05 CONN-ENTRY OCCURS 25 TIMES.
+               10 CONN-USER1               PIC X(15).
+               10 CONN-USER2               PIC X(15).
+       01 CONN-COUNT                       PIC 99 VALUE 0.
+       01 VN-FOUND                         PIC 9 VALUE 0.
+
        01 USERS.
            05 USER-ENTRY OCCURS 5 TIMES.
                10 U-NAME                   PIC X(15).
@@ -124,6 +141,8 @@
            PERFORM LOAD-ACCOUNTS
            PERFORM ENSURE-REQUESTS-FILE
            PERFORM LOAD-REQUESTS
+           PERFORM ENSURE-CONNECTS-FILE
+           PERFORM LOAD-CONNECTS
            PERFORM MAIN-MENU
            PERFORM END-PROGRAM
            .
@@ -620,7 +639,7 @@
                    WHEN 6
                        PERFORM VIEW-PENDING-REQUESTS
                    WHEN 7
-                       PERFORM LEARN-SKILL-MENU
+                       PERFORM VIEW-NETWORK
                    WHEN 8
                        EXIT PARAGRAPH
                    WHEN OTHER
@@ -1149,6 +1168,6 @@
            END-IF
            .
 
-       COPY "SENDREQ.CPY".
-       COPY "VIEWREQ.CPY".
-       COPY "VIEWNET.CPY".
+       COPY "src/SENDREQ.CPY".
+       COPY "src/VIEWREQ.CPY".
+       COPY "src/VIEWNET.CPY".
