@@ -620,7 +620,7 @@
                    WHEN 6
                        PERFORM VIEW-PENDING-REQUESTS
                    WHEN 7
-                       PERFORM VIEW-NETWORK
+                       PERFORM LEARN-SKILL-MENU
                    WHEN 8
                        EXIT PARAGRAPH
                    WHEN OTHER
@@ -1151,3 +1151,4 @@
 
        COPY "SENDREQ.CPY".
        COPY "VIEWREQ.CPY".
+       COPY "VIEWNET.CPY".
