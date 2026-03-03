@@ -595,7 +595,9 @@
                PERFORM PRINT-LINE
                MOVE "6. View My Pending Connection Requests" TO WS-OUT
                PERFORM PRINT-LINE
-               MOVE "7. Logout" TO WS-OUT
+               MOVE "7. View My Network" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "8. Logout" TO WS-OUT
                PERFORM PRINT-LINE
                MOVE "Enter your choice:" TO WS-OUT
                PERFORM PRINT-LINE
@@ -618,6 +620,8 @@
                    WHEN 6
                        PERFORM VIEW-PENDING-REQUESTS
                    WHEN 7
+                       PERFORM VIEW-NETWORK
+                   WHEN 8
                        EXIT PARAGRAPH
                    WHEN OTHER
                        CONTINUE
