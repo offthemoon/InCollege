@@ -15,6 +15,10 @@
            SELECT REQUESTS-FILE ASSIGN TO "pending_requests.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS REQUESTS-STATUS.
+      *>   Week 5: New file for Established Connections
+           SELECT CONNECTIONS-FILE ASSIGN TO "connections.dat"
+               ORGANIZATION IS LINE SEQUENTIAL
+               FILE STATUS IS CONNECTIONS-STATUS.
 
        DATA DIVISION.
        FILE SECTION.
@@ -31,10 +35,14 @@
        FD REQUESTS-FILE.
        01 REQ-RECORD                       PIC X(100).
 
+       FD CONNECTIONS-FILE.
+       01 CONN-RECORD                      PIC X(100).
+
        WORKING-STORAGE SECTION.
 
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
+       01 CONNECTIONS-STATUS               PIC XX VALUE "00".
        01 INFILE-EOF                       PIC 9 VALUE 0.
 
        01 INPUT-FILENAME                   PIC X(120) VALUE "InCollege-Input.txt".
@@ -91,6 +99,14 @@
        01 SR-VALID                         PIC 9 VALUE 0.
        01 VR-FOUND                         PIC 9 VALUE 0.
 
+      *> Variables for Established Connections (Week 5)
+       01 CONN-MAX                         PIC 99 VALUE 25.
+       01 CONNECTIONS.
+           05 CONN-ENTRY OCCURS 25 TIMES.
+               10 CONN-USER1               PIC X(15).
+               10 CONN-USER2               PIC X(15).
+       01 CONN-COUNT                       PIC 99 VALUE 0.
+
        01 USERS.
            05 USER-ENTRY OCCURS 5 TIMES.
                10 U-NAME                   PIC X(15).
@@ -124,6 +140,8 @@
            PERFORM LOAD-ACCOUNTS
            PERFORM ENSURE-REQUESTS-FILE
            PERFORM LOAD-REQUESTS
+           PERFORM ENSURE-CONNECTIONS-FILE
+           PERFORM LOAD-CONNECTIONS
            PERFORM MAIN-MENU
            PERFORM END-PROGRAM
            .
@@ -1147,3 +1165,4 @@
 
        COPY "SENDREQ.CPY".
        COPY "VIEWREQ.CPY".
+       COPY "CONNMGMT.CPY".
