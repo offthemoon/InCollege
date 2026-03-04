@@ -36,8 +36,8 @@ Enter your choice:
 Enter your choice:
 7
 --- Your Network ---
-Roy is in your network.
-Jasmine is in your network.
+Connected with: Jasmine (University: University of South Florida, Major: Computer Science)
+Connected with: Roy (University: University of Central Florida, Major: Electrical Engineer)
 --------------------
 1. Back to Main Menu
 Enter your choice:

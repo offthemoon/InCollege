@@ -80,24 +80,48 @@
                    UNTIL WS-K > CONN-COUNT
                    IF FUNCTION TRIM(CONN-USER1(WS-K))
                       = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-                       MOVE SPACES TO WS-OUT
-                       STRING FUNCTION TRIM(CONN-USER2(WS-K))
-                              " is in your network."
-                           DELIMITED BY SIZE
-                           INTO WS-OUT
-                       END-STRING
-                       PERFORM PRINT-LINE
+      *> Find the connected user in USERS array
+                       PERFORM VARYING WS-J FROM 1 BY 1
+                           UNTIL WS-J > 5
+                           IF FUNCTION TRIM(U-NAME(WS-J))
+                              = FUNCTION TRIM(CONN-USER2(WS-K))
+                               MOVE SPACES TO WS-OUT
+                               STRING "Connected with: "
+                                      FUNCTION TRIM(U-NAME(WS-J))
+                                      " (University: "
+                                      FUNCTION TRIM(U-UNIV(WS-J))
+                                      ", Major: "
+                                      FUNCTION TRIM(U-MAJOR(WS-J))
+                                      ")"
+                                   DELIMITED BY SIZE
+                                   INTO WS-OUT
+                               END-STRING
+                               PERFORM PRINT-LINE
+                           END-IF
+                       END-PERFORM
                        MOVE 1 TO VN-FOUND
                    ELSE
                    IF FUNCTION TRIM(CONN-USER2(WS-K))
                       = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-                       MOVE SPACES TO WS-OUT
-                       STRING FUNCTION TRIM(CONN-USER1(WS-K))
-                              " is in your network."
-                           DELIMITED BY SIZE
-                           INTO WS-OUT
-                       END-STRING
-                       PERFORM PRINT-LINE
+      *> Find the connected user in USERS array
+                       PERFORM VARYING WS-J FROM 1 BY 1
+                           UNTIL WS-J > 5
+                           IF FUNCTION TRIM(U-NAME(WS-J))
+                              = FUNCTION TRIM(CONN-USER1(WS-K))
+                               MOVE SPACES TO WS-OUT
+                               STRING "Connected with: "
+                                      FUNCTION TRIM(U-NAME(WS-J))
+                                      " (University: "
+                                      FUNCTION TRIM(U-UNIV(WS-J))
+                                      ", Major: "
+                                      FUNCTION TRIM(U-MAJOR(WS-J))
+                                      ")"
+                                   DELIMITED BY SIZE
+                                   INTO WS-OUT
+                               END-STRING
+                               PERFORM PRINT-LINE
+                           END-IF
+                       END-PERFORM
                        MOVE 1 TO VN-FOUND
                    END-IF
                    END-IF

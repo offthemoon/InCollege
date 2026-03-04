@@ -34,12 +34,12 @@
        SAVE-REQUESTS.
            OPEN OUTPUT REQUESTS-FILE
            IF PEND-COUNT > 0
-               PERFORM VARYING WS-K FROM 1 BY 1
-                   UNTIL WS-K > PEND-COUNT
+               PERFORM VARYING WS-I FROM 1 BY 1
+                   UNTIL WS-I > PEND-COUNT
                    MOVE SPACES TO REQ-RECORD
                    STRING
-                       FUNCTION TRIM(PEND-FROM(WS-K)) "|"
-                       FUNCTION TRIM(PEND-TO(WS-K))
+                       FUNCTION TRIM(PEND-FROM(WS-I)) "|"
+                       FUNCTION TRIM(PEND-TO(WS-I))
                        DELIMITED BY SIZE
                        INTO REQ-RECORD
                    END-STRING
@@ -55,16 +55,6 @@
            IF FUNCTION TRIM(SR-SENDER) = FUNCTION TRIM(SR-RECIPIENT)
                MOVE 0 TO SR-VALID
                MOVE "You cannot send a connection request to yourself."
-                   TO WS-OUT
-               PERFORM PRINT-LINE
-               EXIT PARAGRAPH
-           END-IF
-
-      *> Check if already connected
-           PERFORM ARE-CONNECTED
-           IF VN-FOUND = 1
-               MOVE 0 TO SR-VALID
-               MOVE "You are already connected with this user."
                    TO WS-OUT
                PERFORM PRINT-LINE
                EXIT PARAGRAPH

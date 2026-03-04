@@ -12,8 +12,8 @@
                        MOVE 1 TO VR-FOUND
 
                        MOVE SPACES TO WS-OUT
-                       STRING FUNCTION TRIM(PEND-FROM(WS-K))
-                              " has sent you a connection request."
+                       STRING "Request from: "
+                              FUNCTION TRIM(PEND-FROM(WS-K))
                            DELIMITED BY SIZE
                            INTO WS-OUT
                        END-STRING
@@ -59,17 +59,19 @@
                    TO CONN-USER1(CONN-COUNT)
                MOVE FUNCTION TRIM(PEND-TO(WS-K))
                    TO CONN-USER2(CONN-COUNT)
-               PERFORM SAVE-CONNECTS
 
+      *> Save name before SAVE-CONNECTS changes WS-K
                MOVE SPACES TO WS-OUT
-               STRING "You are now connected with "
-                      FUNCTION TRIM(PEND-FROM(WS-K)) "."
+               STRING "Connection request from "
+                      FUNCTION TRIM(CONN-USER1(CONN-COUNT)) " accepted!"
                    DELIMITED BY SIZE
                    INTO WS-OUT
                END-STRING
+
+               PERFORM SAVE-CONNECTS
                PERFORM PRINT-LINE
            ELSE
-               MOVE "System error: connection limit reached." TO WS-OUT
+               MOVE "Connection limit reached." TO WS-OUT
                PERFORM PRINT-LINE
            END-IF
 
@@ -81,7 +83,7 @@
       *> WS-K holds the index of the request being processed.
            MOVE SPACES TO WS-OUT
            STRING "Connection request from "
-                  FUNCTION TRIM(PEND-FROM(WS-K)) " declined."
+                  FUNCTION TRIM(CONN-USER1(CONN-COUNT)) " declined."
                DELIMITED BY SIZE
                INTO WS-OUT
            END-STRING
