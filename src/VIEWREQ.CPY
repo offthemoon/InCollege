@@ -71,8 +71,9 @@
            END-STRING
            PERFORM PRINT-LINE
 
-      *>   Add to connections file
-           IF CONN-COUNT < 25
+      *>   Add bidirectional connections (two entries)
+           IF CONN-COUNT < 24
+      *>       First direction: Current user -> Requester
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER1(CONN-COUNT)
@@ -89,6 +90,25 @@
                    TO CONN-USER2(CONN-COUNT)
                MOVE FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
                    TO CONN-USER2-LNAME(CONN-COUNT)
+
+      *>       Second direction: Requester -> Current user
+               ADD 1 TO CONN-COUNT
+               MOVE FUNCTION TRIM(PEND-FROM(WS-K))
+                   TO CONN-USER1(CONN-COUNT)
+               MOVE FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
+                   TO CONN-USER1-LNAME(CONN-COUNT)
+               MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                   TO CONN-USER2(CONN-COUNT)
+      *> Find and store current user's last name for second entry
+               PERFORM VARYING WS-J FROM 1 BY 1
+                   UNTIL WS-J > 5
+                   IF FUNCTION TRIM(U-NAME(WS-J))
+                      = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                       MOVE FUNCTION TRIM(U-LNAME(WS-J))
+                           TO CONN-USER2-LNAME(CONN-COUNT)
+                   END-IF
+               END-PERFORM
+
                PERFORM SAVE-CONNECTIONS
            END-IF
 
