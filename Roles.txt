@@ -1,5 +1,5 @@
 Scrum Master - Aarav Jain
 Dev 1 - Samuel Johnson
 Dev 2 - Riham Khan
-Test 1 - Jasmiine Kaur Kohli
+Test 1 - Jasmine Kaur Kohli
 Test 2 - Roy Ibarra
