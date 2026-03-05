@@ -77,15 +77,9 @@
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER1(CONN-COUNT)
-      *>find and store current user's last name
-               PERFORM VARYING WS-J FROM 1 BY 1
-                   UNTIL WS-J > 5
-                   IF FUNCTION TRIM(U-NAME(WS-J))
-                      = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-                       MOVE FUNCTION TRIM(U-LNAME(WS-J))
-                           TO CONN-USER1-LNAME(CONN-COUNT)
-                   END-IF
-               END-PERFORM
+      *>store current user's last name directly (CURRENT-USER-ID is an index)
+               MOVE FUNCTION TRIM(U-LNAME(CURRENT-USER-ID))
+                   TO CONN-USER1-LNAME(CONN-COUNT)
                MOVE FUNCTION TRIM(PEND-FROM(WS-K))
                    TO CONN-USER2(CONN-COUNT)
                MOVE FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
@@ -99,15 +93,9 @@
                    TO CONN-USER1-LNAME(CONN-COUNT)
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER2(CONN-COUNT)
-      *>find and store current user's last name for second entry
-               PERFORM VARYING WS-J FROM 1 BY 1
-                   UNTIL WS-J > 5
-                   IF FUNCTION TRIM(U-NAME(WS-J))
-                      = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-                       MOVE FUNCTION TRIM(U-LNAME(WS-J))
-                           TO CONN-USER2-LNAME(CONN-COUNT)
-                   END-IF
-               END-PERFORM
+      *>store current user's last name directly (CURRENT-USER-ID is an index)
+               MOVE FUNCTION TRIM(U-LNAME(CURRENT-USER-ID))
+                   TO CONN-USER2-LNAME(CONN-COUNT)
 
                PERFORM SAVE-CONNECTIONS
            END-IF

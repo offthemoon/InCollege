@@ -99,6 +99,8 @@
        01 SR-SENDER                        PIC X(15) VALUE SPACES.
        01 SR-RECIPIENT                     PIC X(15) VALUE SPACES.
        01 SR-VALID                         PIC 9 VALUE 0.
+       01 SR-SENDER-ID                     PIC 9 VALUE 0.
+       01 SR-RECIPIENT-ID                  PIC 9 VALUE 0.
        01 VR-FOUND                         PIC 9 VALUE 0.
 
       *>variables for established connections (Week 5)
@@ -1159,8 +1161,10 @@
                IF CHOICE = 1
                    MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                        TO SR-SENDER
+                   MOVE CURRENT-USER-ID TO SR-SENDER-ID
                    MOVE FUNCTION TRIM(U-NAME(WS-SEARCH-ID))
                        TO SR-RECIPIENT
+                   MOVE WS-SEARCH-ID TO SR-RECIPIENT-ID
                    PERFORM SEND-REQUEST
                END-IF
 
