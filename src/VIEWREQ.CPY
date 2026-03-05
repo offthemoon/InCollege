@@ -9,7 +9,7 @@
                    UNTIL WS-K > PEND-COUNT
                    IF FUNCTION TRIM(PEND-TO(WS-K))
                       = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-      *> Find the requesting user in USERS array
+      *>find the requesting user in USERS array
                        PERFORM VARYING WS-J FROM 1 BY 1
                            UNTIL WS-J > 5
                            IF FUNCTION TRIM(U-NAME(WS-J))
@@ -74,28 +74,45 @@
            END-STRING
            PERFORM PRINT-LINE
 
+<<<<<<< HEAD
       *> Add to connections file
            IF CONN-COUNT < 25
+=======
+      *>add bidirectional connections
+           IF CONN-COUNT < 24
+      *>first direction: Current user -> requester
+>>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER1(CONN-COUNT)
-      *> Find and store current user's last name
-               PERFORM VARYING WS-J FROM 1 BY 1
-                   UNTIL WS-J > 5
-                   IF FUNCTION TRIM(U-NAME(WS-J))
-                      = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-                       MOVE FUNCTION TRIM(U-LNAME(WS-J))
-                           TO CONN-USER1-LNAME(CONN-COUNT)
-                   END-IF
-               END-PERFORM
+      *>store current user's last name directly (CURRENT-USER-ID is an index)
+               MOVE FUNCTION TRIM(U-LNAME(CURRENT-USER-ID))
+                   TO CONN-USER1-LNAME(CONN-COUNT)
                MOVE FUNCTION TRIM(PEND-FROM(WS-K))
                    TO CONN-USER2(CONN-COUNT)
                MOVE FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
                    TO CONN-USER2-LNAME(CONN-COUNT)
+
+      *>second direction: requester -> current user
+               ADD 1 TO CONN-COUNT
+               MOVE FUNCTION TRIM(PEND-FROM(WS-K))
+                   TO CONN-USER1(CONN-COUNT)
+               MOVE FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
+                   TO CONN-USER1-LNAME(CONN-COUNT)
+               MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                   TO CONN-USER2(CONN-COUNT)
+      *>store current user's last name directly (CURRENT-USER-ID is an index)
+               MOVE FUNCTION TRIM(U-LNAME(CURRENT-USER-ID))
+                   TO CONN-USER2-LNAME(CONN-COUNT)
+
                PERFORM SAVE-CONNECTIONS
            END-IF
 
+<<<<<<< HEAD
       *> Remove from pending requests
+=======
+      *>remove from pending requests
+>>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM REMOVE-PENDING-REQUEST
            .
 
@@ -108,12 +125,20 @@
            END-STRING
            PERFORM PRINT-LINE
 
+<<<<<<< HEAD
       *> Remove from pending requests
+=======
+      *>remove from pending requests
+>>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM REMOVE-PENDING-REQUEST
            .
 
        REMOVE-PENDING-REQUEST.
+<<<<<<< HEAD
       *> Shift all requests after WS-K down by one position
+=======
+      *>shift all requests after WS-K down by one position
+>>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM VARYING WS-J FROM WS-K BY 1
                UNTIL WS-J > PEND-COUNT
                IF WS-J < PEND-COUNT
@@ -124,12 +149,17 @@
                END-IF
            END-PERFORM
 
+<<<<<<< HEAD
       *> Clear the last entry
+=======
+      *>clear the last entry
+>>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            MOVE SPACES TO PEND-FROM(PEND-COUNT)
            MOVE SPACES TO PEND-FROM-LNAME(PEND-COUNT)
            MOVE SPACES TO PEND-TO(PEND-COUNT)
            MOVE SPACES TO PEND-TO-LNAME(PEND-COUNT)
 
+<<<<<<< HEAD
       *> Decrement count
            SUBTRACT 1 FROM PEND-COUNT
 
@@ -137,5 +167,14 @@
            SUBTRACT 1 FROM WS-K
 
       *> Save updated pending requests
+=======
+      *>decrement count
+           SUBTRACT 1 FROM PEND-COUNT
+
+      *>also decrement WS-K to stay at same position since we shifted
+           SUBTRACT 1 FROM WS-K
+
+      *>save updated pending requests
+>>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM SAVE-REQUESTS
            .

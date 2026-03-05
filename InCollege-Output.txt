@@ -188,8 +188,8 @@ Request from: Aarav Jain
 1. Accept
 2. Reject
 Enter your choice for Aarav:
-2
-Connection request from Aarav rejected.
+1
+Connection request from Aarav accepted!
 -----------------------------------
 1. Create/Edit My Profile
 2. View My Profile

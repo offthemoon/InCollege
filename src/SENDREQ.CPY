@@ -103,24 +103,12 @@
                        TO PEND-FROM(PEND-COUNT)
                    MOVE FUNCTION TRIM(SR-RECIPIENT)
                        TO PEND-TO(PEND-COUNT)
-      *> Find and store sender's last name
-                   PERFORM VARYING WS-J FROM 1 BY 1
-                       UNTIL WS-J > 5
-                       IF FUNCTION TRIM(U-NAME(WS-J))
-                          = FUNCTION TRIM(SR-SENDER)
-                           MOVE FUNCTION TRIM(U-LNAME(WS-J))
-                               TO PEND-FROM-LNAME(PEND-COUNT)
-                       END-IF
-                   END-PERFORM
-      *> Find and store recipient's last name
-                   PERFORM VARYING WS-J FROM 1 BY 1
-                       UNTIL WS-J > 5
-                       IF FUNCTION TRIM(U-NAME(WS-J))
-                          = FUNCTION TRIM(SR-RECIPIENT)
-                           MOVE FUNCTION TRIM(U-LNAME(WS-J))
-                               TO PEND-TO-LNAME(PEND-COUNT)
-                       END-IF
-                   END-PERFORM
+      *>store sender's last name directly using SR-SENDER-ID
+                   MOVE FUNCTION TRIM(U-LNAME(SR-SENDER-ID))
+                       TO PEND-FROM-LNAME(PEND-COUNT)
+      *>store recipient's last name directly using SR-RECIPIENT-ID
+                   MOVE FUNCTION TRIM(U-LNAME(SR-RECIPIENT-ID))
+                       TO PEND-TO-LNAME(PEND-COUNT)
                    PERFORM SAVE-REQUESTS
 
                    MOVE SPACES TO WS-OUT
