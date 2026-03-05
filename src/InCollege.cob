@@ -16,7 +16,7 @@
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS REQUESTS-STATUS.
       *>   Week 5: New file for Established Connections
-           SELECT CONNECTIONS-FILE ASSIGN TO "connections.dat"
+           SELECT CONNECTIONS-FILE ASSIGN TO "src/connections.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS CONNECTIONS-STATUS.
 
@@ -92,7 +92,9 @@
        01 PENDING-REQUESTS.
            05 PEND-ENTRY OCCURS 25 TIMES.
                10 PEND-FROM                PIC X(15).
+               10 PEND-FROM-LNAME          PIC X(15).
                10 PEND-TO                  PIC X(15).
+               10 PEND-TO-LNAME            PIC X(15).
        01 PEND-COUNT                       PIC 99 VALUE 0.
        01 SR-SENDER                        PIC X(15) VALUE SPACES.
        01 SR-RECIPIENT                     PIC X(15) VALUE SPACES.
@@ -104,7 +106,9 @@
        01 ESTABLISHED-CONNECTS.
            05 CONN-ENTRY OCCURS 25 TIMES.
                10 CONN-USER1               PIC X(15).
+               10 CONN-USER1-LNAME         PIC X(15).
                10 CONN-USER2               PIC X(15).
+               10 CONN-USER2-LNAME         PIC X(15).
        01 CONN-COUNT                       PIC 99 VALUE 0.
        01 VN-FOUND                         PIC 9 VALUE 0.
 

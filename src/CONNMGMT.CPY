@@ -20,10 +20,14 @@
                        IF CONN-COUNT < 25
                            ADD 1 TO CONN-COUNT
                            MOVE SPACES TO CONN-USER1(CONN-COUNT)
+                           MOVE SPACES TO CONN-USER1-LNAME(CONN-COUNT)
                            MOVE SPACES TO CONN-USER2(CONN-COUNT)
+                           MOVE SPACES TO CONN-USER2-LNAME(CONN-COUNT)
                            UNSTRING CONN-RECORD DELIMITED BY "|"
                                INTO CONN-USER1(CONN-COUNT)
+                                    CONN-USER1-LNAME(CONN-COUNT)
                                     CONN-USER2(CONN-COUNT)
+                                    CONN-USER2-LNAME(CONN-COUNT)
                            END-UNSTRING
                        END-IF
                END-READ
@@ -39,7 +43,9 @@
                    MOVE SPACES TO CONN-RECORD
                    STRING
                        FUNCTION TRIM(CONN-USER1(WS-J)) "|"
-                       FUNCTION TRIM(CONN-USER2(WS-J))
+                       FUNCTION TRIM(CONN-USER1-LNAME(WS-J)) "|"
+                       FUNCTION TRIM(CONN-USER2(WS-J)) "|"
+                       FUNCTION TRIM(CONN-USER2-LNAME(WS-J))
                        DELIMITED BY SIZE
                        INTO CONN-RECORD
                    END-STRING

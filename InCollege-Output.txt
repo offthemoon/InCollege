@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Samuel
+Roy
 Please enter your password:
-$@Mue12026
+Roy@1234
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -20,15 +20,24 @@ You have successfully logged in.
 Enter your choice:
 6
 --- Pending Connection Requests ---
-Request from: Roy
-  1. Accept   2. Reject
-Enter your choice:
-1
-Connection request from Roy accepted!
+You have no pending connection requests at this time.
 -----------------------------------
-1. Back to Main Menu
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
 Enter your choice:
 7
+--- Your Network ---
+Connected with: Samuel Johnson (University: Georgia Institute of Technology, Major: Mechanical Engineer)
+--------------------
+1. Back to Main Menu
+Enter your choice:
+1
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job

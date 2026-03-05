@@ -9,13 +9,22 @@
                    UNTIL WS-K > PEND-COUNT
                    IF FUNCTION TRIM(PEND-TO(WS-K))
                       = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-                       MOVE SPACES TO WS-OUT
-                       STRING "Request from: "
-                              FUNCTION TRIM(PEND-FROM(WS-K))
-                           DELIMITED BY SIZE
-                           INTO WS-OUT
-                       END-STRING
-                       PERFORM PRINT-LINE
+      *> Find the requesting user in USERS array
+                       PERFORM VARYING WS-J FROM 1 BY 1
+                           UNTIL WS-J > 5
+                           IF FUNCTION TRIM(U-NAME(WS-J))
+                              = FUNCTION TRIM(PEND-FROM(WS-K))
+                               MOVE SPACES TO WS-OUT
+                               STRING "Request from: "
+                                      FUNCTION TRIM(PEND-FROM(WS-K))
+                                      " "
+                                      FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
+                                   DELIMITED BY SIZE
+                                   INTO WS-OUT
+                               END-STRING
+                               PERFORM PRINT-LINE
+                           END-IF
+                       END-PERFORM
 
                        MOVE "1. Accept" TO WS-OUT
                        PERFORM PRINT-LINE
@@ -67,8 +76,19 @@
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER1(CONN-COUNT)
+      *> Find and store current user's last name
+               PERFORM VARYING WS-J FROM 1 BY 1
+                   UNTIL WS-J > 5
+                   IF FUNCTION TRIM(U-NAME(WS-J))
+                      = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+                       MOVE FUNCTION TRIM(U-LNAME(WS-J))
+                           TO CONN-USER1-LNAME(CONN-COUNT)
+                   END-IF
+               END-PERFORM
                MOVE FUNCTION TRIM(PEND-FROM(WS-K))
                    TO CONN-USER2(CONN-COUNT)
+               MOVE FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
+                   TO CONN-USER2-LNAME(CONN-COUNT)
                PERFORM SAVE-CONNECTIONS
            END-IF
 

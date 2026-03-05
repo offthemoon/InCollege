@@ -36,7 +36,9 @@
                               = FUNCTION TRIM(CONN-USER2(WS-K))
                                MOVE SPACES TO WS-OUT
                                STRING "Connected with: "
-                                      FUNCTION TRIM(U-NAME(WS-J))
+                                      FUNCTION TRIM(CONN-USER2(WS-K))
+                                      " "
+                                      FUNCTION TRIM(CONN-USER2-LNAME(WS-K))
                                       " (University: "
                                       FUNCTION TRIM(U-UNIV(WS-J))
                                       ", Major: "
@@ -59,7 +61,9 @@
                               = FUNCTION TRIM(CONN-USER1(WS-K))
                                MOVE SPACES TO WS-OUT
                                STRING "Connected with: "
-                                      FUNCTION TRIM(U-NAME(WS-J))
+                                      FUNCTION TRIM(CONN-USER1(WS-K))
+                                      " "
+                                      FUNCTION TRIM(CONN-USER1-LNAME(WS-K))
                                       " (University: "
                                       FUNCTION TRIM(U-UNIV(WS-J))
                                       ", Major: "

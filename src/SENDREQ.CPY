@@ -20,10 +20,14 @@
                        IF PEND-COUNT < 25
                            ADD 1 TO PEND-COUNT
                            MOVE SPACES TO PEND-FROM(PEND-COUNT)
+                           MOVE SPACES TO PEND-FROM-LNAME(PEND-COUNT)
                            MOVE SPACES TO PEND-TO(PEND-COUNT)
+                           MOVE SPACES TO PEND-TO-LNAME(PEND-COUNT)
                            UNSTRING REQ-RECORD DELIMITED BY "|"
                                INTO PEND-FROM(PEND-COUNT)
+                                    PEND-FROM-LNAME(PEND-COUNT)
                                     PEND-TO(PEND-COUNT)
+                                    PEND-TO-LNAME(PEND-COUNT)
                            END-UNSTRING
                        END-IF
                END-READ
@@ -39,7 +43,9 @@
                    MOVE SPACES TO REQ-RECORD
                    STRING
                        FUNCTION TRIM(PEND-FROM(WS-I)) "|"
-                       FUNCTION TRIM(PEND-TO(WS-I))
+                       FUNCTION TRIM(PEND-FROM-LNAME(WS-I)) "|"
+                       FUNCTION TRIM(PEND-TO(WS-I)) "|"
+                       FUNCTION TRIM(PEND-TO-LNAME(WS-I))
                        DELIMITED BY SIZE
                        INTO REQ-RECORD
                    END-STRING
@@ -97,6 +103,24 @@
                        TO PEND-FROM(PEND-COUNT)
                    MOVE FUNCTION TRIM(SR-RECIPIENT)
                        TO PEND-TO(PEND-COUNT)
+      *> Find and store sender's last name
+                   PERFORM VARYING WS-J FROM 1 BY 1
+                       UNTIL WS-J > 5
+                       IF FUNCTION TRIM(U-NAME(WS-J))
+                          = FUNCTION TRIM(SR-SENDER)
+                           MOVE FUNCTION TRIM(U-LNAME(WS-J))
+                               TO PEND-FROM-LNAME(PEND-COUNT)
+                       END-IF
+                   END-PERFORM
+      *> Find and store recipient's last name
+                   PERFORM VARYING WS-J FROM 1 BY 1
+                       UNTIL WS-J > 5
+                       IF FUNCTION TRIM(U-NAME(WS-J))
+                          = FUNCTION TRIM(SR-RECIPIENT)
+                           MOVE FUNCTION TRIM(U-LNAME(WS-J))
+                               TO PEND-TO-LNAME(PEND-COUNT)
+                       END-IF
+                   END-PERFORM
                    PERFORM SAVE-REQUESTS
 
                    MOVE SPACES TO WS-OUT
