@@ -69,7 +69,7 @@ You have successfully logged in.
 Enter your choice:
 6
 --- Pending Connection Requests ---
-Request from: Aarav
+Request from: Aarav Jain
 1. Accept
 2. Reject
 Enter your choice for Aarav:

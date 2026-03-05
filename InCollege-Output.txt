@@ -184,7 +184,7 @@ Request from: Jasmine Kohli
 Enter your choice for Jasmine:
 1
 Connection request from Jasmine accepted!
-Request from: Aarav Kohli
+Request from: Aarav Jain
 1. Accept
 2. Reject
 Enter your choice for Aarav:

@@ -14,6 +14,8 @@
                            UNTIL WS-J > 5
                            IF FUNCTION TRIM(U-NAME(WS-J))
                               = FUNCTION TRIM(PEND-FROM(WS-K))
+                               MOVE FUNCTION TRIM(U-LNAME(WS-J))
+                                   TO PEND-FROM-LNAME(WS-K)
                                MOVE SPACES TO WS-OUT
                                STRING "Request from: "
                                       FUNCTION TRIM(PEND-FROM(WS-K))
@@ -23,6 +25,7 @@
                                    INTO WS-OUT
                                END-STRING
                                PERFORM PRINT-LINE
+                               EXIT PERFORM
                            END-IF
                        END-PERFORM
 
@@ -71,7 +74,7 @@
            END-STRING
            PERFORM PRINT-LINE
 
-      *>   Add to connections file
+      *> Add to connections file
            IF CONN-COUNT < 25
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
@@ -92,7 +95,7 @@
                PERFORM SAVE-CONNECTIONS
            END-IF
 
-      *>   Remove from pending requests
+      *> Remove from pending requests
            PERFORM REMOVE-PENDING-REQUEST
            .
 
@@ -105,30 +108,34 @@
            END-STRING
            PERFORM PRINT-LINE
 
-      *>   Remove from pending requests
+      *> Remove from pending requests
            PERFORM REMOVE-PENDING-REQUEST
            .
 
        REMOVE-PENDING-REQUEST.
-      *>   Shift all requests after WS-K down by one position
+      *> Shift all requests after WS-K down by one position
            PERFORM VARYING WS-J FROM WS-K BY 1
                UNTIL WS-J > PEND-COUNT
                IF WS-J < PEND-COUNT
                    MOVE PEND-FROM(WS-J + 1) TO PEND-FROM(WS-J)
+                   MOVE PEND-FROM-LNAME(WS-J + 1) TO PEND-FROM-LNAME(WS-J)
                    MOVE PEND-TO(WS-J + 1) TO PEND-TO(WS-J)
+                   MOVE PEND-TO-LNAME(WS-J + 1) TO PEND-TO-LNAME(WS-J)
                END-IF
            END-PERFORM
 
-      *>   Clear the last entry
+      *> Clear the last entry
            MOVE SPACES TO PEND-FROM(PEND-COUNT)
+           MOVE SPACES TO PEND-FROM-LNAME(PEND-COUNT)
            MOVE SPACES TO PEND-TO(PEND-COUNT)
+           MOVE SPACES TO PEND-TO-LNAME(PEND-COUNT)
 
-      *>   Decrement count
+      *> Decrement count
            SUBTRACT 1 FROM PEND-COUNT
 
-      *>   Also decrement WS-K to stay at same position since we shifted
+      *> Also decrement WS-K to stay at same position since we shifted
            SUBTRACT 1 FROM WS-K
 
-      *>   Save updated pending requests
+      *> Save updated pending requests
            PERFORM SAVE-REQUESTS
            .

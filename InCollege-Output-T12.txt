@@ -21,7 +21,7 @@ Enter your choice:
 7
 --- Your Network ---
 Connected with: Samuel Johnson (University: Georgia Institute of Technology, Major: Mechanical Engineer)
-Connected with: Aarav  (University: , Major: )
+Connected with: Aarav Jain (University: University of South Florida, Major: Information Technology)
 --------------------
 1. Back to Main Menu
 Enter your choice:
