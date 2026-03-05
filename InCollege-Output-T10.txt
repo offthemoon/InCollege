@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Samuel
+Jasmine
 Please enter your password:
-$@Mue12026
+Jas123!me
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -18,31 +18,24 @@ You have successfully logged in.
 7. View My Network
 8. Logout
 Enter your choice:
-7
---- Your Network ---
-You have no connections in your network yet.
---------------------
-1. Back to Main Menu
+6
+--- Pending Connection Requests ---
+You have no pending connection requests at this time.
+-----------------------------------
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
 Enter your choice:
 8
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Logout
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
 3
-Job search/internship is under construction.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Logout
-Enter your choice:
 --- END_OF_PROGRAM_EXECUTION ---

@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Roy
+Riham
 Please enter your password:
-Roy@1234
+RihaM!99
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -20,7 +20,12 @@ You have successfully logged in.
 Enter your choice:
 6
 --- Pending Connection Requests ---
-You have no pending connection requests at this time.
+Request from: Aarav
+1. Accept
+2. Reject
+Enter your choice for Aarav:
+1
+Connection request from Aarav accepted!
 -----------------------------------
 1. Create/Edit My Profile
 2. View My Profile
@@ -31,11 +36,11 @@ You have no pending connection requests at this time.
 7. View My Network
 8. Logout
 Enter your choice:
-1
---- Create/Edit Profile ---
-Enter First Name:
 8
-Enter Last Name:
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
 3
-Enter University/College Attended:
 --- END_OF_PROGRAM_EXECUTION ---

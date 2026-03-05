@@ -5,9 +5,107 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Roy
+Riham
 Please enter your password:
-Roy@1234
+RihaM!99
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+4
+Enter first name to search:
+Samuel
+Enter last name to search:
+Johnson
+--- Profile Found ---
+--- Profile Information ---
+Name: Samuel Johnson
+University: Georgia Institute of Technology
+Major: Mechanical Engineer
+Graduation Year: 2027
+About Me: I am a tester for InCollege wk2.
+Experience:
+Education:
+1. Send Connection Request
+2. Back to Main Menu
+Enter your choice:
+1
+Connection request sent to Samuel.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+8
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Jasmine
+Please enter your password:
+Jas123!me
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+4
+Enter first name to search:
+Samuel
+Enter last name to search:
+Johnson
+--- Profile Found ---
+--- Profile Information ---
+Name: Samuel Johnson
+University: Georgia Institute of Technology
+Major: Mechanical Engineer
+Graduation Year: 2027
+About Me: I am a tester for InCollege wk2.
+Experience:
+Education:
+1. Send Connection Request
+2. Back to Main Menu
+Enter your choice:
+1
+Connection request sent to Samuel.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+8
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Samuel
+Please enter your password:
+$@Mue12026
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -20,7 +118,18 @@ You have successfully logged in.
 Enter your choice:
 6
 --- Pending Connection Requests ---
-You have no pending connection requests at this time.
+Request from: Riham
+1. Accept
+2. Reject
+Enter your choice for Riham:
+1
+Connection request from Riham accepted!
+Request from: Jasmine
+1. Accept
+2. Reject
+Enter your choice for Jasmine:
+1
+Connection request from Jasmine accepted!
 -----------------------------------
 1. Create/Edit My Profile
 2. View My Profile
@@ -31,9 +140,33 @@ You have no pending connection requests at this time.
 7. View My Network
 8. Logout
 Enter your choice:
-1
---- Create/Edit Profile ---
-Enter First Name:
-1
-Enter Last Name:
+7
+--- Your Network ---
+Connected with: Aarav (University: , Major: )
+Connected with: Riham (University: Massachusetts Institute of Technology, Major: Mechatronics and Rob)
+Connected with: Jasmine (University: University of South Florida, Major: Computer Science)
+--------------------
+1. Back to Main Menu
+Enter your choice:
+8
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+3
+Job search/internship is under construction.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
 --- END_OF_PROGRAM_EXECUTION ---

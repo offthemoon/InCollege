@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Roy
+Riham
 Please enter your password:
-Roy@1234
+RihaM!99
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -20,11 +20,12 @@ You have successfully logged in.
 Enter your choice:
 7
 --- Your Network ---
-You have no connections in your network yet.
+Connected with: Samuel (University: Georgia Institute of Technology, Major: Mechanical Engineer)
+Connected with: Aarav (University: , Major: )
 --------------------
 1. Back to Main Menu
 Enter your choice:
-8
+1
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -33,16 +34,12 @@ Enter your choice:
 6. View My Pending Connection Requests
 7. View My Network
 8. Logout
+Enter your choice:
+8
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
 3
-Job search/internship is under construction.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Logout
-Enter your choice:
 --- END_OF_PROGRAM_EXECUTION ---
