@@ -48,4 +48,3 @@
            END-IF
            CLOSE CONNECTIONS-FILE
            .
-
