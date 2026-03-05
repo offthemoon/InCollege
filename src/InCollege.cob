@@ -1174,7 +1174,7 @@
            END-IF
            .
 
-       COPY "src/SENDREQ.CPY".
-       COPY "src/VIEWREQ.CPY".
-       COPY "src/VIEWNET.CPY".
-       COPY "src/CONNMGMT.CPY".
+       COPY "SENDREQ.CPY".
+       COPY "VIEWREQ.CPY".
+       COPY "VIEWNET.CPY".
+       COPY "CONNMGMT.CPY".

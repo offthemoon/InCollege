@@ -123,13 +123,17 @@
                UNTIL WS-J > PEND-COUNT
                IF WS-J < PEND-COUNT
                    MOVE PEND-FROM(WS-J + 1) TO PEND-FROM(WS-J)
+                   MOVE PEND-FROM-LNAME(WS-J + 1) TO PEND-FROM-LNAME(WS-J)
                    MOVE PEND-TO(WS-J + 1) TO PEND-TO(WS-J)
+                   MOVE PEND-TO-LNAME(WS-J + 1) TO PEND-TO-LNAME(WS-J)
                END-IF
            END-PERFORM
 
       *>clear the last entry
            MOVE SPACES TO PEND-FROM(PEND-COUNT)
+           MOVE SPACES TO PEND-FROM-LNAME(PEND-COUNT)
            MOVE SPACES TO PEND-TO(PEND-COUNT)
+           MOVE SPACES TO PEND-TO-LNAME(PEND-COUNT)
 
       *>decrement count
            SUBTRACT 1 FROM PEND-COUNT
