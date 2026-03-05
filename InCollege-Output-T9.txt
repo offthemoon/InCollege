@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Samuel
+Roy
 Please enter your password:
-$@Mue12026
+Roy@1234
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -34,6 +34,12 @@ Enter your choice:
 1
 --- Create/Edit Profile ---
 Enter First Name:
-7
+2
 Enter Last Name:
+7
+Enter University/College Attended:
+8
+Enter Major:
+3
+Enter Graduation Year (YYYY):
 --- END_OF_PROGRAM_EXECUTION ---

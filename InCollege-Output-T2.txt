@@ -5,10 +5,26 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Samuel
+Aarav
 Please enter your password:
-$@Mue12026
+AaRav!2025
 You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+7
+--- Your Network ---
+You have no connections in your network yet.
+--------------------
+1. Back to Main Menu
+Enter your choice:
+1
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -34,6 +50,12 @@ Enter your choice:
 1
 --- Create/Edit Profile ---
 Enter First Name:
-7
+4
 Enter Last Name:
+Roy
+Enter University/College Attended:
+Ibarra
+Enter Major:
+1
+Enter Graduation Year (YYYY):
 --- END_OF_PROGRAM_EXECUTION ---

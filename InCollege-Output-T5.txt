@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Samuel
+Roy
 Please enter your password:
-$@Mue12026
+Roy@1234
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
