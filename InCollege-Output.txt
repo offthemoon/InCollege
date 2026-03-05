@@ -49,7 +49,7 @@ Education:
 2. Back to Main Menu
 Enter your choice:
 1
-Connection request sent to Roy.
+You have already sent a connection request to this user.
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
