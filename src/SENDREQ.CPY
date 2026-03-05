@@ -34,12 +34,12 @@
        SAVE-REQUESTS.
            OPEN OUTPUT REQUESTS-FILE
            IF PEND-COUNT > 0
-               PERFORM VARYING WS-K FROM 1 BY 1
-                   UNTIL WS-K > PEND-COUNT
+               PERFORM VARYING WS-I FROM 1 BY 1
+                   UNTIL WS-I > PEND-COUNT
                    MOVE SPACES TO REQ-RECORD
                    STRING
-                       FUNCTION TRIM(PEND-FROM(WS-K)) "|"
-                       FUNCTION TRIM(PEND-TO(WS-K))
+                       FUNCTION TRIM(PEND-FROM(WS-I)) "|"
+                       FUNCTION TRIM(PEND-TO(WS-I))
                        DELIMITED BY SIZE
                        INTO REQ-RECORD
                    END-STRING
@@ -113,3 +113,4 @@
                END-IF
            END-IF
            .
+           
