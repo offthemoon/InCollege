@@ -68,6 +68,7 @@ In terminal enter ```./bin/InCollege```
 - Week 2: Profile creation and editing, optional sections (About Me, Experience, Education), profile viewing
 - Week 3: Enhanced profile viewing (complete profile display), basic user search by full name, exact match search results, dual I/O consistency for profile viewing and search functionality
 - Week 4: Send connection requests, store pending requests, view received connection requests
+- Week 5: Accept/reject connection requests, view network of connections, prevent duplicate requests, persistent network updates
 
 ## Weekly Epics
 
@@ -119,3 +120,16 @@ In terminal enter ```./bin/InCollege```
 
 ### Week 5 – Connection Requests
 **Tasks Completed:**
+- Users can view all pending connection requests and choose to accept or reject each request individually.
+- Multiple pending requests handled correctly in sequence, with confirmations displayed for each action.
+- Rejected requests are removed from the pending list and do not appear in the network.
+- Accepted requests are added to the user’s network and stored persistently in connections.dat.
+- Users cannot send duplicate connection requests to existing connections.
+- Network viewing displays all current connections with details including:
+  - Name
+  - University
+  - Major
+- Empty network and empty pending requests are handled gracefully, displaying appropriate messages.
+- Menu navigation allows returning to the main menu after request processing or network viewing.
+- All updates are reflected consistently across multiple logins, ensuring data persistence.
+- File-based input/output continues to ensure console display and output file are identical.
