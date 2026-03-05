@@ -1,6 +1,6 @@
        ARE-CONNECTED.
-      *> Sets VN-FOUND=1 if SR-SENDER and SR-RECIPIENT are already connected.
-      *> With bidirectional storage, we only need to check if sender->recipient exists
+      *>sets VN-FOUND=1 if SR-SENDER and SR-RECIPIENT are already connected.
+      *>with bidirectional storage, we only need to check if sender->recipient exists
            MOVE 0 TO VN-FOUND
            IF CONN-COUNT > 0
                PERFORM VARYING WS-K FROM 1 BY 1
@@ -26,7 +26,7 @@
                    UNTIL WS-K > CONN-COUNT
                    IF FUNCTION TRIM(CONN-USER1(WS-K))
                       = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-      *> Find the connected user in USERS array
+      *>find the connected user in USERS array
                        PERFORM VARYING WS-J FROM 1 BY 1
                            UNTIL WS-J > 5
                            IF FUNCTION TRIM(U-NAME(WS-J))

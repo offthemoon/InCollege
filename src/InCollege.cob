@@ -15,7 +15,7 @@
            SELECT REQUESTS-FILE ASSIGN TO "src/pending_requests.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS REQUESTS-STATUS.
-      *>   Week 5: New file for Established Connections
+      *>week 5: new file for established connections
            SELECT CONNECTIONS-FILE ASSIGN TO "src/connections.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS CONNECTIONS-STATUS.
@@ -101,7 +101,7 @@
        01 SR-VALID                         PIC 9 VALUE 0.
        01 VR-FOUND                         PIC 9 VALUE 0.
 
-      *> Variables for Established Connections (Week 5)
+      *>variables for established connections (Week 5)
        01 CONN-MAX                         PIC 99 VALUE 25.
        01 ESTABLISHED-CONNECTS.
            05 CONN-ENTRY OCCURS 25 TIMES.
@@ -965,7 +965,6 @@
                        INTO WS-OUT
                    END-STRING
                    PERFORM PRINT-LINE
-               *> added this to help make readibility easier.
                MOVE "----------------------------" TO WS-OUT
                PERFORM PRINT-LINE
                END-PERFORM
@@ -996,7 +995,6 @@
                        INTO WS-OUT
                    END-STRING
                    PERFORM PRINT-LINE
-                    *> added this to help make readibility easier.
                    MOVE "----------------------------" TO WS-OUT
                    PERFORM PRINT-LINE
                END-PERFORM

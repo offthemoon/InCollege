@@ -9,7 +9,7 @@
                    UNTIL WS-K > PEND-COUNT
                    IF FUNCTION TRIM(PEND-TO(WS-K))
                       = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
-      *> Find the requesting user in USERS array
+      *>find the requesting user in USERS array
                        PERFORM VARYING WS-J FROM 1 BY 1
                            UNTIL WS-J > 5
                            IF FUNCTION TRIM(U-NAME(WS-J))
@@ -71,13 +71,13 @@
            END-STRING
            PERFORM PRINT-LINE
 
-      *>   Add bidirectional connections (two entries)
+      *>add bidirectional connections
            IF CONN-COUNT < 24
-      *>       First direction: Current user -> Requester
+      *>first direction: Current user -> requester
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER1(CONN-COUNT)
-      *> Find and store current user's last name
+      *>find and store current user's last name
                PERFORM VARYING WS-J FROM 1 BY 1
                    UNTIL WS-J > 5
                    IF FUNCTION TRIM(U-NAME(WS-J))
@@ -91,7 +91,7 @@
                MOVE FUNCTION TRIM(PEND-FROM-LNAME(WS-K))
                    TO CONN-USER2-LNAME(CONN-COUNT)
 
-      *>       Second direction: Requester -> Current user
+      *>second direction: requester -> current user
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(PEND-FROM(WS-K))
                    TO CONN-USER1(CONN-COUNT)
@@ -99,7 +99,7 @@
                    TO CONN-USER1-LNAME(CONN-COUNT)
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER2(CONN-COUNT)
-      *> Find and store current user's last name for second entry
+      *>find and store current user's last name for second entry
                PERFORM VARYING WS-J FROM 1 BY 1
                    UNTIL WS-J > 5
                    IF FUNCTION TRIM(U-NAME(WS-J))
@@ -112,7 +112,7 @@
                PERFORM SAVE-CONNECTIONS
            END-IF
 
-      *>   Remove from pending requests
+      *>remove from pending requests
            PERFORM REMOVE-PENDING-REQUEST
            .
 
@@ -125,12 +125,12 @@
            END-STRING
            PERFORM PRINT-LINE
 
-      *>   Remove from pending requests
+      *>remove from pending requests
            PERFORM REMOVE-PENDING-REQUEST
            .
 
        REMOVE-PENDING-REQUEST.
-      *>   Shift all requests after WS-K down by one position
+      *>shift all requests after WS-K down by one position
            PERFORM VARYING WS-J FROM WS-K BY 1
                UNTIL WS-J > PEND-COUNT
                IF WS-J < PEND-COUNT
@@ -139,16 +139,16 @@
                END-IF
            END-PERFORM
 
-      *>   Clear the last entry
+      *>clear the last entry
            MOVE SPACES TO PEND-FROM(PEND-COUNT)
            MOVE SPACES TO PEND-TO(PEND-COUNT)
 
-      *>   Decrement count
+      *>decrement count
            SUBTRACT 1 FROM PEND-COUNT
 
-      *>   Also decrement WS-K to stay at same position since we shifted
+      *>also decrement WS-K to stay at same position since we shifted
            SUBTRACT 1 FROM WS-K
 
-      *>   Save updated pending requests
+      *>save updated pending requests
            PERFORM SAVE-REQUESTS
            .
