@@ -138,6 +138,13 @@
                      20 U-EDU-UNIV         PIC X(50).
                      20 U-EDU-YEARS        PIC X(20).
 
+       01 JOBS.
+           05 JOB-ENTRY OCCURS 10 TIMES.
+               10 J-TITLE                  PIC X(50).
+               10 J-COMP                   PIC X(50).
+               10 J-LOC                    PIC X(50).
+               10 J-DESC                   PIC X(200).
+
        PROCEDURE DIVISION.
        MAIN.
            PERFORM SETUP-FILENAMES
@@ -635,9 +642,7 @@
                    WHEN 2
                        PERFORM VIEW-MY-PROFILE
                    WHEN 3
-                       MOVE "Job search/internship is under construction."
-                           TO WS-OUT
-                       PERFORM PRINT-LINE
+                       PERFORM POST-BROWSE-JOBS
                    WHEN 4
                        PERFORM FIND-SOMEONE
                    WHEN 5
@@ -1174,7 +1179,67 @@
            END-IF
            .
 
+       POST-BROWSE-JOBS.
+           PERFORM UNTIL 1 = 2
+               MOVE "1. Post a Job/Internship" TO WS-OUT
+               PERFORM PRINT-LINE
+               Move "2. Browse Jobs/Internships" TO WS-OUT
+               PERFORM PRINT-LINE
+               Move "3. Back to Main Menu" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               PERFORM GET-CHOICE-1DIGIT
+
+               EVALUATE CHOICE
+                   WHEN 1
+                       PERFORM POST-JOB
+                   WHEN 2
+                       MOVE "Browse Jobs/Internships is under construction" TO WS-OUT
+                       PERFORM PRINT-LINE
+                   WHEN 3
+                       EXIT PARAGRAPH
+                   WHEN OTHER
+                       CONTINUE
+               END-EVALUATE
+           END-PERFORM
+           .
+
+      *>paragraph displays and takes input about job posting
+       POST-JOB.
+           MOVE "Enter Job Title:" TO WS-OUT
+           PERFORM PRINT-LINE
+           PERFORM READ-INPUT
+
+           MOVE SPACES TO WS-OUT
+           MOVE "Enter Description (max 200 chars):" TO WS-OUT
+           PERFORM PRINT-LINE
+           PERFORM READ-INPUT
+
+           MOVE SPACES TO WS-OUT
+           MOVE "Enter Employer Name:" TO WS-OUT
+           PERFORM PRINT-LINE
+           PERFORM READ-INPUT
+
+           MOVE SPACES TO WS-OUT
+           MOVE "Enter Location:" TO WS-OUT
+           PERFORM PRINT-LINE
+           PERFORM READ-INPUT
+
+           MOVE SPACES TO WS-OUT
+           MOVE "Enter Salary (optional, enter 'NONE' to skip):" TO WS-OUT
+           PERFORM PRINT-LINE
+           PERFORM READ-INPUT
+
+           MOVE "Job posted successfully!" TO WS-OUT
+           PERFORM PRINT-LINE
+           .
+
+
+
+
        COPY "src/SENDREQ.CPY".
        COPY "src/VIEWREQ.CPY".
        COPY "src/VIEWNET.CPY".
        COPY "src/CONNMGMT.CPY".
+       COPY "src/BROWSEJOBS_SRC.CPY".
+       COPY "src/JOBS_SRC.CPY".

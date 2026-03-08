@@ -74,14 +74,9 @@
            END-STRING
            PERFORM PRINT-LINE
 
-<<<<<<< HEAD
-      *> Add to connections file
-           IF CONN-COUNT < 25
-=======
       *>add bidirectional connections
            IF CONN-COUNT < 24
       *>first direction: Current user -> requester
->>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
                ADD 1 TO CONN-COUNT
                MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                    TO CONN-USER1(CONN-COUNT)
@@ -108,11 +103,7 @@
                PERFORM SAVE-CONNECTIONS
            END-IF
 
-<<<<<<< HEAD
-      *> Remove from pending requests
-=======
       *>remove from pending requests
->>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM REMOVE-PENDING-REQUEST
            .
 
@@ -125,20 +116,12 @@
            END-STRING
            PERFORM PRINT-LINE
 
-<<<<<<< HEAD
-      *> Remove from pending requests
-=======
       *>remove from pending requests
->>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM REMOVE-PENDING-REQUEST
            .
 
        REMOVE-PENDING-REQUEST.
-<<<<<<< HEAD
-      *> Shift all requests after WS-K down by one position
-=======
       *>shift all requests after WS-K down by one position
->>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM VARYING WS-J FROM WS-K BY 1
                UNTIL WS-J > PEND-COUNT
                IF WS-J < PEND-COUNT
@@ -149,25 +132,12 @@
                END-IF
            END-PERFORM
 
-<<<<<<< HEAD
-      *> Clear the last entry
-=======
       *>clear the last entry
->>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            MOVE SPACES TO PEND-FROM(PEND-COUNT)
            MOVE SPACES TO PEND-FROM-LNAME(PEND-COUNT)
            MOVE SPACES TO PEND-TO(PEND-COUNT)
            MOVE SPACES TO PEND-TO-LNAME(PEND-COUNT)
 
-<<<<<<< HEAD
-      *> Decrement count
-           SUBTRACT 1 FROM PEND-COUNT
-
-      *> Also decrement WS-K to stay at same position since we shifted
-           SUBTRACT 1 FROM WS-K
-
-      *> Save updated pending requests
-=======
       *>decrement count
            SUBTRACT 1 FROM PEND-COUNT
 
@@ -175,6 +145,5 @@
            SUBTRACT 1 FROM WS-K
 
       *>save updated pending requests
->>>>>>> 04fa2e80356a61e9a521327070d11982ffe0138c
            PERFORM SAVE-REQUESTS
            .
