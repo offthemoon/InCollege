@@ -19,6 +19,10 @@
            SELECT CONNECTIONS-FILE ASSIGN TO "src/connections.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS CONNECTIONS-STATUS.
+      *>   Epic 5: New file for Job and Internship Listings
+           SELECT JOBS-FILE ASSIGN TO "src/jobs.dat"
+               ORGANIZATION IS LINE SEQUENTIAL
+               FILE STATUS IS JOBS-STATUS.
 
        DATA DIVISION.
        FILE SECTION.
@@ -38,11 +42,15 @@
        FD CONNECTIONS-FILE.
        01 CONN-RECORD                      PIC X(100).
 
+       FD JOBS-FILE.
+       01 JOB-RECORD                       PIC X(500).
+
        WORKING-STORAGE SECTION.
 
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
        01 CONNECTIONS-STATUS               PIC XX VALUE "00".
+       01 JOBS-STATUS                      PIC XX VALUE "00".
        01 INFILE-EOF                       PIC 9 VALUE 0.
 
        01 INPUT-FILENAME                   PIC X(120) VALUE "InCollege-Input.txt".
@@ -140,10 +148,17 @@
 
        01 JOBS.
            05 JOB-ENTRY OCCURS 10 TIMES.
+               10 J-ID                     PIC 9(4).
                10 J-TITLE                  PIC X(50).
-               10 J-COMP                   PIC X(50).
-               10 J-LOC                    PIC X(50).
                10 J-DESC                   PIC X(200).
+               10 J-EMPLOYER               PIC X(50).
+               10 J-LOC                    PIC X(50).
+               10 J-SALARY                 PIC X(20).
+               10 J-POSTED-BY              PIC X(15).
+
+       01 JOB-COUNT                        PIC 99 VALUE 0.
+       01 JOB-MAX                          PIC 99 VALUE 10.
+       01 NEXT-JOB-ID                      PIC 9(4) VALUE 1.
 
        PROCEDURE DIVISION.
        MAIN.
@@ -156,6 +171,8 @@
            PERFORM LOAD-REQUESTS
            PERFORM ENSURE-CONNECTIONS-FILE
            PERFORM LOAD-CONNECTIONS
+           PERFORM ENSURE-JOBS-FILE
+           PERFORM LOAD-JOBS
            PERFORM MAIN-MENU
            PERFORM END-PROGRAM
            .
@@ -1178,64 +1195,6 @@
                PERFORM PRINT-LINE
            END-IF
            .
-
-       POST-BROWSE-JOBS.
-           PERFORM UNTIL 1 = 2
-               MOVE "1. Post a Job/Internship" TO WS-OUT
-               PERFORM PRINT-LINE
-               Move "2. Browse Jobs/Internships" TO WS-OUT
-               PERFORM PRINT-LINE
-               Move "3. Back to Main Menu" TO WS-OUT
-               PERFORM PRINT-LINE
-
-               PERFORM GET-CHOICE-1DIGIT
-
-               EVALUATE CHOICE
-                   WHEN 1
-                       PERFORM POST-JOB
-                   WHEN 2
-                       MOVE "Browse Jobs/Internships is under construction" TO WS-OUT
-                       PERFORM PRINT-LINE
-                   WHEN 3
-                       EXIT PARAGRAPH
-                   WHEN OTHER
-                       CONTINUE
-               END-EVALUATE
-           END-PERFORM
-           .
-
-      *>paragraph displays and takes input about job posting
-       POST-JOB.
-           MOVE "Enter Job Title:" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
-
-           MOVE SPACES TO WS-OUT
-           MOVE "Enter Description (max 200 chars):" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
-
-           MOVE SPACES TO WS-OUT
-           MOVE "Enter Employer Name:" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
-
-           MOVE SPACES TO WS-OUT
-           MOVE "Enter Location:" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
-
-           MOVE SPACES TO WS-OUT
-           MOVE "Enter Salary (optional, enter 'NONE' to skip):" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
-
-           MOVE "Job posted successfully!" TO WS-OUT
-           PERFORM PRINT-LINE
-           .
-
-
-
 
        COPY "src/SENDREQ.CPY".
        COPY "src/VIEWREQ.CPY".
