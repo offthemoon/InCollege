@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Riham
+Samuel
 Please enter your password:
-RihaM!99
+$@Mue12026
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -24,15 +24,15 @@ Enter your choice:
 3. Back to Main Menu
 1
 Enter Job Title:
-Robotics Engineer
+Data Analyst Position
 Enter Description (max 200 chars):
-Design and develop robotic systems for industrial automation applications.
+Analyze business data and create insightful reports for stakeholders to drive decision-making processes.
 Enter Employer Name:
-RoboTech Solutions
+Tech Solutions Corp
 Enter Location:
-Boston, MA
+Remote
 Enter Salary (optional, enter 'NONE' to skip):
-$95000/year
+NONE
 Job posted successfully!
 ----------------------------------
 1. Post a Job/Internship

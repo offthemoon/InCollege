@@ -1,0 +1,38 @@
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Jasmine
+Please enter your password:
+J@sm!ne2024
+Incorrect username/password, please try again
+Please enter your username:
+3
+Please enter your password:
+1
+Incorrect username/password, please try again
+Please enter your username:
+Senior Software Engineer
+Please enter your password:
+Design and implement scalable backend systems for high-traffic applications.
+Incorrect username/password, please try again
+Please enter your username:
+CloudTech Industries
+Please enter your password:
+Seattle, WA
+Incorrect username/password, please try again
+Please enter your username:
+$120000/year
+Please enter your password:
+3
+Incorrect username/password, please try again
+Please enter your username:
+8
+Please enter your password:
+3
+Incorrect username/password, please try again
+Please enter your username:
+--- END_OF_PROGRAM_EXECUTION ---

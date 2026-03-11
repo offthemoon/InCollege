@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Riham
+Samuel
 Please enter your password:
-RihaM!99
+$@Mue12026
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -24,15 +24,15 @@ Enter your choice:
 3. Back to Main Menu
 1
 Enter Job Title:
-Robotics Engineer
+Very Long Job Title That Exceeds Normal Length To Test If The System Properly Handles Extremely Long Titles
 Enter Description (max 200 chars):
-Design and develop robotic systems for industrial automation applications.
+This is a very long description that is designed to test whether the system properly handles the maximum character limit of 200 characters as specified in the requirements. This description should be exactly at or near the 200 character limit to verify proper handling and potential truncation if exc
 Enter Employer Name:
-RoboTech Solutions
+Company With A Very Long Name To Test Field Length Handling
 Enter Location:
-Boston, MA
+Location With Very Long Address String To Test
 Enter Salary (optional, enter 'NONE' to skip):
-$95000/year
+$999999999999/year
 Job posted successfully!
 ----------------------------------
 1. Post a Job/Internship

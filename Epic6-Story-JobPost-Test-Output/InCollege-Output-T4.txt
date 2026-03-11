@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Riham
+Samuel
 Please enter your password:
-RihaM!99
+$@Mue12026
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -24,13 +24,45 @@ Enter your choice:
 3. Back to Main Menu
 1
 Enter Job Title:
-Robotics Engineer
+Marketing Internship
 Enter Description (max 200 chars):
-Design and develop robotic systems for industrial automation applications.
+Help create and execute marketing campaigns for our products and services.
 Enter Employer Name:
-RoboTech Solutions
+Startup Ventures LLC
 Enter Location:
-Boston, MA
+New York, NY
+Enter Salary (optional, enter 'NONE' to skip):
+$20/hour
+Job posted successfully!
+----------------------------------
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Enter Job Title:
+Full Stack Developer
+Enter Description (max 200 chars):
+Build modern web applications using React and Node.js frameworks.
+Enter Employer Name:
+Digital Dreams Inc
+Enter Location:
+Austin, TX
+Enter Salary (optional, enter 'NONE' to skip):
+$85000/year
+Job posted successfully!
+----------------------------------
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Enter Job Title:
+Project Manager
+Enter Description (max 200 chars):
+Lead cross-functional teams to deliver successful projects on time.
+Enter Employer Name:
+Enterprise Solutions
+Enter Location:
+San Francisco, CA
 Enter Salary (optional, enter 'NONE' to skip):
 $95000/year
 Job posted successfully!
