@@ -98,28 +98,64 @@
            MOVE NEXT-JOB-ID TO J-ID(WS-I)
            ADD 1 TO NEXT-JOB-ID
 
-      *>get title
-           MOVE "Enter Job Title:" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
+      *>get title (required)
+           MOVE SPACES TO WS-OUT
+           PERFORM UNTIL WS-OUT NOT = SPACES
+               MOVE "Enter Job Title:" TO WS-OUT
+               PERFORM PRINT-LINE
+               PERFORM READ-INPUT
+               IF WS-OUT = SPACES
+                   MOVE "Job title cannot be empty. Please try again."
+                       TO WS-OUT
+                   PERFORM PRINT-LINE
+                   MOVE SPACES TO WS-OUT
+               END-IF
+           END-PERFORM
            MOVE WS-OUT TO J-TITLE(WS-I)
 
-      *>get description
-           MOVE "Enter Description (max 200 chars):" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
+      *>get description (required)
+           MOVE SPACES TO WS-OUT
+           PERFORM UNTIL WS-OUT NOT = SPACES
+               MOVE "Enter Description (max 200 chars):" TO WS-OUT
+               PERFORM PRINT-LINE
+               PERFORM READ-INPUT
+               IF WS-OUT = SPACES
+                   MOVE "Description cannot be empty. Please try again."
+                       TO WS-OUT
+                   PERFORM PRINT-LINE
+                   MOVE SPACES TO WS-OUT
+               END-IF
+           END-PERFORM
            MOVE WS-OUT TO J-DESC(WS-I)
 
-      *>get employer name
-           MOVE "Enter Employer Name:" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
+      *>get employer name (required)
+           MOVE SPACES TO WS-OUT
+           PERFORM UNTIL WS-OUT NOT = SPACES
+               MOVE "Enter Employer Name:" TO WS-OUT
+               PERFORM PRINT-LINE
+               PERFORM READ-INPUT
+               IF WS-OUT = SPACES
+                   MOVE "Employer name cannot be empty. Please try again."
+                       TO WS-OUT
+                   PERFORM PRINT-LINE
+                   MOVE SPACES TO WS-OUT
+               END-IF
+           END-PERFORM
            MOVE WS-OUT TO J-EMPLOYER(WS-I)
 
-      *>get location
-           MOVE "Enter Location:" TO WS-OUT
-           PERFORM PRINT-LINE
-           PERFORM READ-INPUT
+      *>get location (required)
+           MOVE SPACES TO WS-OUT
+           PERFORM UNTIL WS-OUT NOT = SPACES
+               MOVE "Enter Location:" TO WS-OUT
+               PERFORM PRINT-LINE
+               PERFORM READ-INPUT
+               IF WS-OUT = SPACES
+                   MOVE "Location cannot be empty. Please try again."
+                       TO WS-OUT
+                   PERFORM PRINT-LINE
+                   MOVE SPACES TO WS-OUT
+               END-IF
+           END-PERFORM
            MOVE WS-OUT TO J-LOC(WS-I)
 
       *>get salary (optional)
