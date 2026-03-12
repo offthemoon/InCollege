@@ -103,24 +103,48 @@
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            MOVE WS-OUT TO J-TITLE(WS-I)
+           IF FUNCTION TRIM(J-TITLE(WS-I)) = SPACES
+               MOVE "Error: Job Title is required." TO WS-OUT
+               PERFORM PRINT-LINE
+               SUBTRACT 1 FROM JOB-COUNT
+               EXIT PARAGRAPH
+           END-IF
 
       *>get description
            MOVE "Enter Description (max 200 chars):" TO WS-OUT
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            MOVE WS-OUT TO J-DESC(WS-I)
+           IF FUNCTION TRIM(J-DESC(WS-I)) = SPACES
+               MOVE "Error: Description is required." TO WS-OUT
+               PERFORM PRINT-LINE
+               SUBTRACT 1 FROM JOB-COUNT
+               EXIT PARAGRAPH
+           END-IF
 
       *>get employer name
            MOVE "Enter Employer Name:" TO WS-OUT
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            MOVE WS-OUT TO J-EMPLOYER(WS-I)
+           IF FUNCTION TRIM(J-EMPLOYER(WS-I)) = SPACES
+               MOVE "Error: Employer Name is required." TO WS-OUT
+               PERFORM PRINT-LINE
+               SUBTRACT 1 FROM JOB-COUNT
+               EXIT PARAGRAPH
+           END-IF
 
       *>get location
            MOVE "Enter Location:" TO WS-OUT
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            MOVE WS-OUT TO J-LOC(WS-I)
+           IF FUNCTION TRIM(J-LOC(WS-I)) = SPACES
+               MOVE "Error: Location is required." TO WS-OUT
+               PERFORM PRINT-LINE
+               SUBTRACT 1 FROM JOB-COUNT
+               EXIT PARAGRAPH
+           END-IF
 
       *>get salary (optional)
            MOVE "Enter Salary (optional, enter 'NONE' to skip):" TO WS-OUT

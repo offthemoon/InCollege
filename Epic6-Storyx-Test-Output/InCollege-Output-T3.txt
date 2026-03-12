@@ -23,6 +23,7 @@ Enter your choice:
 2. Browse Jobs/Internships
 3. Back to Main Menu
 2
+Browse Jobs/Internships is under construction.
 1. Post a Job/Internship
 2. Browse Jobs/Internships
 3. Back to Main Menu
