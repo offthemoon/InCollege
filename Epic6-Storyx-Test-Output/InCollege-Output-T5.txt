@@ -7,6 +7,7 @@ Enter your choice:
 Please enter your username:
 Jasmine
 Please enter your password:
+<<<<<<< HEAD
 J@sm!ne2024
 Incorrect username/password, please try again
 Please enter your username:
@@ -35,4 +36,54 @@ Please enter your password:
 3
 Incorrect username/password, please try again
 Please enter your username:
+=======
+Jas123!me
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+3
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Enter Job Title:
+Senior Software Engineer
+Enter Description (max 200 chars):
+Design and implement scalable backend systems for high-traffic applications.
+Enter Employer Name:
+CloudTech Industries
+Enter Location:
+Seattle, WA
+Enter Salary (optional, enter 'NONE' to skip):
+$120000/year
+Job posted successfully!
+----------------------------------
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+8
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+3
+>>>>>>> d58e0df2442ff6c759e3241a52edb6f72a6fac93
 --- END_OF_PROGRAM_EXECUTION ---

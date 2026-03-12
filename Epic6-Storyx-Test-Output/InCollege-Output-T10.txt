@@ -5,9 +5,15 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
+<<<<<<< HEAD
+Jasmine
+Please enter your password:
+Jas123!me
+=======
 Riham
 Please enter your password:
 RihaM!99
+>>>>>>> d58e0df2442ff6c759e3241a52edb6f72a6fac93
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -23,18 +29,42 @@ Enter your choice:
 2. Browse Jobs/Internships
 3. Back to Main Menu
 1
+<<<<<<< HEAD
 Enter Job Title:
-Robotics Engineer
+Senior Software Engineer
 Enter Description (max 200 chars):
-Design and develop robotic systems for industrial automation applications.
+Design and implement scalable backend systems for high-traffic applications.
 Enter Employer Name:
-RoboTech Solutions
+CloudTech Industries
 Enter Location:
-Boston, MA
+Seattle, WA
 Enter Salary (optional, enter 'NONE' to skip):
-$95000/year
+$120000/year
 Job posted successfully!
 ----------------------------------
+=======
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Robotics Engineer
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Design and develop robotic systems for industrial automation applications.
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+RoboTech Solutions
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Boston, MA
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$95000/year
+>>>>>>> d58e0df2442ff6c759e3241a52edb6f72a6fac93
 1. Post a Job/Internship
 2. Browse Jobs/Internships
 3. Back to Main Menu
