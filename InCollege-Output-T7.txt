@@ -1,0 +1,47 @@
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Samuel
+Please enter your password:
+$@Mue12026
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+3
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Enter Job Title:
+
+Job title cannot be empty. Please try again.
+Enter Job Title:
+
+Job title cannot be empty. Please try again.
+Enter Job Title:
+
+Job title cannot be empty. Please try again.
+Enter Job Title:
+
+Job title cannot be empty. Please try again.
+Enter Job Title:
+NONE
+Enter Description (max 200 chars):
+3
+Enter Employer Name:
+8
+Enter Location:
+3
+Enter Salary (optional, enter 'NONE' to skip):
+--- END_OF_PROGRAM_EXECUTION ---

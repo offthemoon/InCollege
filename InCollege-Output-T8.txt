@@ -1,0 +1,274 @@
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Samuel
+Please enter your password:
+$@Mue12026
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+3
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Enter Job Title:
+Test Job 1
+Enter Description (max 200 chars):
+Description for test job 1
+Enter Employer Name:
+Company 1
+Enter Location:
+Location 1
+Enter Salary (optional, enter 'NONE' to skip):
+$10/hour
+Job posted successfully!
+----------------------------------
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Enter Job Title:
+Test Job 2
+Enter Description (max 200 chars):
+Description for test job 2
+Enter Employer Name:
+Company 2
+Enter Location:
+Location 2
+Enter Salary (optional, enter 'NONE' to skip):
+$20/hour
+Job posted successfully!
+----------------------------------
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 3
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 3
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 3
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 3
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$30/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 4
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 4
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 4
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 4
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$40/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 5
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 5
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 5
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 5
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$50/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 6
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 6
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 6
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 6
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$60/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 7
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 7
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 7
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 7
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$70/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 8
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 8
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 8
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 8
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$80/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 9
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 9
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 9
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 9
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$90/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+1
+Error: Maximum number of job postings reached (10).
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Test Job 10
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Description for test job 10
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Company 10
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+Location 10
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+$100/hour
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Logout
+Enter your choice:
+8
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+3
+--- END_OF_PROGRAM_EXECUTION ---
