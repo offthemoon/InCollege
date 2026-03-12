@@ -64,8 +64,9 @@
                PERFORM VARYING WS-I FROM 1 BY 1
                    UNTIL WS-I > JOB-COUNT
                    MOVE SPACES TO JOB-RECORD
+                   MOVE J-ID(WS-I) TO WS-K
                    STRING
-                       J-ID(WS-I) "|"
+                       WS-K "|"
                        FUNCTION TRIM(J-TITLE(WS-I)) "|"
                        FUNCTION TRIM(J-DESC(WS-I)) "|"
                        FUNCTION TRIM(J-EMPLOYER(WS-I)) "|"
