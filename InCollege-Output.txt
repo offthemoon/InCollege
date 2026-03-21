@@ -23,7 +23,61 @@ Enter your choice:
 2. Browse Jobs/Internships
 3. Back to Main Menu
 2
-Browse Jobs/Internships is under construction.
+Here are the available jobs/internships:
+----------------------------------
+Job #01: Robotics Engineer
+  Employer : RoboTech Solutions
+  Location : Boston, MA
+----------------------------------
+Job #02: Software Engineering Intern
+  Employer : InCollege Inc
+  Location : Tampa, FL
+----------------------------------
+Job #03: Data Analyst Position
+  Employer : Tech Solutions Corp
+  Location : Remote
+----------------------------------
+Job #04: Marketing Internship
+  Employer : Startup Ventures LLC
+  Location : New York, NY
+----------------------------------
+Job #05: Full Stack Developer
+  Employer : Digital Dreams Inc
+  Location : Austin, TX
+----------------------------------
+Job #06: Project Manager
+  Employer : Enterprise Solutions
+  Location : San Francisco, CA
+----------------------------------
+Job #07: Senior Software Engineer
+  Employer : CloudTech Industries
+  Location : Seattle, WA
+----------------------------------
+Job #08: Very Long Job Title That Exceeds Normal Length To
+  Employer : Company With A Very Long Name To Test Field Length
+  Location : Location With Very Long Address String To Test
+----------------------------------
+Job #09: Test Job 1
+  Employer : Company 1
+  Location : Location 1
+----------------------------------
+Job #10: Test Job 2
+  Employer : Company 2
+  Location : Location 2
+----------------------------------
+Enter job number to view details, or 0 to go back:
+03
+--- Job Details ---
+Job Title: Data Analyst Position
+  Employer   : Tech Solutions Corp
+  Location   : Remote
+  Salary     : NONE
+  Description: Analyze business data and create insightful reports for stakeholders to drive decision-making processes.
+-------------------------------
+1. Post a Job/Internship
+2. Browse Jobs/Internships
+3. Back to Main Menu
+8
 1. Post a Job/Internship
 2. Browse Jobs/Internships
 3. Back to Main Menu
@@ -37,11 +91,4 @@ Browse Jobs/Internships is under construction.
 7. View My Network
 8. Logout
 Enter your choice:
-8
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
-Enter your choice:
-3
 --- END_OF_PROGRAM_EXECUTION ---
