@@ -1,11 +1,22 @@
-      *>contains main menu for job posting and browsing
+      *> contains job search submenu, browse, detail view, apply, report
        POST-BROWSE-JOBS.
            PERFORM UNTIL 1 = 2
+               MOVE "--- Job Search/Internship Menu ---" TO WS-OUT
+               PERFORM PRINT-LINE
+
                MOVE "1. Post a Job/Internship" TO WS-OUT
                PERFORM PRINT-LINE
+
                MOVE "2. Browse Jobs/Internships" TO WS-OUT
                PERFORM PRINT-LINE
-               MOVE "3. Back to Main Menu" TO WS-OUT
+
+               MOVE "3. View My Applications" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               MOVE "4. Back to Main Menu" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               MOVE "Enter your choice:" TO WS-OUT
                PERFORM PRINT-LINE
 
                PERFORM GET-CHOICE-1DIGIT
@@ -16,128 +27,141 @@
                    WHEN 2
                        PERFORM BROWSE-JOBS
                    WHEN 3
+                       PERFORM VIEW-MY-APPLICATIONS
+                   WHEN 4
                        EXIT PARAGRAPH
                    WHEN OTHER
-                       CONTINUE
+                       MOVE "Invalid choice. Please try again." TO WS-OUT
+                       PERFORM PRINT-LINE
                END-EVALUATE
            END-PERFORM
            .
 
        BROWSE-JOBS.
-        *>    MOVE "Browse Jobs/Internships is under construction."
-        *>        TO WS-OUT
-        *>    PERFORM PRINT-LINE
-               MOVE "Here are the available jobs/internships:" TO WS-OUT
-               PERFORM PRINT-LINE
+           MOVE "--- Available Job Listings ---" TO WS-OUT
+           PERFORM PRINT-LINE
 
-               *>This function here is going to call a function that is going to display all the jobs.
-               PERFORM DISPLAY-JOBS
-           .
-
-
-       DISPLAY-JOBS.
            IF JOB-COUNT = 0
-               MOVE "--- Available Job Listings ---"
-                   TO WS-OUT
+               MOVE "No jobs/internships are currently available." TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "-----------------------------" TO WS-OUT
                PERFORM PRINT-LINE
                EXIT PARAGRAPH
            END-IF
 
            PERFORM VARYING WS-I FROM 1 BY 1 UNTIL WS-I > JOB-COUNT
-               MOVE "----------------------------------" TO WS-OUT
-               PERFORM PRINT-LINE
-
                MOVE SPACES TO WS-OUT
-               STRING "Job #" WS-I ": "
-                      FUNCTION TRIM(J-TITLE(WS-I))
+               STRING
+                   WS-I ". "
+                   FUNCTION TRIM(J-TITLE(WS-I))
+                   " at "
+                   FUNCTION TRIM(J-EMPLOYER(WS-I))
+                   " ("
+                   FUNCTION TRIM(J-LOC(WS-I))
+                   ")"
                    DELIMITED BY SIZE
                    INTO WS-OUT
                END-STRING
                PERFORM PRINT-LINE
-
-               MOVE SPACES TO WS-OUT
-               STRING "  Employer : "
-                      FUNCTION TRIM(J-EMPLOYER(WS-I))
-                   DELIMITED BY SIZE
-                   INTO WS-OUT
-               END-STRING
-               PERFORM PRINT-LINE
-
-               MOVE SPACES TO WS-OUT
-               STRING "  Location : "
-                      FUNCTION TRIM(J-LOC(WS-I))
-                   DELIMITED BY SIZE
-                   INTO WS-OUT
-               END-STRING
-               PERFORM PRINT-LINE
-
            END-PERFORM
 
-           MOVE "----------------------------------" TO WS-OUT
+           MOVE "-----------------------------" TO WS-OUT
            PERFORM PRINT-LINE
 
+           PERFORM BROWSE-JOBS-DETAIL-LOOP
+           .
+
+       BROWSE-JOBS-DETAIL-LOOP.
+           PERFORM UNTIL 1 = 2
+               MOVE "Enter job number to view details, or 0 to go back:" TO WS-OUT
+               PERFORM PRINT-LINE
+
+               PERFORM GET-CHOICE-2DIGIT
+
+               IF CHOICE = 0
+                   EXIT PARAGRAPH
+               END-IF
+
+               IF CHOICE < 1 OR CHOICE > JOB-COUNT
+                   MOVE "Invalid job number. Please try again." TO WS-OUT
+                   PERFORM PRINT-LINE
+               ELSE
+                   PERFORM SHOW-JOB-DETAILS
+               END-IF
+           END-PERFORM
+           .
+
+       SHOW-JOB-DETAILS.
+           MOVE "--- Job Details ---" TO WS-OUT
+           PERFORM PRINT-LINE
 
            MOVE SPACES TO WS-OUT
+           STRING "Title: "
+                  FUNCTION TRIM(J-TITLE(CHOICE))
+               DELIMITED BY SIZE
+               INTO WS-OUT
+           END-STRING
+           PERFORM PRINT-LINE
 
-            MOVE "Enter job number to view details, or 0 to go back:" TO WS-OUT
-             PERFORM PRINT-LINE
+           MOVE SPACES TO WS-OUT
+           STRING "Description: "
+                  FUNCTION TRIM(J-DESC(CHOICE))
+               DELIMITED BY SIZE
+               INTO WS-OUT
+           END-STRING
+           PERFORM PRINT-LINE
 
-            PERFORM GET-CHOICE-2DIGIT
+           MOVE SPACES TO WS-OUT
+           STRING "Employer: "
+                  FUNCTION TRIM(J-EMPLOYER(CHOICE))
+               DELIMITED BY SIZE
+               INTO WS-OUT
+           END-STRING
+           PERFORM PRINT-LINE
 
-             IF CHOICE = 0
-                 PERFORM POST-LOGIN-MENU
+           MOVE SPACES TO WS-OUT
+           STRING "Location: "
+                  FUNCTION TRIM(J-LOC(CHOICE))
+               DELIMITED BY SIZE
+               INTO WS-OUT
+           END-STRING
+           PERFORM PRINT-LINE
 
-              ELSE IF CHOICE > 0 AND CHOICE <= JOB-COUNT
-                 MOVE SPACES TO WS-OUT
+           IF FUNCTION TRIM(J-SALARY(CHOICE)) NOT = SPACES
+              AND FUNCTION TRIM(J-SALARY(CHOICE)) NOT = "NONE"
+               MOVE SPACES TO WS-OUT
+               STRING "Salary: "
+                      FUNCTION TRIM(J-SALARY(CHOICE))
+                   DELIMITED BY SIZE
+                   INTO WS-OUT
+               END-STRING
+               PERFORM PRINT-LINE
+           END-IF
 
-                 MOVE "--- Job Details ---" TO WS-OUT
-                 PERFORM PRINT-LINE
+           MOVE "-------------------" TO WS-OUT
+           PERFORM PRINT-LINE
 
-                 STRING "Job Title: "
-                        FUNCTION TRIM(J-TITLE(CHOICE))
-                     DELIMITED BY SIZE
-                     INTO WS-OUT
-                 END-STRING
-                 PERFORM PRINT-LINE
+           MOVE "1. Apply for this Job" TO WS-OUT
+           PERFORM PRINT-LINE
 
-                 MOVE SPACES TO WS-OUT
-                 STRING "  Employer   : "
-                        FUNCTION TRIM(J-EMPLOYER(CHOICE))
-                     DELIMITED BY SIZE
-                     INTO WS-OUT
-                 END-STRING
-                 PERFORM PRINT-LINE
+           MOVE "2. Back to Job List" TO WS-OUT
+           PERFORM PRINT-LINE
 
-                 MOVE SPACES TO WS-OUT
-                 STRING "  Location   : "
-                        FUNCTION TRIM(J-LOC(CHOICE))
-                     DELIMITED BY SIZE
-                     INTO WS-OUT
-                 END-STRING
-                 PERFORM PRINT-LINE
+           MOVE "Enter your choice:" TO WS-OUT
+           PERFORM PRINT-LINE
 
-                 MOVE SPACES TO WS-OUT
-                 STRING "  Salary     : "
-                        FUNCTION TRIM(J-SALARY(CHOICE))
-                     DELIMITED BY SIZE
-                     INTO WS-OUT
-                 END-STRING
-                 PERFORM PRINT-LINE
+           PERFORM GET-CHOICE-1DIGIT
 
-                 MOVE SPACES TO WS-OUT
-                 STRING "  Description: "
-                        FUNCTION TRIM(J-DESC(CHOICE))
-                     DELIMITED BY SIZE
-                     INTO WS-OUT
-                 END-STRING
-                 PERFORM PRINT-LINE
-
-
-                 MOVE "-------------------------------" TO WS-OUT
-                 PERFORM PRINT-LINE
-
-
-               *> We are going to have to implmenet a function that allows users to apply.
+           EVALUATE CHOICE
+               WHEN 1
+                   PERFORM APPLY-FOR-JOB
+               WHEN 2
+                   CONTINUE
+               WHEN OTHER
+                   MOVE "Invalid choice. Returning to job list." TO WS-OUT
+                   PERFORM PRINT-LINE
+           END-EVALUATE
+           .
 
        GET-CHOICE-2DIGIT.
            PERFORM READ-INPUT

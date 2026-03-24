@@ -23,6 +23,9 @@
            SELECT JOBS-FILE ASSIGN TO "src/jobs.dat"
                ORGANIZATION IS LINE SEQUENTIAL
                FILE STATUS IS JOBS-STATUS.
+           SELECT APPLICATIONS-FILE ASSIGN TO "src/applications.dat"
+               ORGANIZATION IS LINE SEQUENTIAL
+               FILE STATUS IS APPLICATIONS-STATUS.
 
        DATA DIVISION.
        FILE SECTION.
@@ -44,6 +47,9 @@
 
        FD JOBS-FILE.
        01 JOB-RECORD                       PIC X(500).
+
+       FD APPLICATIONS-FILE.
+       01 APPLICATION-RECORD               PIC X(100).
 
        WORKING-STORAGE SECTION.
 
@@ -160,6 +166,19 @@
        01 JOB-MAX                          PIC 99 VALUE 10.
        01 NEXT-JOB-ID                      PIC 9(4) VALUE 1.
 
+       01 APPLICATIONS.
+           05 APP-ENTRY OCCURS 100 TIMES.
+               10 APP-USERNAME             PIC X(15).
+               10 APP-JOB-ID               PIC 9(4).
+
+       01 APP-COUNT                        PIC 9(3) VALUE 0.
+       01 APP-MAX                          PIC 9(3) VALUE 100.
+       01 APPLICATIONS-STATUS              PIC XX VALUE "00".
+       01 SELECTED-JOB-ID                  PIC 9(4) VALUE 0.
+       01 APP-TOTAL-FOR-USER               PIC 9(3) VALUE 0.
+       01 MATCH-FOUND                      PIC 9 VALUE 0.
+       01 WS-NUM-TXT                       PIC ZZZ VALUE SPACES.
+
        PROCEDURE DIVISION.
        MAIN.
            PERFORM SETUP-FILENAMES
@@ -173,6 +192,8 @@
            PERFORM LOAD-CONNECTIONS
            PERFORM ENSURE-JOBS-FILE
            PERFORM LOAD-JOBS
+           PERFORM ENSURE-APPLICATIONS-FILE
+           PERFORM LOAD-APPLICATIONS
            PERFORM MAIN-MENU
            PERFORM END-PROGRAM
            .
@@ -1195,10 +1216,68 @@
                PERFORM PRINT-LINE
            END-IF
            .
+      ENSURE-APPLICATIONS-FILE.
+           MOVE "00" TO APPLICATIONS-STATUS
+           OPEN INPUT APPLICATIONS-FILE
+           IF APPLICATIONS-STATUS NOT = "00"
+               OPEN OUTPUT APPLICATIONS-FILE
+               CLOSE APPLICATIONS-FILE
+           ELSE
+               CLOSE APPLICATIONS-FILE
+           END-IF
+           .
 
+       LOAD-APPLICATIONS.
+           MOVE 0 TO APP-COUNT
+
+           OPEN INPUT APPLICATIONS-FILE
+           PERFORM UNTIL 1 = 2
+               READ APPLICATIONS-FILE
+                   AT END
+                       EXIT PERFORM
+                   NOT AT END
+                       IF APP-COUNT < APP-MAX
+                           ADD 1 TO APP-COUNT
+                           MOVE APP-COUNT TO WS-I
+                           UNSTRING APPLICATION-RECORD DELIMITED BY "|"
+                               INTO APP-USERNAME(WS-I)
+                                    APP-JOB-ID(WS-I)
+                           END-UNSTRING
+                       END-IF
+               END-READ
+           END-PERFORM
+           CLOSE APPLICATIONS-FILE
+           .
+
+       SAVE-APPLICATIONS.
+           OPEN OUTPUT APPLICATIONS-FILE
+           PERFORM VARYING WS-I FROM 1 BY 1 UNTIL WS-I > APP-COUNT
+               MOVE SPACES TO APPLICATION-RECORD
+               STRING
+                   FUNCTION TRIM(APP-USERNAME(WS-I)) "|"
+                   APP-JOB-ID(WS-I)
+                   DELIMITED BY SIZE
+                   INTO APPLICATION-RECORD
+               END-STRING
+               WRITE APPLICATION-RECORD
+           END-PERFORM
+           CLOSE APPLICATIONS-FILE
+           .
+
+       FIND-JOB-BY-ID.
+           MOVE 0 TO MATCH-FOUND
+           PERFORM VARYING WS-I FROM 1 BY 1 UNTIL WS-I > JOB-COUNT
+               IF J-ID(WS-I) = SELECTED-JOB-ID
+                   MOVE 1 TO MATCH-FOUND
+                   EXIT PERFORM
+               END-IF
+           END-PERFORM
+           .
        COPY "src/SENDREQ.CPY".
        COPY "src/VIEWREQ.CPY".
        COPY "src/VIEWNET.CPY".
        COPY "src/CONNMGMT.CPY".
        COPY "src/BROWSEJOBS_SRC.CPY".
        COPY "src/JOBS_SRC.CPY".
+       COPY "src/APPLYJOB_SRC.CPY".
+       COPY "src/VIEWAPPS_SRC.CPY".
