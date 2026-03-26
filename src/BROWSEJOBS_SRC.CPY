@@ -92,12 +92,13 @@
            .
 
        SHOW-JOB-DETAILS.
+           MOVE CHOICE TO SELECTED-JOB-INDEX
            MOVE "--- Job Details ---" TO WS-OUT
            PERFORM PRINT-LINE
 
            MOVE SPACES TO WS-OUT
            STRING "Title: "
-                  FUNCTION TRIM(J-TITLE(CHOICE))
+                  FUNCTION TRIM(J-TITLE(SELECTED-JOB-INDEX))
                DELIMITED BY SIZE
                INTO WS-OUT
            END-STRING
@@ -105,7 +106,7 @@
 
            MOVE SPACES TO WS-OUT
            STRING "Description: "
-                  FUNCTION TRIM(J-DESC(CHOICE))
+                  FUNCTION TRIM(J-DESC(SELECTED-JOB-INDEX))
                DELIMITED BY SIZE
                INTO WS-OUT
            END-STRING
@@ -113,7 +114,7 @@
 
            MOVE SPACES TO WS-OUT
            STRING "Employer: "
-                  FUNCTION TRIM(J-EMPLOYER(CHOICE))
+                  FUNCTION TRIM(J-EMPLOYER(SELECTED-JOB-INDEX))
                DELIMITED BY SIZE
                INTO WS-OUT
            END-STRING
@@ -121,17 +122,17 @@
 
            MOVE SPACES TO WS-OUT
            STRING "Location: "
-                  FUNCTION TRIM(J-LOC(CHOICE))
+                  FUNCTION TRIM(J-LOC(SELECTED-JOB-INDEX))
                DELIMITED BY SIZE
                INTO WS-OUT
            END-STRING
            PERFORM PRINT-LINE
 
-           IF FUNCTION TRIM(J-SALARY(CHOICE)) NOT = SPACES
-              AND FUNCTION TRIM(J-SALARY(CHOICE)) NOT = "NONE"
+           IF FUNCTION TRIM(J-SALARY(SELECTED-JOB-INDEX)) NOT = SPACES
+              AND FUNCTION TRIM(J-SALARY(SELECTED-JOB-INDEX)) NOT = "NONE"
                MOVE SPACES TO WS-OUT
                STRING "Salary: "
-                      FUNCTION TRIM(J-SALARY(CHOICE))
+                      FUNCTION TRIM(J-SALARY(SELECTED-JOB-INDEX))
                    DELIMITED BY SIZE
                    INTO WS-OUT
                END-STRING

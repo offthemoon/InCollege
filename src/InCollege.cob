@@ -64,7 +64,7 @@
        01 CMDLINE                          PIC X(120) VALUE SPACES.
        01 TEST-ID                          PIC X(40)  VALUE SPACES.
 
-       01 CHOICE                           PIC 9 VALUE 0.
+       01 CHOICE                           PIC 99 VALUE 0.
        01 LOGIN-SUCCESS                    PIC 9 VALUE 0.
        01 USER-COUNT                       PIC 9 VALUE 0.
        01 FOUND                            PIC 9 VALUE 0.
@@ -178,7 +178,7 @@
        01 APP-TOTAL-FOR-USER               PIC 9(3) VALUE 0.
        01 MATCH-FOUND                      PIC 9 VALUE 0.
        01 WS-NUM-TXT                       PIC ZZZ VALUE SPACES.
-
+       01 SELECTED-JOB-INDEX              PIC 99 VALUE 0.
        PROCEDURE DIVISION.
        MAIN.
            PERFORM SETUP-FILENAMES

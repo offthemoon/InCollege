@@ -1,6 +1,6 @@
       *> handles applying for jobs and preventing duplicate applications
        APPLY-FOR-JOB.
-           MOVE J-ID(CHOICE) TO SELECTED-JOB-ID
+           MOVE J-ID(SELECTED-JOB-INDEX) TO SELECTED-JOB-ID
 
       *> check if already applied
            MOVE 0 TO MATCH-FOUND
@@ -17,9 +17,9 @@
                MOVE SPACES TO WS-OUT
                STRING
                    "You have already applied for "
-                   FUNCTION TRIM(J-TITLE(CHOICE))
+                   FUNCTION TRIM(J-TITLE(SELECTED-JOB-INDEX))
                    " at "
-                   FUNCTION TRIM(J-EMPLOYER(CHOICE))
+                   FUNCTION TRIM(J-EMPLOYER(SELECTED-JOB-INDEX))
                    "."
                    DELIMITED BY SIZE
                    INTO WS-OUT
@@ -46,9 +46,9 @@
            MOVE SPACES TO WS-OUT
            STRING
                "Your application for "
-               FUNCTION TRIM(J-TITLE(CHOICE))
+               FUNCTION TRIM(J-TITLE(SELECTED-JOB-INDEX))
                " at "
-               FUNCTION TRIM(J-EMPLOYER(CHOICE))
+               FUNCTION TRIM(J-EMPLOYER(SELECTED-JOB-INDEX))
                " has been submitted."
                DELIMITED BY SIZE
                INTO WS-OUT
