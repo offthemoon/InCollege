@@ -667,7 +667,9 @@
                PERFORM PRINT-LINE
                MOVE "7. View My Network" TO WS-OUT
                PERFORM PRINT-LINE
-               MOVE "8. Logout" TO WS-OUT
+               MOVE "8. Messages" TO WS-OUT
+               PERFORM PRINT-LINE
+               MOVE "9. Logout" TO WS-OUT
                PERFORM PRINT-LINE
                MOVE "Enter your choice:" TO WS-OUT
                PERFORM PRINT-LINE
@@ -690,6 +692,8 @@
                    WHEN 7
                        PERFORM VIEW-NETWORK
                    WHEN 8
+                       PERFORM MESSAGES
+                   WHEN 9
                        EXIT PARAGRAPH
                    WHEN OTHER
                        CONTINUE
@@ -1225,6 +1229,35 @@
            ELSE
                CLOSE APPLICATIONS-FILE
            END-IF
+           .
+      MESSAGES.
+       PERFORM UNTIL 1 = 2
+           MOVE "--- Messages ---" TO WS-OUT
+           PERFORM PRINT-LINE
+           MOVE "1. Send a New Message" TO WS-OUT
+           PERFORM PRINT-LINE
+           MOVE "2. View My Messages" TO WS-OUT
+           PERFORM PRINT-LINE
+           MOVE "3. Back to Main Menu" TO WS-OUT
+           PERFORM PRINT-LINE
+
+           MOVE "Enter your choice:" TO WS-OUT
+           PERFORM PRINT-LINE
+
+           PERFORM GET-CHOICE-1DIGIT
+
+               EVALUATE CHOICE
+                   WHEN 1
+                       PERFORM CREATE-EDIT-PROFILE
+                   WHEN 2
+                       PERFORM VIEW-MY-PROFILE
+                   WHEN 3
+                       EXIT PARAGRAPH
+                   WHEN OTHER
+                       MOVE "Invalid choice, please try again." TO WS-OUT
+                       PERFORM PRINT-LINE
+               END-EVALUATE
+         END-PERFORM
            .
 
        LOAD-APPLICATIONS.
