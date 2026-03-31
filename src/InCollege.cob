@@ -1248,9 +1248,9 @@
 
                EVALUATE CHOICE
                    WHEN 1
-                       PERFORM CREATE-EDIT-PROFILE
+                       PERFORM SEND-MESSAGE
                    WHEN 2
-                       PERFORM VIEW-MY-PROFILE
+                       PERFORM VIEW-MY-MESSAGES
                    WHEN 3
                        EXIT PARAGRAPH
                    WHEN OTHER
@@ -1314,3 +1314,6 @@
        COPY "src/JOBS_SRC.CPY".
        COPY "src/APPLYJOB_SRC.CPY".
        COPY "src/VIEWAPPS_SRC.CPY".
+       *>  Addded two more copybooks for messages functionality
+       COPY "src/SENDMESSAGE_SRC.CPY".
+       COPY "SRC/VIEWMESSAGES_SRC.CPY".

@@ -40,23 +40,58 @@ Invalid choice, please try again.
 3. Back to Main Menu
 Enter your choice:
 1
---- Create/Edit Profile ---
-Enter First Name:
+under construction
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
 4
-Enter Last Name:
+Invalid choice, please try again.
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
 1
-Enter University/College Attended:
+under construction
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
 0
-Enter Major:
+Invalid choice, please try again.
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
 3
-Enter Graduation Year (YYYY):
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
 4
-Invalid graduation year. Please try again.
-Enter Graduation Year (YYYY):
+Enter first name to search:
 8
-Invalid graduation year. Please try again.
-Enter Graduation Year (YYYY):
+Enter last name to search:
 3
-Invalid graduation year. Please try again.
-Enter Graduation Year (YYYY):
+No profile found.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
 --- END_OF_PROGRAM_EXECUTION ---
