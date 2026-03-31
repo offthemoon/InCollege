@@ -1,4 +1,4 @@
        VIEW-MY-MESSAGES.
-            MOVE "under construction" TO WS-OUT
+            MOVE "This feature is currently under construction" TO WS-OUT
             PERFORM PRINT-LINE
             .

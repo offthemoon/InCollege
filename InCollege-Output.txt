@@ -25,49 +25,49 @@ Enter your choice:
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
+1
+Enter recipient username:
+Jasmine
+Enter your message:
+How are you?
+Message sent successfully!
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient username:
+Mark
+You can only message users you are connected with.
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
 9
-Invalid choice, please try again.
---- Messages ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-03
-Invalid choice, please try again.
---- Messages ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
 1
-under construction
---- Messages ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-4
-Invalid choice, please try again.
---- Messages ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-1
-under construction
---- Messages ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-0
-Invalid choice, please try again.
---- Messages ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-3
+Please enter your username:
+Jasmine
+Please enter your password:
+Jas123!me
+You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -78,12 +78,20 @@ Enter your choice:
 8. Messages
 9. Logout
 Enter your choice:
-4
-Enter first name to search:
 8
-Enter last name to search:
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+2
+This feature is currently under construction
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
 3
-No profile found.
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -94,4 +102,11 @@ No profile found.
 8. Messages
 9. Logout
 Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+3
 --- END_OF_PROGRAM_EXECUTION ---

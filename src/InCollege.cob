@@ -4,6 +4,9 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
+           SELECT MESSAGES-FILE ASSIGN TO "src/messages.dat"
+               ORGANIZATION IS LINE SEQUENTIAL
+               FILE STATUS IS MESSAGES-STATUS.
            SELECT INPUT-FILE ASSIGN TO INPUT-FILENAME
                ORGANIZATION IS LINE SEQUENTIAL.
            SELECT OUTPUT-FILE ASSIGN TO OUTPUT-FILENAME
@@ -29,7 +32,8 @@
 
        DATA DIVISION.
        FILE SECTION.
-
+       FD MESSAGES-FILE.
+       01 MESSAGE-RECORD PIC X(500).
        FD INPUT-FILE.
        01 INPUT-RECORD                     PIC X(300).
 
@@ -53,6 +57,15 @@
 
        WORKING-STORAGE SECTION.
 
+       01 MSG-SENDER                       PIC X(15).
+       01 MSG-RECEIVER                     PIC X(15).
+       01 MSG-TEXT                         PIC X(300).
+       01 WS-MSG-LINE                      PIC X(500).
+       01 MSG-FOUND                        PIC 9 VALUE 0.
+       01 MESSAGE-CONTENT                  PIC X(200).
+       01 WS-DATE                          PIC 9(8).
+       01 WS-TIME                          PIC 9(6).
+       01 MESSAGES-STATUS                  PIC XX VALUE "00".
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
        01 CONNECTIONS-STATUS               PIC XX VALUE "00".
@@ -194,6 +207,7 @@
            PERFORM LOAD-JOBS
            PERFORM ENSURE-APPLICATIONS-FILE
            PERFORM LOAD-APPLICATIONS
+           PERFORM ENSURE-MESSAGES-FILE
            PERFORM MAIN-MENU
            PERFORM END-PROGRAM
            .
@@ -1306,6 +1320,18 @@
                END-IF
            END-PERFORM
            .
+
+       ENSURE-MESSAGES-FILE.
+           MOVE "00" TO MESSAGES-STATUS
+           OPEN INPUT MESSAGES-FILE
+           IF MESSAGES-STATUS NOT = "00"
+               OPEN OUTPUT MESSAGES-FILE
+               CLOSE MESSAGES-FILE
+           ELSE
+               CLOSE MESSAGES-FILE
+           END-IF
+           .
+
        COPY "src/SENDREQ.CPY".
        COPY "src/VIEWREQ.CPY".
        COPY "src/VIEWNET.CPY".
