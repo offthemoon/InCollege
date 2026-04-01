@@ -1,1 +1,18 @@
 Samuel|Jasmine|How are you?
+Samuel|Jasmine|How are you?
+Samuel|Jasmine|Connected message should work
+Jasmine|Riham|Accepted request message should work
+Samuel|Jasmine|Hi Jasmine, I am Samuel!
+Jasmine|Riham|3
+Jasmine|Riham|3
+Jasmine|Riham|RihaM!99
+Jasmine|Riham|Accepted request message should work
+Samuel|Jasmine|Hi Jasmine, I am Samuel!
+Jasmine|Riham|Unconnected message should fail
+Jasmine|Riham|Accepted request message should work
+Samuel|Jasmine|Hi Jasmine, I am Samuel!
+Jasmine|Riham|How are you?
+Samuel|Jasmine|Hi Jasmine, I am Samuel!
+Jasmine|Riham|How are you?
+Samuel|Jasmine|Hi Jasmine, I am Samuel!
+Jasmine|Riham|How are you?
