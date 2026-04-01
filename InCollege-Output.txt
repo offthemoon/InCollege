@@ -29,17 +29,8 @@ Enter your choice:
 Enter recipient username:
 Jasmine
 Enter your message:
-How are you?
-Message sent successfully!
---- Messages ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-1
-Enter recipient username:
-Mark
-You can only message users you are connected with.
+
+Message cannot be empty.
 --- Messages ---
 1. Send a New Message
 2. View My Messages
@@ -67,6 +58,200 @@ Please enter your username:
 Jasmine
 Please enter your password:
 Jas123!me
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+8
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient username:
+Riham
+You can only message users you are connected with.
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+4
+Enter first name to search:
+Riham
+Enter last name to search:
+Khan
+--- Profile Found ---
+--- Profile Information ---
+Name: Riham Khan
+University: Massachusetts Institute of Technology
+Major: Mechatronics and Rob
+Graduation Year: 2030
+About Me:
+Experience:
+Education:
+1. Send Connection Request
+2. Back to Main Menu
+Enter your choice:
+1
+Connection request sent to Riham.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+8
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient username:
+Riham
+Cannot message users with pending requests.
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Riham
+Please enter your password:
+RihaM!99
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+6
+--- Pending Connection Requests ---
+Request from: Jasmine Kohli
+1. Accept
+2. Reject
+Enter your choice for Jasmine:
+1
+Connection request from Jasmine accepted!
+-----------------------------------
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Jasmine
+Please enter your password:
+Jas123!me
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+8
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient username:
+Riham
+Enter your message:
+How are you?
+Message sent successfully!
+--- Messages ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Riham
+Please enter your password:
+RihaM!99
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
