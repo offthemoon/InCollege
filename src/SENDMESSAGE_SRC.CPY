@@ -64,6 +64,13 @@
                EXIT PARAGRAPH
            END-IF
 
+      *> Message to not exceed 200 characters
+           IF FUNCTION LENGTH(FUNCTION TRIM(MSG-TEXT)) > 200
+               MOVE "Message cannot exceed 200 characters." TO WS-OUT
+               PERFORM PRINT-LINE
+               EXIT PARAGRAPH
+           END-IF
+
            MOVE FUNCTION TRIM(U-NAME(CURRENT-USER-ID)) TO MSG-SENDER
 
       *> Write to file

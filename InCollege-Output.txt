@@ -29,8 +29,8 @@ Enter your choice:
 Enter recipient username:
 Jasmine
 Enter your message:
-
-Message cannot be empty.
+This is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very
+Message cannot exceed 200 characters.
 --- Messages ---
 1. Send a New Message
 2. View My Messages
