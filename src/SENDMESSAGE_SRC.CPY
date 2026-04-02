@@ -1,5 +1,6 @@
        SEND-MESSAGE.
-           MOVE "Enter recipient username:" TO WS-OUT
+           MOVE "Enter recipient's username (must be a connection):"
+               TO WS-OUT
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            MOVE WS-OUT(1:15) TO MSG-RECEIVER
@@ -53,7 +54,7 @@
                EXIT PARAGRAPH
            END-IF
 
-           MOVE "Enter your message:" TO WS-OUT
+           MOVE "Enter your message (max 200 chars):" TO WS-OUT
            PERFORM PRINT-LINE
            PERFORM READ-INPUT
            MOVE WS-OUT TO MSG-TEXT

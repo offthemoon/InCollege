@@ -20,18 +20,18 @@ You have successfully logged in.
 9. Logout
 Enter your choice:
 8
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
 1
-Enter recipient username:
+Enter recipient's username (must be a connection):
 Jasmine
-Enter your message:
+Enter your message (max 200 chars):
 This is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very
 Message cannot exceed 200 characters.
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
@@ -70,16 +70,16 @@ You have successfully logged in.
 9. Logout
 Enter your choice:
 8
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
 1
-Enter recipient username:
+Enter recipient's username (must be a connection):
 Riham
 You can only message users you are connected with.
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
@@ -125,16 +125,16 @@ Connection request sent to Riham.
 9. Logout
 Enter your choice:
 8
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
 1
-Enter recipient username:
+Enter recipient's username (must be a connection):
 Riham
 Cannot message users with pending requests.
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
@@ -214,18 +214,18 @@ You have successfully logged in.
 9. Logout
 Enter your choice:
 8
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
 1
-Enter recipient username:
+Enter recipient's username (must be a connection):
 Riham
-Enter your message:
+Enter your message (max 200 chars):
 How are you?
 Message sent successfully!
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
@@ -264,14 +264,14 @@ You have successfully logged in.
 9. Logout
 Enter your choice:
 8
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
 2
 This feature is currently under construction
---- Messages ---
+--- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu

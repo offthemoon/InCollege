@@ -1246,7 +1246,7 @@
            .
       MESSAGES.
        PERFORM UNTIL 1 = 2
-           MOVE "--- Messages ---" TO WS-OUT
+           MOVE "--- Messages Menu ---" TO WS-OUT
            PERFORM PRINT-LINE
            MOVE "1. Send a New Message" TO WS-OUT
            PERFORM PRINT-LINE
