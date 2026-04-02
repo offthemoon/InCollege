@@ -78,15 +78,16 @@
            OPEN EXTEND MESSAGES-FILE
 
            MOVE SPACES TO MESSAGE-RECORD
-           ACCEPT WS-DATE FROM DATE YYYYMMDD
-           ACCEPT WS-TIME FROM TIME
+           MOVE FUNCTION CURRENT-DATE TO WS-CURRENT-DATE-TIME
 
            STRING
                FUNCTION TRIM(MSG-SENDER) "|"
                FUNCTION TRIM(MSG-RECEIVER) "|"
                FUNCTION TRIM(MSG-TEXT) "|"
-               WS-DATE(1:4) "-" WS-DATE(5:2) "-" WS-DATE(7:2) " "
-               WS-TIME(1:2) ":" WS-TIME(3:2) ":" WS-TIME(5:2)
+               WS-CURRENT-DATE-TIME(1:4) "-" WS-CURRENT-DATE-TIME(5:2) "-"
+               WS-CURRENT-DATE-TIME(7:2) " "
+               WS-CURRENT-DATE-TIME(9:2) ":" WS-CURRENT-DATE-TIME(11:2) ":"
+               WS-CURRENT-DATE-TIME(13:2)
                DELIMITED BY SIZE
                INTO MESSAGE-RECORD
            END-STRING

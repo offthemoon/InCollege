@@ -63,8 +63,8 @@
        01 WS-MSG-LINE                      PIC X(500).
        01 MSG-FOUND                        PIC 9 VALUE 0.
        01 MESSAGE-CONTENT                  PIC X(200).
-       01 WS-DATE                          PIC 9(8).
-       01 WS-TIME                          PIC 9(6).
+      *> FUNCTION CURRENT-DATE: YYYYMMDD + local HHMMSS + ... (21 chars total)
+       01 WS-CURRENT-DATE-TIME              PIC X(21).
        01 MESSAGES-STATUS                  PIC XX VALUE "00".
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
