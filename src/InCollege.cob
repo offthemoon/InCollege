@@ -63,9 +63,23 @@
        01 WS-MSG-LINE                      PIC X(500).
        01 MSG-FOUND                        PIC 9 VALUE 0.
        01 MESSAGE-CONTENT                  PIC X(200).
-      *> FUNCTION CURRENT-DATE: YYYYMMDD + local HHMMSS + ... (21 chars total)
-       01 WS-CURRENT-DATE-TIME              PIC X(21).
+      *> Timestamp: YYYYMMDD + local HHMMSS
+       01 WS-CURRENT-DATE-TIME             PIC X(21).
        01 MESSAGES-STATUS                  PIC XX VALUE "00".
+      *> Week 9: View My Messages
+       01 VM-MAX                           PIC 999 VALUE 200.
+       01 VM-COUNT                         PIC 999 VALUE 0.
+       01 VM-MSG-EOF                       PIC 9 VALUE 0.
+       01 VM-DISPLAY-I                     PIC 999 VALUE 0.
+       01 VM-STORE.
+       05 VM-ITEM                          OCCURS 200 TIMES.
+       10 VM-FROM                          PIC X(15).
+       10 VM-BODY                          PIC X(300).
+       10 VM-WHEN                          PIC X(25).
+       01 VM-TMP-SENDER                    PIC X(15).
+       01 VM-TMP-RECV                      PIC X(15).
+       01 VM-TMP-TEXT                      PIC X(300).
+       01 VM-TMP-TS                        PIC X(25).
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
        01 CONNECTIONS-STATUS               PIC XX VALUE "00".
@@ -1340,6 +1354,6 @@
        COPY "src/JOBS_SRC.CPY".
        COPY "src/APPLYJOB_SRC.CPY".
        COPY "src/VIEWAPPS_SRC.CPY".
-       *>  Addded two more copybooks for messages functionality
+       *>  Addded two more copybooks for messages functionality as per epic requirement
        COPY "src/SENDMESSAGE_SRC.CPY".
-       COPY "SRC/VIEWMESSAGES_SRC.CPY".
+       COPY "src/VIEWMESSAGES_SRC.CPY".

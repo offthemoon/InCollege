@@ -29,201 +29,18 @@ Enter your choice:
 Enter recipient's username (must be a connection):
 Jasmine
 Enter your message (max 200 chars):
-This is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very
-Message cannot exceed 200 characters.
+Hi Jasmine, we have a connection
+Message sent successfully!
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
-3
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-9
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
-Enter your choice:
 1
-Please enter your username:
+Enter recipient's username (must be a connection):
 Jasmine
-Please enter your password:
-Jas123!me
-You have successfully logged in.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-8
---- Messages Menu ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-1
-Enter recipient's username (must be a connection):
-Riham
-You can only message users you are connected with.
---- Messages Menu ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-3
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-4
-Enter first name to search:
-Riham
-Enter last name to search:
-Khan
---- Profile Found ---
---- Profile Information ---
-Name: Riham Khan
-University: Massachusetts Institute of Technology
-Major: Mechatronics and Rob
-Graduation Year: 2030
-About Me:
-Experience:
-Education:
-1. Send Connection Request
-2. Back to Main Menu
-Enter your choice:
-1
-Connection request sent to Riham.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-8
---- Messages Menu ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-1
-Enter recipient's username (must be a connection):
-Riham
-Cannot message users with pending requests.
---- Messages Menu ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-3
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-9
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
-Enter your choice:
-1
-Please enter your username:
-Riham
-Please enter your password:
-RihaM!99
-You have successfully logged in.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-6
---- Pending Connection Requests ---
-Request from: Jasmine Kohli
-1. Accept
-2. Reject
-Enter your choice for Jasmine:
-1
-Connection request from Jasmine accepted!
------------------------------------
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-9
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
-Enter your choice:
-1
-Please enter your username:
-Jasmine
-Please enter your password:
-Jas123!me
-You have successfully logged in.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Messages
-9. Logout
-Enter your choice:
-8
---- Messages Menu ---
-1. Send a New Message
-2. View My Messages
-3. Back to Main Menu
-Enter your choice:
-1
-Enter recipient's username (must be a connection):
-Riham
 Enter your message (max 200 chars):
-How are you?
+This is another message and should come on a new line
 Message sent successfully!
 --- Messages Menu ---
 1. Send a New Message
@@ -249,9 +66,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Riham
+Jasmine
 Please enter your password:
-RihaM!99
+Jas123!me
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -270,7 +87,15 @@ Enter your choice:
 3. Back to Main Menu
 Enter your choice:
 2
-This feature is currently under construction
+--- Your Messages ---
+From: Samuel
+Message: Hi Jasmine, we have a connection
+Sent: 2026-04-05 21:26:38
+---
+From: Samuel
+Message: This is another message and should come on a new line
+Sent: 2026-04-05 21:26:38
+---------------------
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages

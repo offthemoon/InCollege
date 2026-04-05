@@ -95,8 +95,6 @@
            WRITE MESSAGE-RECORD
            CLOSE MESSAGES-FILE
 
-           OPEN EXTEND MESSAGES-FILE
-
            MOVE "Message sent successfully!" TO WS-OUT
            PERFORM PRINT-LINE
            .

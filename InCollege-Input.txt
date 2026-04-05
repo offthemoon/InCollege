@@ -4,43 +4,15 @@ $@Mue12026
 8
 1
 Jasmine
-This is a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long message.
+Hi Jasmine, we have a connection
+1
+Jasmine
+This is another message and should come on a new line
 3
 9
 1
 Jasmine
 Jas123!me
-8
-1
-Riham
-3
-4
-Riham
-Khan
-1
-8
-1
-Riham
-3
-9
-1
-Riham
-RihaM!99
-6
-1
-9
-1
-Jasmine
-Jas123!me
-8
-1
-Riham
-How are you?
-3
-9
-1
-Riham
-RihaM!99
 8
 2
 3
