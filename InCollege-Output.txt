@@ -5,9 +5,179 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
+Samuel
+Please enter your password:
+$@Mue12026
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+8
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient's username (must be a connection):
+Jasmine
+Enter your message (max 200 chars):
+Hi Jasmine, we have a connection
+Message sent successfully!
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient's username (must be a connection):
+Jasmine
+Enter your message (max 200 chars):
+This is another message and should come on a new line
+Message sent successfully!
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Aarav
+Please enter your password:
+AaRav!2025
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+8
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient's username (must be a connection):
+Jasmine
+Enter your message (max 200 chars):
+First message from Aarav
+Message sent successfully!
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
 Jasmine
 Please enter your password:
 Jas123!me
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+8
+You have 3 unread messages.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+2
+--- How do you want to view messages? ---
+1. View all messages
+2. Messages from: Samuel
+3. Messages from: Aarav
+4. Back (return without viewing)
+Enter your choice:
+3
+--- Your Messages ---
+From: Aarav
+Message: First message from Aarav
+Sent: 2026-04-06 03:24:21
+---------------------
+You have 2 unread messages.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Roy
+Please enter your password:
+Roy@1234
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -27,6 +197,95 @@ Enter your choice:
 Enter your choice:
 2
 You have no messages at this time.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient's username (must be a connection):
+Riham
+Enter your message (max 200 chars):
+Glad we connected!
+Message sent successfully!
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+2
+You have no messages at this time.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+1
+Enter recipient's username (must be a connection):
+Riham
+Enter your message (max 200 chars):
+This is another message to you!
+Message sent successfully!
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+1
+Please enter your username:
+Riham
+Please enter your password:
+RihaM!99
+You have successfully logged in.
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+8
+You have 2 unread messages.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+2
+--- How do you want to view messages? ---
+1. View messages from Roy
+2. Back (return without viewing)
+Enter your choice:
+1
+--- Your Messages ---
+From: Roy
+Message: Glad we connected!
+Sent: 2026-04-06 03:24:21
+---
+From: Roy
+Message: This is another message to you!
+Sent: 2026-04-06 03:24:21
+---------------------
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages

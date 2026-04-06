@@ -84,11 +84,24 @@
        01 UNREAD-MSG-COUNT                 PIC 999 VALUE 0.
        01 UNREAD-DISP                      PIC ZZZ9.
        01 COUNT-URG-EOF                    PIC 9 VALUE 0.
-       01 M-MSG-TOTAL                       PIC 999 VALUE 0.
-       01 M-LOAD-EOF                        PIC 9 VALUE 0.
-       01 MSG-LOOP-IDX                      PIC 999 VALUE 0.
+       01 M-MSG-TOTAL                      PIC 999 VALUE 0.
+       01 M-LOAD-EOF                       PIC 9 VALUE 0.
+       01 MSG-LOOP-IDX                     PIC 999 VALUE 0.
        01 M-ALL-MSGS.
-           05 M-REC                        OCCURS 200 TIMES PIC X(500).
+       05 M-REC                            OCCURS 200 TIMES PIC X(500).
+       01 VM-CURRENT-LINE-IDX              PIC 999 VALUE 0.
+       01 VM-SRC-LINE.
+       05 VM-SRC-LINE-ENTRY                OCCURS 200 TIMES PIC 999.
+       01 VM-SHOW-FLAG.
+       05 VM-SHOW-ENTRY                    OCCURS 200 TIMES PIC 9.
+       01 VM-US-COUNT                      PIC 99 VALUE 0.
+       01 VM-UNIQUE-SENDERS.
+       05 VM-US-NAME                       OCCURS 15 TIMES PIC X(15).
+       01 VM-MENU-CHOICE                   PIC 999 VALUE 0.
+       01 VM-MENU-MAX                      PIC 999 VALUE 0.
+       01 VM-SUBMENU-OPT-N                 PIC 99 VALUE 0.
+       01 VM-PREV-SHOWN                    PIC 9 VALUE 0.
+       01 VM-PICK-SENDER-IX                PIC 99 VALUE 0.
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
        01 CONNECTIONS-STATUS               PIC XX VALUE "00".
@@ -286,6 +299,14 @@
            MOVE 0 TO CHOICE
            IF WS-OUT(1:1) >= "0" AND WS-OUT(1:1) <= "9"
                COMPUTE CHOICE = FUNCTION NUMVAL(WS-OUT(1:1))
+           END-IF
+           .
+
+       GET-CHOICE-MENU-NUM.
+           PERFORM READ-INPUT
+           MOVE 0 TO VM-MENU-CHOICE
+           IF FUNCTION TRIM(WS-OUT) NOT = SPACES
+               MOVE FUNCTION NUMVAL(FUNCTION TRIM(WS-OUT)) TO VM-MENU-CHOICE
            END-IF
            .
 
