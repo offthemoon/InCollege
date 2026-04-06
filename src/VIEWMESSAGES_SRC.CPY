@@ -49,7 +49,7 @@
                PERFORM VARYING VM-DISPLAY-I FROM 1 BY 1 UNTIL VM-DISPLAY-I > VM-COUNT
                    IF FUNCTION TRIM(VM-FROM(VM-DISPLAY-I)) = FUNCTION TRIM(
                            VM-US-NAME(VM-PICK-SENDER-IX))
-                       MOVE 1 TO VM-SHOW-ENT(VM-DISPLAY-I)
+                       MOVE 1 TO VM-SHOW-ENTRY(VM-DISPLAY-I)
                    END-IF
                END-PERFORM
            END-IF
@@ -123,13 +123,13 @@
 
        VM-CLEAR-SHOW-FLAGS.
            PERFORM VARYING VM-DISPLAY-I FROM 1 BY 1 UNTIL VM-DISPLAY-I > VM-COUNT
-               MOVE 0 TO VM-SHOW-ENT(VM-DISPLAY-I)
+               MOVE 0 TO VM-SHOW-ENTRY(VM-DISPLAY-I)
            END-PERFORM
            .
 
        VM-SET-ALL-SHOW-FLAGS.
            PERFORM VARYING VM-DISPLAY-I FROM 1 BY 1 UNTIL VM-DISPLAY-I > VM-COUNT
-               MOVE 1 TO VM-SHOW-ENT(VM-DISPLAY-I)
+               MOVE 1 TO VM-SHOW-ENTRY(VM-DISPLAY-I)
            END-PERFORM
            .
 
@@ -138,7 +138,7 @@
            PERFORM PRINT-LINE
            MOVE 0 TO VM-PREV-SHOWN
            PERFORM VARYING VM-DISPLAY-I FROM 1 BY 1 UNTIL VM-DISPLAY-I > VM-COUNT
-               IF VM-SHOW-ENT(VM-DISPLAY-I) = 1
+               IF VM-SHOW-ENTRY(VM-DISPLAY-I) = 1
                    IF VM-PREV-SHOWN = 1
                        MOVE "---" TO WS-OUT
                        PERFORM PRINT-LINE
@@ -173,8 +173,8 @@
 
        VM-MARK-SHOWN-AS-READ.
            PERFORM VARYING VM-DISPLAY-I FROM 1 BY 1 UNTIL VM-DISPLAY-I > VM-COUNT
-               IF VM-SHOW-ENT(VM-DISPLAY-I) = 1
-                   MOVE VM-SRC-LINE-ENT(VM-DISPLAY-I) TO MSG-LOOP-IDX
+               IF VM-SHOW-ENTRY(VM-DISPLAY-I) = 1
+                   MOVE VM-SRC-LINE-ENTRY(VM-DISPLAY-I) TO MSG-LOOP-IDX
                    PERFORM VM-MARK-ONE-MREC-READ
                END-IF
            END-PERFORM
@@ -245,7 +245,7 @@
            IF FUNCTION TRIM(VM-TMP-RECV) = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
                IF VM-COUNT < VM-MAX
                    ADD 1 TO VM-COUNT
-                   MOVE VM-CURRENT-LINE-IDX TO VM-SRC-LINE-ENT(VM-COUNT)
+                   MOVE VM-CURRENT-LINE-IDX TO VM-SRC-LINE-ENTRY(VM-COUNT)
                    MOVE FUNCTION TRIM(VM-TMP-SENDER) TO VM-FROM(VM-COUNT)
                    MOVE FUNCTION TRIM(VM-TMP-TEXT) TO VM-BODY(VM-COUNT)
                    IF FUNCTION TRIM(VM-TMP-TS) = SPACES

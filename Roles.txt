@@ -1,5 +1,5 @@
-Scrum Master - Riham Khan
-Dev 1 - Jasmine Kaur Kohli
-Dev 2 - Roy Ibarra
-Test 1 - Aarav Jain
-Test 2 - Samuel Johnson
+Scrum Master - Samuel Johnson
+Dev 1 - Riham Khan
+Dev 2 - Jasmine Kaur Kohli
+Test 1 - Roy Ibarra
+Test 2 - Aarav Jain

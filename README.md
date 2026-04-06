@@ -118,12 +118,12 @@ In terminal enter ```./bin/InCollege```
 - All output displayed on screen and written identically to the output file
 
 
-### Week 5 – Connection Requests
+### Week 5 – Connection Management
 **Tasks Completed:**
 - Users can view all pending connection requests and choose to accept or reject each request individually.
 - Multiple pending requests handled correctly in sequence, with confirmations displayed for each action.
 - Rejected requests are removed from the pending list and do not appear in the network.
-- Accepted requests are added to the user’s network and stored persistently in connections.dat.
+- Accepted requests are added to the user's network and stored persistently in connections.dat.
 - Users cannot send duplicate connection requests to existing connections.
 - Network viewing displays all current connections with details including:
   - Name
@@ -133,3 +133,36 @@ In terminal enter ```./bin/InCollege```
 - Menu navigation allows returning to the main menu after request processing or network viewing.
 - All updates are reflected consistently across multiple logins, ensuring data persistence.
 - File-based input/output continues to ensure console display and output file are identical.
+
+### Week 6 – Job Posting System
+**Tasks Completed:**
+- Users can post job/internship listings with required fields (title, description, employer, location, salary)
+- Job board displays all available job postings
+- Persistent storage of job listings in jobs.dat
+- Continued file-based input and output handling
+
+### Week 7 – Job Application System
+**Tasks Completed:**
+- Users can apply to posted jobs from the job board
+- Prevent duplicate applications to the same job
+- View list of jobs user has applied to
+- Persistent storage of applications in applications.dat
+
+### Week 8 – Basic Messaging System Part 1
+**Tasks Completed:**
+- Implemented "Messages" menu option in post-login menu
+- Users can send messages to their established connections only
+- Message validation: recipient must exist and be a connection
+- Message text limited to 200 characters
+- Messages stored persistently in messages.dat with timestamp and read status
+- Unread message count displayed when entering Messages menu
+
+### Week 9 – Basic Messaging System Part 2
+**Tasks Completed:**
+- Implemented "View My Messages" functionality in Messages menu
+- Users can view all messages they have received
+- Messages display with sender name, message content, and timestamp
+- Filter messages by sender or view all messages
+- Gracefully handles "no messages" scenario with appropriate message display
+- Messages marked as read after being viewed
+- All message viewing actions logged to output file
