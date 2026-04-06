@@ -88,6 +88,8 @@
                WS-CURRENT-DATE-TIME(7:2) " "
                WS-CURRENT-DATE-TIME(9:2) ":" WS-CURRENT-DATE-TIME(11:2) ":"
                WS-CURRENT-DATE-TIME(13:2)
+               "|"
+               "0"
                DELIMITED BY SIZE
                INTO MESSAGE-RECORD
            END-STRING

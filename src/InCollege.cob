@@ -80,6 +80,15 @@
        01 VM-TMP-RECV                      PIC X(15).
        01 VM-TMP-TEXT                      PIC X(300).
        01 VM-TMP-TS                        PIC X(25).
+       01 VM-TMP-READ                      PIC X(1).
+       01 UNREAD-MSG-COUNT                 PIC 999 VALUE 0.
+       01 UNREAD-DISP                      PIC ZZZ9.
+       01 COUNT-URG-EOF                    PIC 9 VALUE 0.
+       01 M-MSG-TOTAL                       PIC 999 VALUE 0.
+       01 M-LOAD-EOF                        PIC 9 VALUE 0.
+       01 MSG-LOOP-IDX                      PIC 999 VALUE 0.
+       01 M-ALL-MSGS.
+           05 M-REC                        OCCURS 200 TIMES PIC X(500).
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
        01 CONNECTIONS-STATUS               PIC XX VALUE "00".
@@ -1260,6 +1269,23 @@
            .
       MESSAGES.
        PERFORM UNTIL 1 = 2
+           PERFORM COUNT-UNREAD-MESSAGES
+           IF UNREAD-MSG-COUNT > 0
+               IF UNREAD-MSG-COUNT = 1
+                   MOVE "You have 1 unread message." TO WS-OUT
+                   PERFORM PRINT-LINE
+               ELSE
+                   MOVE UNREAD-MSG-COUNT TO UNREAD-DISP
+                   MOVE SPACES TO WS-OUT
+                   STRING "You have "
+                       FUNCTION TRIM(UNREAD-DISP)
+                       " unread messages."
+                       DELIMITED BY SIZE
+                       INTO WS-OUT
+                   END-STRING
+                   PERFORM PRINT-LINE
+               END-IF
+           END-IF
            MOVE "--- Messages Menu ---" TO WS-OUT
            PERFORM PRINT-LINE
            MOVE "1. Send a New Message" TO WS-OUT
@@ -1286,6 +1312,41 @@
                        PERFORM PRINT-LINE
                END-EVALUATE
          END-PERFORM
+           .
+
+       COUNT-UNREAD-MESSAGES.
+           MOVE 0 TO UNREAD-MSG-COUNT
+           OPEN INPUT MESSAGES-FILE
+           IF MESSAGES-STATUS NOT = "00"
+               EXIT PARAGRAPH
+           END-IF
+           MOVE 0 TO COUNT-URG-EOF
+           PERFORM UNTIL COUNT-URG-EOF = 1
+               READ MESSAGES-FILE
+                   AT END
+                       MOVE 1 TO COUNT-URG-EOF
+                   NOT AT END
+                       PERFORM COUNT-UNREAD-LINE-PARSE
+               END-READ
+           END-PERFORM
+           CLOSE MESSAGES-FILE
+           .
+
+       COUNT-UNREAD-LINE-PARSE.
+           MOVE SPACES TO VM-TMP-SENDER VM-TMP-RECV VM-TMP-TEXT VM-TMP-TS
+           MOVE SPACES TO VM-TMP-READ
+           INSPECT MESSAGE-RECORD REPLACING ALL X"0D" BY SPACE
+           UNSTRING MESSAGE-RECORD
+               DELIMITED BY "|"
+               INTO VM-TMP-SENDER VM-TMP-RECV VM-TMP-TEXT VM-TMP-TS
+                    VM-TMP-READ
+           END-UNSTRING
+           IF FUNCTION TRIM(VM-TMP-RECV) = FUNCTION TRIM(U-NAME(CURRENT-USER-ID))
+               IF FUNCTION TRIM(VM-TMP-READ) = SPACES
+                       OR FUNCTION TRIM(VM-TMP-READ) = "0"
+                   ADD 1 TO UNREAD-MSG-COUNT
+               END-IF
+           END-IF
            .
 
        LOAD-APPLICATIONS.
