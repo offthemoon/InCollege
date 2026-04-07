@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Roy
+Jasmine
 Please enter your password:
-Roy@1234
+Jas123!me
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -16,15 +16,42 @@ You have successfully logged in.
 5. Learn a new skill
 6. View My Pending Connection Requests
 7. View My Network
-8. Logout
+8. Messages
+9. Logout
 Enter your choice:
-6
---- Pending Connection Requests ---
-You have no pending connection requests at this time.
------------------------------------
-1. Back to Main Menu
+8
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+2
+--- How do you want to view messages? ---
+1. View all messages
+2. Messages from: Samuel
+3. Messages from: Aarav
+4. Back (return without viewing)
 Enter your choice:
 1
+--- Your Messages ---
+From: Samuel
+Message: Hi Jasmine, we have a connection
+Sent: 2026-04-06 03:24:21
+---
+From: Samuel
+Message: This is another message and should come on a new line
+Sent: 2026-04-03 03:24:21
+---
+From: Aarav
+Message: First message from Aarav
+Sent: 2026-04-06 03:24:21
+---------------------
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -32,13 +59,14 @@ Enter your choice:
 5. Learn a new skill
 6. View My Pending Connection Requests
 7. View My Network
-8. Logout
+8. Messages
+9. Logout
 Enter your choice:
-7
---- Your Network ---
-Connected with: Samuel (University: Georgia Institute of Technology, Major: Mechanical Engineer)
-Connected with: Aarav (University: , Major: )
---------------------
-1. Back to Main Menu
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
 Enter your choice:
+3
 --- END_OF_PROGRAM_EXECUTION ---

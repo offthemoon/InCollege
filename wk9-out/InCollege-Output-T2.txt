@@ -5,9 +5,9 @@ Welcome to InCollege!
 Enter your choice:
 1
 Please enter your username:
-Aarav
+Jasmine
 Please enter your password:
-AaRav!2025
+Jas123!me
 You have successfully logged in.
 1. Create/Edit My Profile
 2. View My Profile
@@ -16,15 +16,42 @@ You have successfully logged in.
 5. Learn a new skill
 6. View My Pending Connection Requests
 7. View My Network
-8. Logout
+8. Messages
+9. Logout
 Enter your choice:
-7
---- Your Network ---
-You have no connections in your network yet.
---------------------
-1. Back to Main Menu
+8
+You have 2 unread messages.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
 Enter your choice:
-1
+2
+--- How do you want to view messages? ---
+1. View all messages
+2. Messages from: Samuel
+3. Messages from: Aarav
+4. Back (return without viewing)
+Enter your choice:
+100
+Invalid choice.
+You have 2 unread messages.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+12
+Enter recipient's username (must be a connection):
+
+Recipient user not found.
+You have 2 unread messages.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+34
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -32,64 +59,7 @@ Enter your choice:
 5. Learn a new skill
 6. View My Pending Connection Requests
 7. View My Network
-8. Logout
-Enter your choice:
-6
---- Pending Connection Requests ---
-You have no pending connection requests at this time.
------------------------------------
-1. Back to Main Menu
-Enter your choice:
-1
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Logout
-Enter your choice:
-4
-Enter first name to search:
-Roy
-Enter last name to search:
-Ibarra
---- Profile Found ---
---- Profile Information ---
-Name: Roy Ibarra
-University: University of Central Florida
-Major: Electrical Engineer
-Graduation Year: 2027
-About Me: I am a developer for InCollege wk2.
-Experience:
- Title: Developer
- Company: InCollege
- Dates: Spring 2026
- Description: Coded wk2 tasks.
-----------------------------
- Title: Teacher Assistant
- Company: Bellini Company
- Dates: Fall 2025
- Description: I graded student's work, taught students during recitation sessions and office hours. I really like.
-----------------------------
-Education:
- Degree: Electrical Engineering
- University: University of South Florida
- Years: 2023-2027
-----------------------------
-1. Send Connection Request
-2. Back to Main Menu
-Enter your choice:
-1
-You have already sent a connection request to this user.
-1. Create/Edit My Profile
-2. View My Profile
-3. Search for a job
-4. Find someone you know
-5. Learn a new skill
-6. View My Pending Connection Requests
-7. View My Network
-8. Logout
+8. Messages
+9. Logout
 Enter your choice:
 --- END_OF_PROGRAM_EXECUTION ---

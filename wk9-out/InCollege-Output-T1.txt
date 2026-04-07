@@ -16,15 +16,37 @@ You have successfully logged in.
 5. Learn a new skill
 6. View My Pending Connection Requests
 7. View My Network
-8. Logout
+8. Messages
+9. Logout
 Enter your choice:
-6
---- Pending Connection Requests ---
-You have no pending connection requests at this time.
------------------------------------
-1. Back to Main Menu
+8
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
 Enter your choice:
-1
+2
+You have no messages at this time.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+2
+You have no messages at this time.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+2
+You have no messages at this time.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
 1. Create/Edit My Profile
 2. View My Profile
 3. Search for a job
@@ -32,13 +54,38 @@ Enter your choice:
 5. Learn a new skill
 6. View My Pending Connection Requests
 7. View My Network
-8. Logout
+8. Messages
+9. Logout
 Enter your choice:
-7
---- Your Network ---
-Connected with: Jasmine (University: University of South Florida, Major: Computer Science)
-Connected with: Roy (University: University of Central Florida, Major: Electrical Engineer)
---------------------
-1. Back to Main Menu
+8
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
 Enter your choice:
+2
+You have no messages at this time.
+--- Messages Menu ---
+1. Send a New Message
+2. View My Messages
+3. Back to Main Menu
+Enter your choice:
+3
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
+Enter your choice:
+9
+Welcome to InCollege!
+1. Log In
+2. Create New Account
+3. Exit
+Enter your choice:
+3
 --- END_OF_PROGRAM_EXECUTION ---
