@@ -20,6 +20,7 @@
            END-IF
 
            PERFORM VM-BUILD-UNIQUE-SENDERS
+           PERFORM VM-SORT-MESSAGES-NEWEST-FIRST
            IF VM-US-COUNT = 1
                COMPUTE VM-MENU-MAX = 2
            ELSE
@@ -79,6 +80,43 @@
                            TO VM-US-NAME(VM-US-COUNT)
                    END-IF
                END-IF
+           END-PERFORM
+           .
+
+       VM-SORT-MESSAGES-NEWEST-FIRST.
+           IF VM-COUNT <= 1
+               EXIT PARAGRAPH
+           END-IF
+           PERFORM VARYING VM-SORT-I FROM 1 BY 1 UNTIL VM-SORT-I >= VM-COUNT
+               PERFORM VARYING VM-SORT-J FROM 1 BY 1
+                   UNTIL VM-SORT-J > (VM-COUNT - VM-SORT-I)
+                   MOVE VM-WHEN(VM-SORT-J) TO VM-SORT-LEFT
+                   MOVE VM-WHEN(VM-SORT-J + 1) TO VM-SORT-RIGHT
+                   IF FUNCTION TRIM(VM-SORT-LEFT) = "N/A"
+                       MOVE SPACES TO VM-SORT-LEFT
+                   END-IF
+                   IF FUNCTION TRIM(VM-SORT-RIGHT) = "N/A"
+                       MOVE SPACES TO VM-SORT-RIGHT
+                   END-IF
+      *>Timestamp, newest message appears first
+                   IF VM-SORT-LEFT < VM-SORT-RIGHT
+                       MOVE VM-FROM(VM-SORT-J) TO VM-SORT-TMP-FROM
+                       MOVE VM-BODY(VM-SORT-J) TO VM-SORT-TMP-BODY
+                       MOVE VM-WHEN(VM-SORT-J) TO VM-SORT-TMP-WHEN
+                       MOVE VM-SRC-LINE-ENTRY(VM-SORT-J) TO VM-SORT-TMP-LINE
+
+                       MOVE VM-FROM(VM-SORT-J + 1) TO VM-FROM(VM-SORT-J)
+                       MOVE VM-BODY(VM-SORT-J + 1) TO VM-BODY(VM-SORT-J)
+                       MOVE VM-WHEN(VM-SORT-J + 1) TO VM-WHEN(VM-SORT-J)
+                       MOVE VM-SRC-LINE-ENTRY(VM-SORT-J + 1)
+                           TO VM-SRC-LINE-ENTRY(VM-SORT-J)
+
+                       MOVE VM-SORT-TMP-FROM TO VM-FROM(VM-SORT-J + 1)
+                       MOVE VM-SORT-TMP-BODY TO VM-BODY(VM-SORT-J + 1)
+                       MOVE VM-SORT-TMP-WHEN TO VM-WHEN(VM-SORT-J + 1)
+                       MOVE VM-SORT-TMP-LINE TO VM-SRC-LINE-ENTRY(VM-SORT-J + 1)
+                   END-IF
+               END-PERFORM
            END-PERFORM
            .
 

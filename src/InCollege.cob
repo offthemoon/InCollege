@@ -102,6 +102,14 @@
        01 VM-SUBMENU-OPT-N                 PIC 99 VALUE 0.
        01 VM-PREV-SHOWN                    PIC 9 VALUE 0.
        01 VM-PICK-SENDER-IX                PIC 99 VALUE 0.
+       01 VM-SORT-I                        PIC 999 VALUE 0.
+       01 VM-SORT-J                        PIC 999 VALUE 0.
+       01 VM-SORT-TMP-FROM                 PIC X(15).
+       01 VM-SORT-TMP-BODY                 PIC X(300).
+       01 VM-SORT-TMP-WHEN                 PIC X(25).
+       01 VM-SORT-TMP-LINE                 PIC 999.
+       01 VM-SORT-LEFT                     PIC X(25).
+       01 VM-SORT-RIGHT                    PIC X(25).
        01 ACCOUNTS-STATUS                  PIC XX VALUE "00".
        01 REQUESTS-STATUS                  PIC XX VALUE "00".
        01 CONNECTIONS-STATUS               PIC XX VALUE "00".
@@ -297,7 +305,8 @@
        GET-CHOICE-1DIGIT.
            PERFORM READ-INPUT
            MOVE 0 TO CHOICE
-           IF WS-OUT(1:1) >= "0" AND WS-OUT(1:1) <= "9"
+           IF FUNCTION LENGTH(FUNCTION TRIM(WS-OUT)) = 1
+              AND WS-OUT(1:1) >= "0" AND WS-OUT(1:1) <= "9"
                COMPUTE CHOICE = FUNCTION NUMVAL(WS-OUT(1:1))
            END-IF
            .
