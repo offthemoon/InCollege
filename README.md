@@ -143,12 +143,12 @@ In terminal enter ```./bin/InCollege```
 - All output displayed on screen and written identically to the output file
 
 
-### Week 5 – Connection Requests
+### Week 5 – Connection Management
 **Tasks Completed:**
 - Users can view all pending connection requests and choose to accept or reject each request individually.
 - Multiple pending requests handled correctly in sequence, with confirmations displayed for each action.
 - Rejected requests are removed from the pending list and do not appear in the network.
-- Accepted requests are added to the user’s network and stored persistently in connections.dat.
+- Accepted requests are added to the user's network and stored persistently in connections.dat.
 - Users cannot send duplicate connection requests to existing connections.
 - Network viewing displays all current connections with details including:
   - Name
@@ -217,3 +217,13 @@ In terminal enter ```./bin/InCollege```
 - Displayed confirmation after successful send
 - Continued file-based input/output consistency
 - Added modular copybooks for messaging support
+
+### Week 9 – Basic Messaging System Part 2
+**Tasks Completed:**
+- Implemented "View My Messages" functionality in Messages menu
+- Users can view all messages they have received
+- Messages display with sender name, message content, and timestamp
+- Filter messages by sender or view all messages
+- Gracefully handles "no messages" scenario with appropriate message display
+- Messages marked as read after being viewed
+- All message viewing actions logged to output file
