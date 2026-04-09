@@ -43,7 +43,9 @@ Project Structure
 ├── Epic7-Storyx-Test-Output    # Sample test outputs for Week 7
 ├── Epic8-Storyx-Test-Input     # Sample test inputs for Week 8
 ├── Epic8-Storyx-Test-Output    # Sample test outputs for Week 8
-├── accounts_info.dat           # Stored account information for Week 1, 2, 3, 4, 5, 6, 7, 8 test cases
+├── Epic9-Storyx-Test-Input     # Sample test inputs for Week 8
+├── Epic9-Storyx-Test-Output    # Sample test outputs for Week 8
+├── accounts_info.dat           # Stored account information for Week 1, 2, 3, 4, 5, 6, 7, 8, 9 test cases
 ├── InCollege-Input.txt         # Example input for Week 8
 ├── InCollege-Output.txt        # Example output for Week 8
 └── README.md                   # This file
@@ -93,7 +95,8 @@ In terminal enter ```./bin/InCollege```
 - Week 5: Accept/reject connection requests, view network of connections, prevent duplicate requests, persistent network updates
 - Week 6: Post job and internship listings with persistent storage
 - Week 7: Browse jobs, view full details, apply to jobs
-- Week 8: Private messaging system (send messages to connected users)
+- Week 8: Send private messages to connections
+- Week 9: View messages sent from connections
 
 ## Weekly Epics
 
