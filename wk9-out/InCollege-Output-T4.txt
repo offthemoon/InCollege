@@ -26,66 +26,21 @@ Enter your choice:
 3. Back to Main Menu
 Enter your choice:
 2
---- How do you want to view messages? ---
-1. View all messages
-2. Messages from: Samuel
-3. Messages from: Aarav
-4. Back (return without viewing)
-Enter your choice:
-2
---- Your Messages ---
-From: Samuel
-Message: Hi Jasmine, we have a connection
-Sent: 2026-04-06 03:24:21
----
-From: Samuel
-Message: This is another message and should come on a new line
-Sent: 2026-04-06 03:24:21
----------------------
+You have no messages at this time.
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
 2
---- How do you want to view messages? ---
-1. View all messages
-2. Messages from: Samuel
-3. Messages from: Aarav
-4. Back (return without viewing)
-Enter your choice:
-3
---- Your Messages ---
-From: Aarav
-Message: First message from Aarav
-Sent: 2026-04-06 03:24:21
----------------------
+You have no messages at this time.
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages
 3. Back to Main Menu
 Enter your choice:
 2
---- How do you want to view messages? ---
-1. View all messages
-2. Messages from: Samuel
-3. Messages from: Aarav
-4. Back (return without viewing)
-Enter your choice:
-1
---- Your Messages ---
-From: Samuel
-Message: Hi Jasmine, we have a connection
-Sent: 2026-04-06 03:24:21
----
-From: Samuel
-Message: This is another message and should come on a new line
-Sent: 2026-04-06 03:24:21
----
-From: Aarav
-Message: First message from Aarav
-Sent: 2026-04-06 03:24:21
----------------------
+You have no messages at this time.
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages
@@ -102,11 +57,32 @@ Enter your choice:
 8. Messages
 9. Logout
 Enter your choice:
-9
-Welcome to InCollege!
-1. Log In
-2. Create New Account
-3. Exit
+2
+--- Profile Information ---
+Name: Jasmine Kohli
+University: University of South Florida
+Major: Computer Science
+Graduation Year: 2026
+About Me: I am a scrum master for InCollege wk2.
+Experience:
+Education:
+1. Create/Edit My Profile
+2. View My Profile
+3. Search for a job
+4. Find someone you know
+5. Learn a new skill
+6. View My Pending Connection Requests
+7. View My Network
+8. Messages
+9. Logout
 Enter your choice:
+1
+--- Create/Edit Profile ---
+Enter First Name:
 3
+Enter Last Name:
+9
+Enter University/College Attended:
+3
+Enter Major:
 --- END_OF_PROGRAM_EXECUTION ---

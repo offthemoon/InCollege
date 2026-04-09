@@ -131,7 +131,7 @@ You have successfully logged in.
 9. Logout
 Enter your choice:
 8
-You have 5 unread messages.
+You have 3 unread messages.
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages
@@ -148,17 +148,9 @@ Enter your choice:
 --- Your Messages ---
 From: Aarav
 Message: First message from Aarav
-Sent: 2026-04-09 16:38:56
----
-From: Aarav
-Message: First message from Aarav
-Sent: 2026-04-07 03:06:36
----
-From: Aarav
-Message: First message from Aarav
-Sent: 2026-04-06 03:24:21
+Sent: 2026-04-09 16:50:52
 ---------------------
-You have 4 unread messages.
+You have 2 unread messages.
 --- Messages Menu ---
 1. Send a New Message
 2. View My Messages
@@ -288,27 +280,11 @@ Enter your choice:
 --- Your Messages ---
 From: Roy
 Message: Glad we connected!
-Sent: 2026-04-09 16:38:57
+Sent: 2026-04-09 16:50:52
 ---
 From: Roy
 Message: This is another message to you!
-Sent: 2026-04-09 16:38:57
----
-From: Roy
-Message: This is another message to you!
-Sent: 2026-04-07 03:06:37
----
-From: Roy
-Message: Glad we connected!
-Sent: 2026-04-07 03:06:36
----
-From: Roy
-Message: Glad we connected!
-Sent: 2026-04-06 03:24:21
----
-From: Roy
-Message: This is another message to you!
-Sent: 2026-04-06 03:24:21
+Sent: 2026-04-09 16:50:52
 ---------------------
 --- Messages Menu ---
 1. Send a New Message
